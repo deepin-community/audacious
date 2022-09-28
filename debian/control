@@ -1,0 +1,195 @@
+Source: audacious
+Section: sound
+Priority: optional
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Uploaders:
+ Andrej Shadura <andrewsh@debian.org>,
+ Mateusz Łukasik <mati75@linuxmint.pl>
+Build-Depends:
+ debhelper-compat (= 13),
+ imagemagick,
+ libglib2.0-dev,
+ libgtk2.0-dev,
+ librsvg2-bin,
+ qtbase5-dev
+Standards-Version: 4.6.0
+Homepage: https://www.audacious-media-player.org/
+Vcs-Browser: https://salsa.debian.org/multimedia-team/audacious
+Vcs-Git: https://salsa.debian.org/multimedia-team/audacious.git
+
+Package: audacious
+Architecture: any
+Depends:
+ audacious-plugins (>= ${source:Upstream-Version}),
+ default-dbus-session-bus | dbus-session-bus | dbus-x11,
+ gtk2-engines-pixbuf,
+ libaudcore5 (= ${binary:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends}
+Recommends:
+ unzip
+Description: small and fast audio player which supports lots of formats
+ Audacious is a fork of beep-media-player which supports Winamp skins
+ and many codecs.
+ .
+ In the default install, the following codecs are supported:
+ .
+  * MP3
+  * Ogg Vorbis / Theora
+  * AAC and AAC+
+  * FLAC
+  * ALAC
+  * Windows Media (WMA)
+  * WAVE
+ .
+ Additionally, Audacious is extendable through plugins, and contains
+ other useful features like LIRC support. Support for many more codecs
+ can also be added through plugins.
+ .
+ This package contains the core player and its localization.
+
+Package: audacious-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libaudcore5 (= ${binary:Version}),
+ libaudgui5 (= ${binary:Version}),
+ libaudtag3 (= ${binary:Version}),
+ libaudqt2 (= ${binary:Version}),
+ libglib2.0-dev,
+ libgtk2.0-dev,
+ qtbase5-dev,
+ ${misc:Depends}
+Description: audacious development files
+ Audacious is a fork of beep-media-player which supports Winamp skins
+ and many codecs.
+ .
+ In the default install, the following codecs are supported:
+ .
+  * MP3
+  * Ogg Vorbis / Theora
+  * AAC and AAC+
+  * FLAC
+  * ALAC
+  * Windows Media (WMA)
+  * WAVE
+ .
+ Additionally, Audacious is extendable through plugins, and contains
+ other useful features like LIRC support. Support for many more codecs
+ can also be added through plugins.
+ .
+ This package contains the development libraries and header files
+ required for developing components for audacious.
+ .
+ Please note that this package no longer contains libaudacious, as
+ libaudacious was dropped in Audacious 1.4.
+
+Package: libaudcore5
+Section: libs
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: audacious core engine library
+ Audacious is a fork of beep-media-player which supports Winamp skins
+ and many codecs.
+ .
+ In the default install, the following codecs are supported:
+ .
+  * MP3
+  * Ogg Vorbis / Theora
+  * AAC and AAC+
+  * FLAC
+  * ALAC
+  * Windows Media (WMA)
+  * WAVE
+ .
+ Additionally, Audacious is extendable through plugins, and contains
+ other useful features like LIRC support. Support for many more codecs
+ can also be added through plugins.
+ .
+ This package contains a library which provides core functionality
+ of Audacious.
+
+Package: libaudgui5
+Section: libs
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: audacious media player (libaudgui shared library)
+ Audacious is a fork of beep-media-player which supports Winamp skins
+ and many codecs.
+ .
+ In the default install, the following codecs are supported:
+ .
+  * MP3
+  * Ogg Vorbis / Theora
+  * AAC and AAC+
+  * FLAC
+  * ALAC
+  * Windows Media (WMA)
+  * WAVE
+ .
+ Additionally, Audacious is extendable through plugins, and contains
+ other useful features like LIRC support. Support for many more codecs
+ can also be added through plugins.
+ .
+ This package provides the libaudgui shared library.
+
+Package: libaudtag3
+Section: libs
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: audacious media player (libaudtag shared library)
+ Audacious is a fork of beep-media-player which supports Winamp skins
+ and many codecs.
+ .
+ In the default install, the following codecs are supported:
+ .
+  * MP3
+  * Ogg Vorbis / Theora
+  * AAC and AAC+
+  * FLAC
+  * ALAC
+  * Windows Media (WMA)
+  * WAVE
+ .
+ Additionally, Audacious is extendable through plugins, and contains
+ other useful features like LIRC support. Support for many more codecs
+ can also be added through plugins.
+ .
+ This package provides the libaudtag shared library.
+
+Package: libaudqt2
+Section: libs
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: audacious media player (libaudqt shared library)
+ Audacious is a fork of beep-media-player which supports Winamp skins
+ and many codecs.
+ .
+ In the default install, the following codecs are supported:
+ .
+  * MP3
+  * Ogg Vorbis / Theora
+  * AAC and AAC+
+  * FLAC
+  * ALAC
+  * Windows Media (WMA)
+  * WAVE
+ .
+ Additionally, Audacious is extendable through plugins, and contains
+ other useful features like LIRC support. Support for many more codecs
+ can also be added through plugins.
+ .
+ This package provides the libaudqt shared library.

@@ -1,0 +1,4 @@
+# SymbolsHelper-Confirmed: 3.9 amd64
+libaudtag.so.3 libaudtag3 #MINVER#
+ (c++)"audtag::write_tuple(VFSFile&, Tuple const&, audtag::TagType)@Base" 3.8
+ (c++)"audtag::read_tag(VFSFile&, Tuple&, Index<char>*)@Base" 3.8

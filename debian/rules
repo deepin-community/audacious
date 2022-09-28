@@ -1,0 +1,36 @@
+#!/usr/bin/make -f
+
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+DEB_BUILD_ARCH ?= $(shell dpkg-architecture -qDEB_BUILD_ARCH)
+
+ifeq ($(DEB_BUILD_ARCH),i386)
+additional_confflags := --disable-sse2
+endif
+
+# Do not link against unused libraries (make dpkg-shlibdeps happy).
+LDFLAGS += -Wl,-z,defs -Wl,--as-needed
+export DEB_BUILD_MAINT_OPTIONS=hardening=+bindnow
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- --disable-rpath --enable-chardet $(additional_confflags) \
+		--with-buildstamp="$(shell dpkg-vendor --query vendor) package" --enable-gtk
+
+override_dh_auto_install:
+	dh_auto_install
+	# Move the arch-specific headers into the multiarch domain
+	cd debian/tmp/usr/include && \
+	mkdir -p $(DEB_HOST_MULTIARCH)/libaudcore && \
+	mv libaudcore/audio.h $(DEB_HOST_MULTIARCH)/libaudcore/
+
+override_dh_installdirs:
+	dh_installdirs
+	mkdir -p debian/tmp/usr/share/pixmaps
+	convert images/audacious.png -resize 16x16 debian/tmp/usr/share/pixmaps/audacious-16.xpm
+	convert images/audacious.png -resize 32x32 debian/tmp/usr/share/pixmaps/audacious-32.xpm
+
+override_dh_auto_clean:
+	dh_auto_clean || true
+	rm -f src/libaudcore/audio.h

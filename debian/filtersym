@@ -1,0 +1,17 @@
+#!/usr/bin/gawk -f
+
+# demangle symbols file
+
+/^lib/
+
+/^ \(/
+
+function demangle(sym) {
+    split(sym, parts, /@/)
+    "c++filt -n " parts[1] | getline demangled
+    return demangled "@" parts[2]
+}
+
+/^ _Z/ {
+    print " (c++)\"" demangle($1) "\" " $2
+}

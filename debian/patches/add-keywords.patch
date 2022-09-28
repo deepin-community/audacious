@@ -1,0 +1,15 @@
+Description: Add keywords to desktop file
+Author: Mateusz Łukasik <mati75@linuxmint.pl>
+
+--- a/audacious.desktop
++++ b/audacious.desktop
+@@ -5,7 +5,8 @@
+ GenericName=Music Player
+ Comment=Listen to music
+ Icon=audacious
+-Categories=AudioVideo;Audio;Player;
++Keywords=audio;player;audacious;music;gtk;
++Categories=AudioVideo;Audio;Player;GTK;
+ Exec=audacious %U
+ TryExec=audacious
+ StartupNotify=false

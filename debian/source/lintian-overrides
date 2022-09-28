@@ -1,0 +1,5 @@
+# this is not relevant to us
+source: wayward-symbolic-link-target-in-source contrib/macpack/Audacious.app/Contents/MacOS/audacious
+
+# the upstream always releases plugins and the core in sync
+source: version-substvar-for-external-package audacious -> audacious-plugins
