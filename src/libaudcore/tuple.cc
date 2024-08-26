@@ -147,6 +147,10 @@ static const struct
 
     {"description", Tuple::String, -1},
     {"musicbrainz-id", Tuple::String, -1},
+    {"channels", Tuple::Int, -1},
+    {"publisher", Tuple::String, -1},
+    {"catalog-number", Tuple::String, -1},
+    {"lyrics", Tuple::String, -1},
 
     /* fallbacks */
     {nullptr, Tuple::String, -1},
@@ -170,6 +174,8 @@ static const FieldDictEntry field_dict[] = {
     {"artist", Tuple::Artist},
     {"audio-file", Tuple::AudioFile},
     {"bitrate", Tuple::Bitrate},
+    {"catalog-number", Tuple::CatalogNum},
+    {"channels", Tuple::Channels},
     {"codec", Tuple::Codec},
     {"comment", Tuple::Comment},
     {"composer", Tuple::Composer},
@@ -188,8 +194,10 @@ static const FieldDictEntry field_dict[] = {
     {"gain-track-peak", Tuple::TrackPeak},
     {"genre", Tuple::Genre},
     {"length", Tuple::Length},
+    {"lyrics", Tuple::Lyrics},
     {"musicbrainz-id", Tuple::MusicBrainzID},
     {"performer", Tuple::Performer},
+    {"publisher", Tuple::Publisher},
     {"quality", Tuple::Quality},
     {"segment-end", Tuple::EndTime},
     {"segment-start", Tuple::StartTime},
@@ -569,11 +577,14 @@ EXPORT void Tuple::set_format(const char * format, int chans, int rate,
     if (rate > 0)
         str_append_printf(buf, "%d kHz", rate / 1000);
 
-    if (buf[0])
+    if (buf.len())
         set_str(Quality, buf);
 
     if (brate > 0)
         set_int(Bitrate, brate);
+
+    if (chans > 0)
+        set_int(Channels, chans);
 }
 
 EXPORT void Tuple::set_subtunes(short n_subtunes, const short * subtunes)

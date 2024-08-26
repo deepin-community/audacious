@@ -3,6 +3,7 @@ libaudcore_inc = include_directories('.')
 
 libaudcore_sources = [
   'adder.cc',
+  'archive_reader.cc',
   'art.cc',
   'art-search.cc',
   'audio.cc',
@@ -44,6 +45,7 @@ libaudcore_sources = [
   'scanner.cc',
   'stringbuf.cc',
   'strpool.cc',
+  'threads.cc',
   'tinylock.cc',
   'timer.cc',
   'tuple.cc',
@@ -58,6 +60,7 @@ libaudcore_sources = [
 
 
 libaudcore_headers = [
+  'archive_reader.h',
   'audstrings.h',
   'drct.h',
   'equalizer.h',
@@ -91,21 +94,34 @@ libaudcore_headers = [
 audio_h = configure_file(input: 'audio.h.in',
   output: 'audio.h',
   configuration: conf,
-  install: true,
   install_dir: join_paths(get_option('includedir'), 'libaudcore'))
 
 
-libaudcore_deps = [glib_dep, gmodule_dep]
+libaudcore_deps = [glib_dep, gmodule_dep, intl_dep]
 
 if get_option('qt')
   libaudcore_deps += [qt_dep]
 endif
 
 
-if cc.has_function('iconv')
-  iconv_dep = []
+if get_option('gtk')
+  libaudcore_deps += [gtk_dep]
+endif
+
+
+if get_option('libarchive')
+  libaudcore_deps += [libarchive_dep]
+endif
+
+
+if meson.version().version_compare('>= 0.60')
+  iconv_dep = dependency('iconv', required: true)
 else
-  iconv_dep = cc.find_library('iconv', required: true)
+  if cxx.has_function('iconv', prefix: '#include <iconv.h>')
+    iconv_dep = dependency('', required: false)
+  else
+    iconv_dep = cxx.find_library('iconv', required: true)
+  endif
 endif
 
 libaudcore_deps += [iconv_dep]
@@ -117,7 +133,7 @@ libaudcore_lib = library('audcore',
   include_directories: src_inc,
   dependencies: libaudcore_deps,
   link_with: libguess_lib,
-  version: '5.1.0',
+  version: '5.4.0',
   soversion: '5',
   install: true
 )

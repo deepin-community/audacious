@@ -1,78 +1,87 @@
 libaudgui.so.5 libaudgui5 #MINVER#
- (c++)"audgui_init()@Base" 3.8
- (c++)"audgui_cleanup()@Base" 3.8
- (c++)"audgui_get_dpi()@Base" 3.8
- (c++)"audgui_button_new(char const*, char const*, void (*)(void*), void*)@Base" 3.8
- (c++)"audgui_dialog_new(GtkMessageType, char const*, char const*, _GtkWidget*, _GtkWidget*)@Base" 3.8
- (c++)"audgui_infowin_hide()@Base" 3.8
- (c++)"audgui_infowin_show(Playlist, int)@Base" 3.9
- (c++)"audgui_jump_to_time()@Base" 3.8
- (c++)"audgui_urilist_open(char const*)@Base" 3.8
- (c++)"audgui_jump_to_track()@Base" 3.8
- (c++)"audgui_list_get_user(_GtkWidget*)@Base" 3.8
- (c++)"audgui_list_new_real(AudguiListCallbacks const*, int, void*, int)@Base" 3.8
- (c++)"audgui_to_native_dpi(int)@Base" 3.8
- (c++)"audgui_vis_bar_color(_GdkColor const&, int, int, float&, float&, float&)@Base" 4.0
- (c++)"audgui_file_entry_new(GtkFileChooserAction, char const*)@Base" 3.8
- (c++)"audgui_infopopup_hide()@Base" 3.8
- (c++)"audgui_infopopup_show(Playlist, int)@Base" 3.9
- (c++)"audgui_list_get_focus(_GtkWidget*)@Base" 3.8
- (c++)"audgui_list_row_count(_GtkWidget*)@Base" 3.8
- (c++)"audgui_list_set_focus(_GtkWidget*, int)@Base" 3.8
- (c++)"audgui_pixbuf_request(char const*, bool*)@Base" 3.8
- (c++)"audgui_simple_message(_GtkWidget**, GtkMessageType, char const*, char const*)@Base" 3.8
- (c++)"audgui_urilist_insert(Playlist, int, char const*)@Base" 3.9
- (c++)"audgui_export_playlist()@Base" 3.8
- (c++)"audgui_get_digit_width(_GtkWidget*)@Base" 3.8
- (c++)"audgui_get_plugin_menu(AudMenuID)@Base" 3.8
- (c++)"audgui_import_playlist()@Base" 3.8
- (c++)"audgui_list_add_column(_GtkWidget*, char const*, int, unsigned long, int, bool)@Base" 3.9
- (c++)"audgui_pixbuf_fallback()@Base" 3.8
- (c++)"audgui_plugin_menu_add(AudMenuID, void (*)(), char const*, char const*)@Base" 3.8
- (c++)"audgui_run_filebrowser(bool)@Base" 3.8
- (c++)"audgui_to_portable_dpi(int)@Base" 3.8
- (c++)"audgui_dark_bg_gradient(_GdkColor const&, int)@Base" 4.0
- (c++)"audgui_get_mouse_coords(_GdkScreen*, int*, int*)@Base" 3.8
- (c++)"audgui_get_mouse_coords(_GtkWidget*, int*, int*)@Base" 3.8
- (c++)"audgui_hide_filebrowser()@Base" 3.8
- (c++)"audgui_list_delete_rows(_GtkWidget*, int, int)@Base" 3.8
- (c++)"audgui_list_insert_rows(_GtkWidget*, int, int)@Base" 3.8
- (c++)"audgui_list_update_rows(_GtkWidget*, int, int)@Base" 3.8
- (c++|regex)"^audgui_pixbuf_from_data\(void const\*, (long|long long)\)@Base$" 3.8
- (c++)"audgui_scaled_image_new(_GdkPixbuf*)@Base" 3.8
- (c++)"audgui_scaled_image_set(_GtkWidget*, _GdkPixbuf*)@Base" 3.8
- (c++)"audgui_destroy_on_escape(_GtkWidget*)@Base" 3.8
- (c++)"audgui_dialog_add_widget(_GtkWidget*, _GtkWidget*)@Base" 3.8
- (c++)"audgui_hide_about_window()@Base" 3.8
- (c++)"audgui_hide_prefs_window()@Base" 3.8
- (c++)"audgui_import_eq_presets(Index<EqualizerPreset> const&)@Base" 3.8
- (c++)"audgui_list_row_at_point(_GtkWidget*, int, int)@Base" 3.8
- (c++)"audgui_show_about_window()@Base" 3.8
- (c++)"audgui_show_plugin_about(PluginHandle*)@Base" 3.8
- (c++)"audgui_show_plugin_prefs(PluginHandle*)@Base" 3.8
- (c++)"audgui_show_prefs_window()@Base" 3.8
- (c++)"audgui_file_entry_get_uri(_GtkWidget*)@Base" 3.8
- (c++)"audgui_file_entry_set_uri(_GtkWidget*, char const*)@Base" 3.8
- (c++)"audgui_jump_to_track_hide()@Base" 3.8
- (c++)"audgui_list_get_highlight(_GtkWidget*)@Base" 3.8
- (c++)"audgui_list_set_highlight(_GtkWidget*, int)@Base" 3.8
- (c++)"audgui_plugin_menu_remove(AudMenuID, void (*)())@Base" 3.8
- (c++)"audgui_queue_manager_show()@Base" 3.8
- (c++)"audgui_pixbuf_scale_within(AudguiPixbuf&, int)@Base" 3.9
- (c++)"audgui_show_add_url_window(bool)@Base" 3.8
- (c++)"audgui_get_monitor_geometry(_GdkScreen*, int, int, _GdkRectangle*)@Base" 3.8
- (c++)"audgui_infowin_show_current()@Base" 3.8
- (c++)"audgui_show_playlist_rename(Playlist)@Base" 3.9
- (c++)"audgui_hide_equalizer_window()@Base" 3.8
- (c++)"audgui_list_update_selection(_GtkWidget*, int, int)@Base" 3.8
- (c++)"audgui_menu_init_with_domain(_GtkWidget*, ArrayRef<AudguiMenuItem>, _GtkAccelGroup*, char const*)@Base" 3.8
- (c++)"audgui_show_eq_preset_window()@Base" 3.8
- (c++)"audgui_show_equalizer_window()@Base" 3.8
- (c++)"audgui_infopopup_show_current()@Base" 3.8
- (c++)"audgui_pixbuf_request_current(bool*)@Base" 3.8
- (c++)"audgui_confirm_playlist_delete(Playlist)@Base" 3.9
- (c++)"audgui_list_row_at_point_rounded(_GtkWidget*, int, int)@Base" 3.8
- (c++)"audgui_menu_item_new_with_domain(AudguiMenuItem const*, _GtkAccelGroup*, char const*)@Base" 3.8
- (c++)"audgui_show_prefs_for_plugin_type(PluginType)@Base" 3.8
- (c++)"audgui_urilist_create_from_selected(Playlist)@Base" 3.9
- images_get_resource@Base 4.0.5
+ (c++)"audgui_init()@Base" 4.3
+ (c++)"audgui_box_new(GtkOrientation, int)@Base" 4.3
+ (c++)"audgui_cleanup()@Base" 4.3
+ (c++)"audgui_get_dpi()@Base" 4.3
+ (c++)"audgui_grid_new()@Base" 4.3
+ (c++)"audgui_paned_new(GtkOrientation)@Base" 4.3
+ (c++)"audgui_scale_new(GtkOrientation, _GtkAdjustment*)@Base" 4.3
+ (c++)"audgui_button_new(char const*, char const*, void (*)(void*), void*)@Base" 4.3
+ (c++)"audgui_dialog_new(GtkMessageType, char const*, char const*, _GtkWidget*, _GtkWidget*)@Base" 4.3
+ (c++)"audgui_infowin_hide()@Base" 4.3
+ (c++)"audgui_infowin_show(Playlist, int)@Base" 4.3
+ (c++)"audgui_jump_to_time()@Base" 4.3
+ (c++)"audgui_urilist_open(char const*)@Base" 4.3
+ (c++)"audgui_jump_to_track()@Base" 4.3
+ (c++)"audgui_list_get_user(_GtkWidget*)@Base" 4.3
+ (c++)"audgui_list_new_real(AudguiListCallbacks const*, int, void*, int)@Base" 4.3
+ (c++)"audgui_separator_new(GtkOrientation)@Base" 4.3
+ (c++)"audgui_to_native_dpi(int)@Base" 4.3
+ (c++)"audgui_vis_bar_color(_GdkColor const&, int, int, float&, float&, float&)@Base" 4.3
+ (c++)"audgui_button_box_new(GtkOrientation)@Base" 4.3
+ (c++)"audgui_file_entry_new(GtkFileChooserAction, char const*)@Base" 4.3
+ (c++)"audgui_infopopup_hide()@Base" 4.3
+ (c++)"audgui_infopopup_show(Playlist, int)@Base" 4.3
+ (c++)"audgui_list_get_focus(_GtkWidget*)@Base" 4.3
+ (c++)"audgui_list_row_count(_GtkWidget*)@Base" 4.3
+ (c++)"audgui_list_set_focus(_GtkWidget*, int)@Base" 4.3
+ (c++)"audgui_pixbuf_request(char const*, bool*)@Base" 4.3
+ (c++)"audgui_simple_message(_GtkWidget**, GtkMessageType, char const*, char const*)@Base" 4.3
+ (c++)"audgui_urilist_insert(Playlist, int, char const*)@Base" 4.3
+ (c++)"audgui_export_playlist()@Base" 4.3
+ (c++)"audgui_get_digit_width(_GtkWidget*)@Base" 4.3
+ (c++)"audgui_get_plugin_menu(AudMenuID)@Base" 4.3
+ (c++)"audgui_import_playlist()@Base" 4.3
+ (c++)"audgui_list_add_column(_GtkWidget*, char const*, int, unsigned long, int, bool)@Base" 4.3
+ (c++)"audgui_pixbuf_fallback()@Base" 4.3
+ (c++)"audgui_plugin_menu_add(AudMenuID, void (*)(), char const*, char const*)@Base" 4.3
+ (c++)"audgui_run_filebrowser(bool)@Base" 4.3
+ (c++)"audgui_to_portable_dpi(int)@Base" 4.3
+ (c++)"audgui_dark_bg_gradient(_GdkColor const&, int)@Base" 4.3
+ (c++)"audgui_get_mouse_coords(_GdkScreen*, int*, int*)@Base" 4.3
+ (c++)"audgui_get_mouse_coords(_GtkWidget*, int*, int*)@Base" 4.3
+ (c++)"audgui_hide_filebrowser()@Base" 4.3
+ (c++)"audgui_list_delete_rows(_GtkWidget*, int, int)@Base" 4.3
+ (c++)"audgui_list_insert_rows(_GtkWidget*, int, int)@Base" 4.3
+ (c++)"audgui_list_update_rows(_GtkWidget*, int, int)@Base" 4.3
+ (c++|regex)"^audgui_pixbuf_from_data\(void const\*, (long|long long)\)@Base" 4.3
+ (c++)"audgui_scaled_image_new(_GdkPixbuf*)@Base" 4.3
+ (c++)"audgui_scaled_image_set(_GtkWidget*, _GdkPixbuf*)@Base" 4.3
+ (c++)"audgui_destroy_on_escape(_GtkWidget*)@Base" 4.3
+ (c++)"audgui_dialog_add_widget(_GtkWidget*, _GtkWidget*)@Base" 4.3
+ (c++)"audgui_hide_about_window()@Base" 4.3
+ (c++)"audgui_hide_prefs_window()@Base" 4.3
+ (c++)"audgui_import_eq_presets(Index<EqualizerPreset> const&)@Base" 4.3
+ (c++)"audgui_list_row_at_point(_GtkWidget*, int, int)@Base" 4.3
+ (c++)"audgui_show_about_window()@Base" 4.3
+ (c++)"audgui_show_plugin_about(PluginHandle*)@Base" 4.3
+ (c++)"audgui_show_plugin_prefs(PluginHandle*)@Base" 4.3
+ (c++)"audgui_show_prefs_window()@Base" 4.3
+ (c++)"audgui_file_entry_get_uri(_GtkWidget*)@Base" 4.3
+ (c++)"audgui_file_entry_set_uri(_GtkWidget*, char const*)@Base" 4.3
+ (c++)"audgui_jump_to_track_hide()@Base" 4.3
+ (c++)"audgui_list_get_highlight(_GtkWidget*)@Base" 4.3
+ (c++)"audgui_list_set_highlight(_GtkWidget*, int)@Base" 4.3
+ (c++)"audgui_plugin_menu_remove(AudMenuID, void (*)())@Base" 4.3
+ (c++)"audgui_queue_manager_show()@Base" 4.3
+ (c++)"audgui_pixbuf_scale_within(AudguiPixbuf&, int)@Base" 4.3
+ (c++)"audgui_show_add_url_window(bool)@Base" 4.3
+ (c++)"audgui_get_monitor_geometry(_GdkScreen*, int, int, _cairo_rectangle_int*)@Base" 4.3
+ (c++)"audgui_grid_set_row_spacing(_GtkWidget*, unsigned int)@Base" 4.3
+ (c++)"audgui_infowin_show_current()@Base" 4.3
+ (c++)"audgui_show_playlist_rename(Playlist)@Base" 4.3
+ (c++)"audgui_hide_equalizer_window()@Base" 4.3
+ (c++)"audgui_list_update_selection(_GtkWidget*, int, int)@Base" 4.3
+ (c++)"audgui_menu_init_with_domain(_GtkWidget*, ArrayRef<AudguiMenuItem>, _GtkAccelGroup*, char const*)@Base" 4.3
+ (c++)"audgui_show_eq_preset_window()@Base" 4.3
+ (c++)"audgui_show_equalizer_window()@Base" 4.3
+ (c++)"audgui_infopopup_show_current()@Base" 4.3
+ (c++)"audgui_pixbuf_request_current(bool*)@Base" 4.3
+ (c++)"audgui_confirm_playlist_delete(Playlist)@Base" 4.3
+ (c++)"audgui_grid_set_column_spacing(_GtkWidget*, unsigned int)@Base" 4.3
+ (c++)"audgui_list_row_at_point_rounded(_GtkWidget*, int, int)@Base" 4.3
+ (c++)"audgui_menu_item_new_with_domain(AudguiMenuItem const*, _GtkAccelGroup*, char const*)@Base" 4.3
+ (c++)"audgui_tree_view_get_hadjustment(_GtkWidget*)@Base" 4.3
+ (c++)"audgui_tree_view_get_vadjustment(_GtkWidget*)@Base" 4.3
+ (c++)"audgui_show_prefs_for_plugin_type(PluginType)@Base" 4.3
+ (c++)"audgui_urilist_create_from_selected(Playlist)@Base" 4.3

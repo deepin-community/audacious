@@ -1,111 +1,120 @@
 libaudqt.so.2 libaudqt2 #MINVER#
- (c++)"audqt::aboutwindow_hide()@Base" 3.7.1
- (c++)"audqt::aboutwindow_show()@Base" 3.7.1
- (c++)"audqt::art_request(char const*, bool*)@Base" 4.0
- (c++)"audqt::art_request(char const*, unsigned int, unsigned int, bool)@Base" 3.7.1
- (c++)"audqt::art_request_current(unsigned int, unsigned int, bool)@Base" 3.7.1
- (c++)"audqt::art_scale(QImage const&, unsigned int, unsigned int, bool)@Base" 4.0
- (c++)"audqt::cleanup()@Base" 3.7.1
- (c++)"audqt::clear_layout(QLayout*)@Base" 3.7.1
- (c++)"audqt::ColorButton::~ColorButton()@Base" 4.0
- (c++)"audqt::ColorButton::~ColorButton()@Base" 4.0
- (c++)"audqt::ColorButton::~ColorButton()@Base" 4.0
- (c++)"audqt::ColorButton::ColorButton(QWidget*)@Base" 4.0
- (c++)"audqt::ColorButton::ColorButton(QWidget*)@Base" 4.0
- (c++)"audqt::ColorButton::onColorChanged()@Base" 4.0
- (c++)"audqt::ColorButton::paintEvent(QPaintEvent*)@Base" 4.0
- (c++)"audqt::ColorButton::setColor(QColor const&)@Base" 4.0
- (c++)"audqt::dark_bg_gradient(QColor const&)@Base" 4.0
- (c++)"audqt::enable_layout(QLayout*, bool)@Base" 3.7.1
- (c++)"audqt::eq_presets_hide()@Base" 4.0
- (c++)"audqt::eq_presets_show()@Base" 4.0
- (c++)"audqt::equalizer_hide()@Base" 3.7.1
- (c++)"audqt::equalizer_show()@Base" 3.7.1
- (c++)"audqt::file_entry_get_uri(QLineEdit*)@Base" 4.0
- (c++)"audqt::file_entry_new(QWidget*, char const*, QFileDialog::FileMode, QFileDialog::AcceptMode)@Base" 4.0
- (c++)"audqt::file_entry_set_uri(QLineEdit*, char const*)@Base" 4.0
- (c++)"audqt::fileopener_show(audqt::FileMode)@Base" 3.7.1
- (c++)"audqt::font_entry_new(QWidget*, char const*)@Base" 4.0
- (c++)"audqt::get_icon(char const*)@Base" 4.0
- (c++)"audqt::infopopup_hide()@Base" 4.0
- (c++)"audqt::infopopup_show_current()@Base" 4.0
- (c++)"audqt::infopopup_show(Playlist, int)@Base" 4.0
- (c++)"audqt::InfoWidget::fillInfo(char const*, Tuple const&, PluginHandle*, bool)@Base" 4.0
- (c++)"audqt::InfoWidget::fillInfo(Index<PlaylistAddItem>&&, bool)@Base" 4.0
- (c++)"audqt::InfoWidget::~InfoWidget()@Base" 3.7.1
- (c++)"audqt::InfoWidget::~InfoWidget()@Base" 3.7.1
- (c++)"audqt::InfoWidget::~InfoWidget()@Base" 3.7.1
- (c++)"audqt::InfoWidget::InfoWidget(QWidget*)@Base" 3.7.1
- (c++)"audqt::InfoWidget::InfoWidget(QWidget*)@Base" 3.7.1
- (c++)"audqt::InfoWidget::keyPressEvent(QKeyEvent*)@Base" 4.0
- (c++)"audqt::InfoWidget::linkEnabled(QWidget*)@Base" 4.0
- (c++)"audqt::InfoWidget::revertInfo()@Base" 4.0
- (c++)"audqt::InfoWidget::updateFile()@Base" 3.7.1
- (c++)"audqt::infowin_hide()@Base" 3.7.1
- (c++)"audqt::infowin_show_current()@Base" 3.7.1
- (c++)"audqt::infowin_show(Playlist, int)@Base" 4.0
- (c++)"audqt::infowin_show_selected(Playlist)@Base" 4.0
- (c++)"audqt::init()@Base" 3.7.1
- (c++)"audqt::log_inspector_hide()@Base" 3.7.1
- (c++)"audqt::log_inspector_show()@Base" 3.7.1
- (c++)"audqt::make_hbox(QWidget*, int)@Base" 4.0
- (c++)"audqt::make_vbox(QWidget*, int)@Base" 4.0
- (c++)"audqt::margins@Base" 4.0
- (c++)"audqt::menu_action(audqt::MenuItem const&, char const*, QWidget*)@Base" 3.7.1
- (c++)"audqt::menu_add(AudMenuID, void (*)(), char const*, char const*)@Base" 3.7.1
- (c++)"audqt::menubar_build(ArrayRef<audqt::MenuItem>, char const*, QWidget*)@Base" 3.7.1
- (c++)"audqt::menu_build(ArrayRef<audqt::MenuItem>, char const*, QWidget*)@Base" 3.7.1
- (c++)"audqt::menu_get_by_id(AudMenuID)@Base" 3.7.1
- (c++)"audqt::menu_remove(AudMenuID, void (*)())@Base" 3.7.1
- (c++)"audqt::playlist_confirm_delete(Playlist)@Base" 4.0
- (c++)"audqt::playlist_show_rename(Playlist)@Base" 4.0
- (c++)"audqt::plugin_about(PluginHandle*)@Base" 3.7.1
- (c++)"audqt::plugin_prefs(PluginHandle*)@Base" 3.7.1
- (c++)"audqt::prefswin_hide()@Base" 3.7.1
- (c++)"audqt::prefswin_show()@Base" 3.7.1
- (c++)"audqt::prefswin_show_page(int, bool)@Base" 3.7.1
- (c++)"audqt::prefswin_show_plugin_page(PluginType)@Base" 3.7.1
- (c++)"audqt::qfont_from_string(char const*)@Base" 4.0
- (c++)"audqt::qfont_to_string(QFont const&)@Base" 4.0
- (c++)"audqt::queue_manager_hide()@Base" 3.7.1
- (c++)"audqt::queue_manager_show()@Base" 3.7.1
- (c++)"audqt::quit()@Base" 3.7.1
- (c++)"audqt::run()@Base" 3.7.1
- (c++)"audqt::simple_message(char const*, char const*)@Base" 3.7.1
- (c++)"audqt::simple_message(char const*, char const*, QMessageBox::Icon)@Base" 3.7.1
- (c++)"audqt::sizes@Base" 4.0
- (c++)"audqt::translate_str(char const*, char const*)@Base" 3.7.1
- (c++)"audqt::TreeView::activate(QModelIndex const&)@Base" 4.0
- (c++)"audqt::TreeView::keyPressEvent(QKeyEvent*)@Base" 4.0
- (c++)"audqt::TreeView::mouseDoubleClickEvent(QMouseEvent*)@Base" 4.0
- (c++)"audqt::TreeView::removeSelectedRows()@Base" 4.0
- (c++)"audqt::TreeView::~TreeView()@Base" 4.0
- (c++)"audqt::TreeView::~TreeView()@Base" 4.0
- (c++)"audqt::TreeView::~TreeView()@Base" 4.0
- (c++)"audqt::TreeView::TreeView(QWidget*)@Base" 4.0
- (c++)"audqt::TreeView::TreeView(QWidget*)@Base" 4.0
- (c++)"audqt::urlopener_show(bool)@Base" 3.7.1
- (c++)"audqt::vis_bar_color(QColor const&, int, int)@Base" 4.0
- (c++)"audqt::volume_button_new(QWidget*)@Base" 4.0
- (c++)"audqt::window_bring_to_front(QWidget*)@Base" 3.7.1
- (c++)"non-virtual thunk to audqt::ColorButton::~ColorButton()@Base" 4.0
- (c++)"non-virtual thunk to audqt::ColorButton::~ColorButton()@Base" 4.0
- (c++)"non-virtual thunk to audqt::InfoWidget::~InfoWidget()@Base" 3.7.1
- (c++)"non-virtual thunk to audqt::InfoWidget::~InfoWidget()@Base" 3.7.1
- (c++)"non-virtual thunk to audqt::InfoWidget::~InfoWidget()@Base" 3.7.1
- (c++)"non-virtual thunk to audqt::InfoWidget::~InfoWidget()@Base" 3.7.1
- (c++)"non-virtual thunk to audqt::TreeView::~TreeView()@Base" 4.0
- (c++)"non-virtual thunk to audqt::TreeView::~TreeView()@Base" 4.0
- (c++)"QByteArray::~QByteArray()@Base" 3.7.1
- (c++)"QByteArray::~QByteArray()@Base" 3.7.1
- (c++)"QString::~QString()@Base" 3.7.1
- (c++)"QString::~QString()@Base" 3.7.1
- (c++)"typeinfo for audqt::ColorButton@Base" 4.0
- (c++)"typeinfo for audqt::InfoWidget@Base" 4.0
- (c++)"typeinfo for audqt::TreeView@Base" 4.0
- (c++)"typeinfo name for audqt::ColorButton@Base" 4.0
- (c++)"typeinfo name for audqt::InfoWidget@Base" 4.0
- (c++)"typeinfo name for audqt::TreeView@Base" 4.0
- (c++)"vtable for audqt::ColorButton@Base" 4.0
- (c++)"vtable for audqt::InfoWidget@Base" 4.0
- (c++)"vtable for audqt::TreeView@Base" 4.0
+ (c++)"audqt::InfoWidget::revertInfo()@Base" 4.2
+ (c++)"audqt::InfoWidget::updateFile()@Base" 4.2
+ (c++)"audqt::InfoWidget::linkEnabled(QWidget*)@Base" 4.2
+ (c++)"audqt::InfoWidget::keyPressEvent(QKeyEvent*)@Base" 4.2
+ (c++)"audqt::InfoWidget::fillInfo(Index<PlaylistAddItem>&&, bool)@Base" 4.2
+ (c++)"audqt::InfoWidget::fillInfo(char const*, Tuple const&, PluginHandle*, bool)@Base" 4.2
+ (c++)"audqt::InfoWidget::InfoWidget(QWidget*)@Base" 4.2
+ (c++)"audqt::InfoWidget::InfoWidget(QWidget*)@Base" 4.2
+ (c++)"audqt::InfoWidget::~InfoWidget()@Base" 4.2
+ (c++)"audqt::InfoWidget::~InfoWidget()@Base" 4.2
+ (c++)"audqt::InfoWidget::~InfoWidget()@Base" 4.2
+ (c++)"audqt::menu_build(ArrayRef<audqt::MenuItem>, char const*, QWidget*)@Base" 4.2
+ (c++)"audqt::ColorButton::paintEvent(QPaintEvent*)@Base" 4.2
+ (c++)"audqt::ColorButton::onColorChanged()@Base" 4.2
+ (c++)"audqt::ColorButton::setColor(QColor const&)@Base" 4.2
+ (c++)"audqt::ColorButton::ColorButton(QWidget*)@Base" 4.2
+ (c++)"audqt::ColorButton::ColorButton(QWidget*)@Base" 4.2
+ (c++)"audqt::ColorButton::~ColorButton()@Base" 4.2
+ (c++)"audqt::ColorButton::~ColorButton()@Base" 4.2
+ (c++)"audqt::ColorButton::~ColorButton()@Base" 4.2
+ (c++)"audqt::art_request(char const*, bool*)@Base" 4.2
+ (c++)"audqt::art_request(char const*, unsigned int, unsigned int, bool)@Base" 4.2
+ (c++)"audqt::menu_action(audqt::MenuItem const&, char const*, QWidget*)@Base" 4.2
+ (c++)"audqt::menu_remove(AudMenuID, void (*)())@Base" 4.2
+ (c++)"audqt::clear_layout(QLayout*)@Base" 4.2
+ (c++)"audqt::infowin_hide()@Base" 4.2
+ (c++)"audqt::infowin_show(Playlist, int)@Base" 4.2
+ (c++)"audqt::plugin_about(PluginHandle*)@Base" 4.2
+ (c++)"audqt::plugin_prefs(PluginHandle*)@Base" 4.2
+ (c++)"audqt::songwin_hide()@Base" 4.2
+ (c++)"audqt::songwin_show()@Base" 4.2
+ (c++)"audqt::enable_layout(QLayout*, bool)@Base" 4.2
+ (c++)"audqt::menubar_build(ArrayRef<audqt::MenuItem>, char const*, QWidget*)@Base" 4.2
+ (c++)"audqt::prefswin_hide()@Base" 4.2
+ (c++)"audqt::prefswin_show()@Base" 4.2
+ (c++)"audqt::translate_str(char const*, char const*)@Base" 4.2
+ (c++)"audqt::vis_bar_color(QColor const&, int, int)@Base" 4.2
+ (c++)"audqt::equalizer_hide()@Base" 4.2
+ (c++)"audqt::equalizer_show()@Base" 4.2
+ (c++)"audqt::file_entry_new(QWidget*, char const*, QFileDialog::FileMode, QFileDialog::AcceptMode)@Base" 4.2
+ (c++)"audqt::font_entry_new(QWidget*, char const*)@Base" 4.2
+ (c++)"audqt::infopopup_hide()@Base" 4.2
+ (c++)"audqt::infopopup_show(Playlist, int)@Base" 4.2
+ (c++)"audqt::menu_get_by_id(AudMenuID)@Base" 4.2
+ (c++)"audqt::simple_message(char const*, char const*)@Base" 4.2
+ (c++)"audqt::simple_message(char const*, char const*, QMessageBox::Icon)@Base" 4.2
+ (c++)"audqt::urlopener_show(bool)@Base" 4.2
+ (c++)"audqt::eq_presets_hide()@Base" 4.2
+ (c++)"audqt::eq_presets_show()@Base" 4.2
+ (c++)"audqt::fileopener_show(audqt::FileMode)@Base" 4.2
+ (c++)"audqt::qfont_to_string(QFont const&)@Base" 4.2
+ (c++)"audqt::aboutwindow_hide()@Base" 4.2
+ (c++)"audqt::aboutwindow_show()@Base" 4.2
+ (c++)"audqt::dark_bg_gradient(QColor const&)@Base" 4.2
+ (c++)"audqt::qfont_from_string(char const*)@Base" 4.2
+ (c++)"audqt::setup_proxy_style(QProxyStyle*)@Base" 4.2
+ (c++)"audqt::volume_button_new(QWidget*)@Base" 4.2
+ (c++)"audqt::file_entry_get_uri(QLineEdit*)@Base" 4.2
+ (c++)"audqt::file_entry_set_uri(QLineEdit*, char const*)@Base" 4.2
+ (c++)"audqt::log_inspector_hide()@Base" 4.2
+ (c++)"audqt::log_inspector_show()@Base" 4.2
+ (c++)"audqt::prefswin_show_page(int, bool)@Base" 4.2
+ (c++)"audqt::queue_manager_hide()@Base" 4.2
+ (c++)"audqt::queue_manager_show()@Base" 4.2
+ (c++)"audqt::register_dock_host(audqt::DockHost*)@Base" 4.2
+ (c++)"audqt::art_request_current(unsigned int, unsigned int, bool)@Base" 4.2
+ (c++)"audqt::infowin_show_current()@Base" 4.2
+ (c++)"audqt::playlist_show_rename(Playlist)@Base" 4.2
+ (c++)"audqt::unregister_dock_host()@Base" 4.2
+ (c++)"audqt::infowin_show_selected(Playlist)@Base" 4.2
+ (c++)"audqt::window_bring_to_front(QWidget*)@Base" 4.2
+ (c++)"audqt::infopopup_show_current()@Base" 4.2
+ (c++)"audqt::playlist_confirm_delete(Playlist)@Base" 4.2
+ (c++)"audqt::prefswin_show_plugin_page(PluginType)@Base" 4.2
+ (c++)"audqt::run()@Base" 4.2
+ (c++)"audqt::init()@Base" 4.2
+ (c++)"audqt::quit()@Base" 4.2
+ (c++)"audqt::sizes@Base" 4.2
+ (c++)"audqt::cleanup()@Base" 4.2
+ (c++)"audqt::margins@Base" 4.2
+ (c++)"audqt::DockItem::grab_focus()@Base" 4.2
+ (c++)"audqt::DockItem::find_by_plugin(PluginHandle*)@Base" 4.2
+ (c++)"audqt::DockItem::DockItem(char const*, char const*, QWidget*)@Base" 4.2
+ (c++)"audqt::DockItem::DockItem(char const*, char const*, QWidget*)@Base" 4.2
+ (c++)"audqt::DockItem::~DockItem()@Base" 4.2
+ (c++)"audqt::DockItem::~DockItem()@Base" 4.2
+ (c++)"audqt::DockItem::~DockItem()@Base" 4.2
+ (c++)"audqt::TreeView::keyPressEvent(QKeyEvent*)@Base" 4.2
+ (c++)"audqt::TreeView::removeSelectedRows()@Base" 4.2
+ (c++)"audqt::TreeView::mouseDoubleClickEvent(QMouseEvent*)@Base" 4.2
+ (c++)"audqt::TreeView::activate(QModelIndex const&)@Base" 4.2
+ (c++)"audqt::TreeView::TreeView(QWidget*)@Base" 4.2
+ (c++)"audqt::TreeView::TreeView(QWidget*)@Base" 4.2
+ (c++)"audqt::TreeView::~TreeView()@Base" 4.2
+ (c++)"audqt::TreeView::~TreeView()@Base" 4.2
+ (c++)"audqt::TreeView::~TreeView()@Base" 4.2
+ (c++)"audqt::get_icon(char const*)@Base" 4.2
+ (c++)"audqt::menu_add(AudMenuID, void (*)(), char const*, char const*)@Base" 4.2
+ (c++)"audqt::art_scale(QImage const&, unsigned int, unsigned int, bool)@Base" 4.2
+ (c++)"audqt::make_hbox(QWidget*, int)@Base" 4.2
+ (c++)"audqt::make_vbox(QWidget*, int)@Base" 4.2
+ (c++)"typeinfo for audqt::InfoWidget@Base" 4.2
+ (c++)"typeinfo for audqt::ColorButton@Base" 4.2
+ (c++)"typeinfo for audqt::DockItem@Base" 4.2
+ (c++)"typeinfo for audqt::TreeView@Base" 4.2
+ (c++)"typeinfo name for audqt::InfoWidget@Base" 4.2
+ (c++)"typeinfo name for audqt::ColorButton@Base" 4.2
+ (c++)"typeinfo name for audqt::DockItem@Base" 4.2
+ (c++)"typeinfo name for audqt::TreeView@Base" 4.2
+ (c++)"vtable for audqt::InfoWidget@Base" 4.2
+ (c++)"vtable for audqt::ColorButton@Base" 4.2
+ (c++)"vtable for audqt::DockItem@Base" 4.2
+ (c++)"vtable for audqt::TreeView@Base" 4.2
+ (c++)"non-virtual thunk to audqt::InfoWidget::~InfoWidget()@Base" 4.2
+ (c++)"non-virtual thunk to audqt::InfoWidget::~InfoWidget()@Base" 4.2
+ (c++)"non-virtual thunk to audqt::ColorButton::~ColorButton()@Base" 4.2
+ (c++)"non-virtual thunk to audqt::ColorButton::~ColorButton()@Base" 4.2
+ (c++)"non-virtual thunk to audqt::TreeView::~TreeView()@Base" 4.2
+ (c++)"non-virtual thunk to audqt::TreeView::~TreeView()@Base" 4.2

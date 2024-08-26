@@ -1,3 +1,72 @@
+audacious (4.3.1-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Rename libraries for 64-bit time_t transition.  Closes: #1061925
+
+ -- Steve Langasek <vorlon@debian.org>  Wed, 28 Feb 2024 02:57:33 +0000
+
+audacious (4.3.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Build against Qt6. (Closes: #1050414)
+
+ -- Bastian Germann <bage@debian.org>  Wed, 01 Nov 2023 13:36:46 +0100
+
+audacious (4.3.1-1) unstable; urgency=medium
+
+  * Add libqt5x11extras5-dev to B-D. (Closes: #1036620)
+  * Bump Standards-Version to 4.6.2.
+  * Upload to unstable.
+
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Mon, 31 Jul 2023 22:32:06 +0200
+
+audacious (4.3.1-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Use GTK3. (Closes: #967261)
+  * Update symbols files.
+  * Switch build method to meson.
+
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Fri, 12 May 2023 20:46:46 +0200
+
+audacious (4.2-1) unstable; urgency=medium
+
+  [ Pino Toscano ]
+  * Remove the old audacious-16.xpm, and audacious-32.xpm icons, no more needed
+    since the removal of the Debian menu file in 3.6.2-1
+    - drop the imagemagick build dependency, as 'convert' is no more needed at
+      build time
+
+  [ Mateusz Łukasik ]
+  * New upstream release.
+  * Update symbols files.
+  * Bump Standards-Version to 4.6.1.
+
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Fri, 28 Oct 2022 18:14:43 +0200
+
+audacious (4.1-2) unstable; urgency=medium
+
+  * Actually enable libarchive.
+  * Refresh symbols.
+  * Drop linker settings which are defaults now.
+  * Fix cross builds.
+  * Use dirs instead of manual mkdir.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Sun, 02 Jan 2022 14:15:25 +0100
+
+audacious (4.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add new build dependency on libarchive-dev.
+  * Refresh patches.
+  * Refresh and sort symbols.
+  * Set Rules-Requires-Root: no.
+  * Instead of moving libaudcore/audio.h to multiarch, install all of
+    libaudcore there.
+  * Simplify the clean step.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Sun, 02 Jan 2022 12:58:45 +0100
+
 audacious (4.0.5-2) unstable; urgency=medium
 
   [ Jelmer Vernooĳ ]
@@ -12,7 +81,7 @@ audacious (4.0.5-2) unstable; urgency=medium
     - Bump dh version to 13.
   * Update symbols files - fix FTBFS with gcc-11. (Closes: #983974)
 
- -- Mateusz Łukasik <mati75@linuxmint.pl>  Wed, 13 Oct 2021 21:45:42 +0200
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Wed, 13 Oct 2021 21:07:07 +0200
 
 audacious (4.0.5-1) unstable; urgency=medium
 

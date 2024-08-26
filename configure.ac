@@ -6,13 +6,13 @@ dnl Initialize
 dnl ==========
 
 AC_PREREQ([2.59])
-AC_INIT([audacious], [4.0.5])
-AC_COPYRIGHT([Copyright (C) 2001-2020 Audacious developers and others])
+AC_INIT([audacious], [4.3.1])
+AC_COPYRIGHT([Copyright (C) 2001-2023 Audacious developers and others])
 
 AC_DEFINE_UNQUOTED(PACKAGE, "$PACKAGE_NAME", [Name of package])
 AC_DEFINE_UNQUOTED(VERSION, "$PACKAGE_VERSION", [Version number of package])
 
-COPYRIGHT="Copyright (C) 2001-2020 Audacious developers and others"
+COPYRIGHT="Copyright (C) 2001-2023 Audacious developers and others"
 AC_DEFINE_UNQUOTED(COPYRIGHT, "$COPYRIGHT", [Copyright])
 AC_SUBST(COPYRIGHT)
 
@@ -42,6 +42,7 @@ LIBS="$LIBS $LIBICONV"
 dnl gettext
 dnl =======
 AM_GNU_GETTEXT([external])
+AM_GNU_GETTEXT_VERSION(0.18.1)
 if test "$MSGFMT" = ":" ; then
     AC_MSG_ERROR([msgfmt was not found; have you installed gettext?])
 fi
@@ -90,6 +91,22 @@ fi
 
 AC_SUBST([VALGRIND_FRIENDLY])
 
+dnl libarchive support
+dnl ==================
+
+AC_ARG_ENABLE(libarchive,
+ AS_HELP_STRING(--enable-libarchive, [Enable libarchive support (default=disabled)]),
+ USE_LIBARCHIVE=$enableval, USE_LIBARCHIVE=no)
+
+if test $USE_LIBARCHIVE = yes ; then
+    PKG_CHECK_MODULES([LIBARCHIVE], [libarchive])
+    AC_DEFINE([USE_LIBARCHIVE], [1], [Define if libarchive support enabled])
+fi
+
+AC_SUBST(USE_LIBARCHIVE)
+AC_SUBST(LIBARCHIVE_CFLAGS)
+AC_SUBST(LIBARCHIVE_LIBS)
+
 dnl Paths
 dnl =====
 
@@ -134,5 +151,6 @@ echo ""
 echo "  D-Bus support:                          $USE_DBUS"
 echo "  GTK+ support:                           $USE_GTK"
 echo "  Qt support:                             $USE_QT"
+echo "  libarchive support:                     $USE_LIBARCHIVE"
 echo "  Valgrind analysis support:              $enable_valgrind"
 echo ""
