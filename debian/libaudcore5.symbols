@@ -1,446 +1,478 @@
 libaudcore.so.5 libaudcore5 #MINVER#
- (c++)"aud_resume()@Base" 3.8
- (c++)"int_to_str(int)@Base" 3.8
- (c++)"str_concat(std::initializer_list<char const*> const&)@Base" 3.8
- (c++)"str_printf(char const*, ...)@Base" 3.8
- (c++)"str_to_int(char const*)@Base" 3.8
- (c++)"aud_cleanup()@Base" 3.8
- (c++)"aud_get_int(char const*, char const*)@Base" 3.8
- (c++)"aud_get_str(char const*, char const*)@Base" 3.8
- (c++)"aud_set_int(char const*, char const*, int)@Base" 3.8
- (c++)"aud_set_str(char const*, char const*, char const*)@Base" 3.8
- (c++)"aud_ui_show(bool)@Base" 3.8
- (c++)"event_queue(char const*, void*, void (*)(void*))@Base" 3.8
- (c++)"str_compare(char const*, char const*)@Base" 3.8
- (c++)"str_convert(char const*, int, char const*, char const*)@Base" 3.8
- (c++)"str_to_utf8(StringBuf&&)@Base" 3.8
- (c++)"str_to_utf8(char const*, int)@Base" 3.8
- (c++)"str_tolower(char const*)@Base" 3.8
- (c++)"str_toupper(char const*)@Base" 3.9
- (c++|regex)"^str_vprintf\(char const\*, (__va_list_tag\*?|char\*|std::__va_list|void\*)\)@Base$" 3.9
- (c++|optional)"std::unique_lock<std::mutex>::unlock()@Base" 4.0.5
- (c++|optional)"std::_Function_base::~_Function_base()@Base" 4.0.5
- (c++|optional|regex)"std::once_flag::.*@Base" 4.0.5
- (c++)"strcmp_safe(char const*, char const*, int)@Base" 3.8
- (c++)"tiny_unlock(char*)@Base" 3.8
+ (c++)"ArchiveReader::ArchiveReader(VFSFile&&)@Base" 4.1
+ (c++)"ArchiveReader::ArchiveReader(VFSFile&&)@Base" 4.1
+ (c++)"ArchiveReader::open(char const*)@Base" 4.1
+ (c++)"ArchiveReader::read_file(char const*)@Base" 4.1
+ (c++)"ArchiveReader::read_folder()@Base" 4.1
  (c++)"aud_art_data(AudArtItem const*)@Base" 3.9
  (c++)"aud_art_file(AudArtItem const*)@Base" 3.9
- (c++)"aud_get_bool(char const*, char const*)@Base" 3.8
- (c++)"aud_get_path(AudPath)@Base" 3.8
- (c++)"aud_set_bool(char const*, char const*, bool)@Base" 3.8
- (c++)"audio_to_int(float const*, void*, int, int)@Base" 3.8
- (c++)"mainloop_run()@Base" 3.8
- (c++)"timer_remove(TimerRate, void (*)(void*), void*)@Base" 3.8
- (c++)"aud_art_unref(AudArtItem*)@Base" 3.9
- (c++)"aud_drct_play()@Base" 3.8
- (c++)"aud_drct_seek(int)@Base" 3.8
- (c++)"aud_drct_stop()@Base" 3.8
- (c++)"aud_init_i18n()@Base" 3.8
- (c++)"audio_amplify(float*, int, int, StereoVolume)@Base" 3.8
- (c++)"audio_amplify(float*, int, int, float const*)@Base" 3.8
- (c++)"double_to_str(double)@Base" 3.8
- (c++)"mainloop_quit()@Base" 3.8
- (c++)"str_calc_hash(char const*)@Base" 3.8
- (c++)"str_to_double(char const*)@Base" 3.8
- (c++)"str_to_locale(char const*, int)@Base" 3.8
- (c++)"strcmp_nocase(char const*, char const*, int)@Base" 3.8
- (c++)"strstr_nocase(char const*, char const*)@Base" 3.8
- (c++)"uri_construct(char const*, char const*)@Base" 3.8
- (c++)"aud_drct_pause()@Base" 3.8
- (c++)"aud_get_double(char const*, char const*)@Base" 3.8
- (c++)"aud_leak_check()@Base" 3.8
- (c++)"aud_set_double(char const*, char const*, double)@Base" 3.8
- (c++)"audio_from_int(void const*, int, float*, int)@Base" 3.8
- (c++)"filename_build(std::initializer_list<char const*> const&)@Base" 3.8
- (c++)"hook_associate(char const*, void (*)(void*, void*), void*)@Base" 3.8
- (c++)"str_insert_int(StringBuf&, int, int)@Base" 4.0
- (c++)"strlen_bounded(char const*, int)@Base" 3.8
- (c++)"tiny_lock_read(unsigned short*)@Base" 3.8
- (c++)"uri_get_scheme(char const*)@Base" 3.8
- (c++)"uri_to_display(char const*)@Base" 3.8
  (c++)"aud_art_request(char const*, int, bool*)@Base" 3.9
- (c++)"aud_drct_pl_add(char const*, int)@Base" 3.8
- (c++)"aud_eq_get_band(int)@Base" 3.8
- (c++)"aud_eq_set_band(int, double)@Base" 3.8
- (c++)"aud_history_add(char const*)@Base" 3.8
- (c++)"aud_history_get(int)@Base" 3.8
- (c++)"aud_plugin_list(PluginType)@Base" 3.8
- (c++)"aud_toggle_bool(char const*, char const*)@Base" 3.9
- (c++)"aud_ui_is_shown()@Base" 3.8
- (c++)"audio_interlace(void const* const*, int, int, void*, int)@Base" 3.8
- (c++)"audio_soft_clip(float*, int)@Base" 3.8
- (c++)"filename_expand(StringBuf&&)@Base" 3.8
- (c++)"filename_to_uri(char const*)@Base" 3.8
- (c++)"hook_dissociate(char const*, void (*)(void*, void*), void*)@Base" 3.8
- (c++|regex)"^str_format_time\((long|long long)\)@Base$" 3.8
- (c++)"str_from_locale(char const*, int)@Base" 3.8
- (c++)"tiny_lock_write(unsigned short*)@Base" 3.8
- (c++)"uri_deconstruct(char const*, char const*)@Base" 4.0
- (c++)"uri_to_filename(char const*, bool)@Base" 3.8
- (c++)"aud_drct_pl_next()@Base" 3.8
- (c++)"aud_drct_pl_open(char const*)@Base" 3.8
- (c++)"aud_drct_pl_prev()@Base" 3.8
- (c++)"aud_eq_get_bands(double*)@Base" 3.8
- (c++)"aud_eq_set_bands(double const*)@Base" 3.8
- (c++)"aud_get_instance()@Base" 3.8
- (c++)"aud_output_reset(OutputReset)@Base" 3.8
- (c++)"aud_set_instance(int)@Base" 3.8
- (c++)"int_array_to_str(int const*, int)@Base" 3.8
- (c++)"str_replace_char(char*, char, char)@Base" 3.8
- (c++)"str_to_int_array(char const*, int*, int)@Base" 3.8
- (c++)"str_tolower_utf8(char const*)@Base" 3.8
- (c++)"str_toupper_utf8(char const*)@Base" 3.9
- (c++)"tiny_unlock_read(unsigned short*)@Base" 3.8
- (c++)"aud_drct_get_info(int&, int&, int&)@Base" 3.8
- (c++)"aud_drct_get_time()@Base" 3.8
- (c++)"aud_file_read_tag(char const*, PluginHandle*, VFSFile&, Tuple&, Index<char>*, String*)@Base" 3.8
- (c++)"aud_history_clear()@Base" 4.0
- (c++)"aud_plugin_enable(PluginHandle*, bool)@Base" 3.8
- (c++)"aud_ui_show_error(char const*)@Base" 3.8
- (c++)"audio_deinterlace(void const*, int, int, void* const*, int)@Base" 3.8
- (c++)"filename_contract(StringBuf&&)@Base" 3.8
- (c++)"filename_get_base(char const*)@Base" 3.8
- (c++)"index_to_str_list(Index<String> const&, char const*)@Base" 3.8
- (c++)"str_append_printf(StringBuf&, char const*, ...)@Base" 4.0
- (c++)"str_insert_double(StringBuf&, int, double)@Base" 4.0
- (c++)"str_list_to_index(char const*, char const*)@Base" 3.8
- (c++)"tiny_unlock_write(unsigned short*)@Base" 3.8
- (c++)"uri_get_extension(char const*)@Base" 3.8
+ (c++)"aud_art_unref(AudArtItem*)@Base" 3.9
+ (c++)"aud_cleanup()@Base" 3.8
+ (c++)"aud_config_set_defaults(char const*, char const* const*)@Base" 3.8
  (c++)"aud_custom_infowin(char const*, PluginHandle*)@Base" 3.8
- (c++)"aud_drct_get_ready()@Base" 3.8
- (c++)"aud_drct_get_title()@Base" 3.8
- (c++)"aud_drct_get_tuple()@Base" 3.8
- (c++)"aud_visualizer_add(Visualizer*)@Base" 3.8
- (c++)"event_queue_cancel(char const*, void*)@Base" 3.8
- (c++)"filename_normalize(StringBuf&&)@Base" 3.8
- (c++|regex)"^str_append_vprintf\(StringBuf&, char const\*, (__va_list_tag\*?|char\*|std::__va_list|void\*)\)@Base" 4.0
- (c++)"str_decode_percent(char const*, int)@Base" 3.8
- (c++)"str_encode_percent(char const*, int)@Base" 3.8
- (c++)"strstr_nocase_utf8(char const*, char const*)@Base" 3.8
- (c++)"aud_drct_get_length()@Base" 3.8
- (c++)"aud_drct_get_paused()@Base" 3.8
- (c++)"aud_drct_get_volume()@Base" 3.8
- (c++)"aud_drct_play_pause()@Base" 3.8
- (c++)"aud_drct_set_volume(StereoVolume)@Base" 3.8
- (c++)"aud_eq_apply_preset(EqualizerPreset const&)@Base" 3.8
- (c++)"aud_eq_read_presets(char const*)@Base" 3.8
- (c++)"aud_plugin_get_name(PluginHandle*)@Base" 3.8
- (c++)"aud_plugin_get_type(PluginHandle*)@Base" 3.8
- (c++)"aud_plugin_menu_add(AudMenuID, void (*)(), char const*, char const*)@Base" 3.8
- (c++)"double_array_to_str(double const*, int)@Base" 3.8
- (c++)"filename_get_parent(char const*)@Base" 3.8
- (c++)"inifile_write_entry(VFSFile&, char const*, char const*)@Base" 3.8
- (c++)"str_compare_encoded(char const*, char const*)@Base" 3.8
- (c++)"str_to_double_array(char const*, double*, int)@Base" 3.8
- (c++)"aud_drct_get_playing()@Base" 3.8
- (c++)"aud_drct_pl_add_list(Index<PlaylistAddItem>&&, int)@Base" 3.8
- (c++)"aud_eq_update_preset(EqualizerPreset&)@Base" 3.8
- (c++)"aud_eq_write_presets(Index<EqualizerPreset> const&, char const*)@Base" 3.8
- (c++)"aud_file_write_tuple(char const*, PluginHandle*, Tuple const&)@Base" 3.8
- (c++)"aud_load_preset_file(EqualizerPreset&, VFSFile&)@Base" 3.8
- (c++)"aud_plugin_add_watch(PluginHandle*, bool (*)(PluginHandle*, void*), void*)@Base" 3.8
- (c++)"aud_plugin_by_header(void const*)@Base" 3.8
- (c++)"aud_plugin_has_about(PluginHandle*)@Base" 3.8
- (c++)"aud_save_preset_file(EqualizerPreset const&, VFSFile&)@Base" 3.8
- (c++)"uri_get_display_base(char const*)@Base" 4.0
- (c++)"aud_drct_get_filename()@Base" 3.8
- (c++)"aud_drct_get_position()@Base" 3.8
- (c++)"aud_drct_pl_open_list(Index<PlaylistAddItem>&&)@Base" 3.8
- (c++)"aud_drct_pl_open_temp(char const*)@Base" 3.8
- (c++)"aud_file_find_decoder(char const*, bool, VFSFile&, String*)@Base" 3.8
- (c++)"aud_get_headless_mode()@Base" 3.8
- (c++)"aud_get_mainloop_type()@Base" 3.8
- (c++)"aud_plugin_get_header(PluginHandle*)@Base" 3.8
- (c++)"aud_set_headless_mode(bool)@Base" 3.8
- (c++)"aud_set_mainloop_type(MainloopType)@Base" 3.8
- (c++)"aud_ui_startup_notify(char const*)@Base" 3.8
- (c++)"aud_visualizer_remove(Visualizer*)@Base" 3.8
- (c++)"inifile_write_heading(VFSFile&, char const*)@Base" 3.8
- (c++)"str_has_prefix_nocase(char const*, char const*)@Base" 3.8
- (c++)"str_has_suffix_nocase(char const*, char const*)@Base" 3.8
  (c++)"aud_drct_enable_record(bool)@Base" 3.8
  (c++)"aud_drct_get_ab_repeat(int&, int&)@Base" 3.8
- (c++)"aud_drct_pl_next_album()@Base" 4.0
- (c++)"aud_drct_pl_prev_album()@Base" 4.0
- (c++)"aud_drct_set_ab_repeat(int, int)@Base" 3.8
- (c++)"aud_plugin_get_current(PluginType)@Base" 3.8
- (c++)"aud_plugin_get_enabled(PluginHandle*)@Base" 3.8
- (c++)"aud_plugin_menu_remove(AudMenuID, void (*)())@Base" 3.8
- (c++)"aud_config_set_defaults(char const*, char const* const*)@Base" 3.8
- (c++)"aud_plugin_get_basename(PluginHandle*)@Base" 3.8
- (c++)"aud_plugin_remove_watch(PluginHandle*, bool (*)(PluginHandle*, void*), void*)@Base" 3.8
- (c++)"aud_plugin_send_message(PluginHandle*, char const*, void const*, int)@Base" 3.8
- (c++)"aud_ui_hide_filebrowser()@Base" 3.8
- (c++)"aud_ui_show_filebrowser(bool)@Base" 3.8
+ (c++)"aud_drct_get_filename()@Base" 3.8
+ (c++)"aud_drct_get_info(int&, int&, int&)@Base" 3.8
+ (c++)"aud_drct_get_length()@Base" 3.8
+ (c++)"aud_drct_get_paused()@Base" 3.8
+ (c++)"aud_drct_get_playing()@Base" 3.8
+ (c++)"aud_drct_get_position()@Base" 3.8
+ (c++)"aud_drct_get_ready()@Base" 3.8
+ (c++)"aud_drct_get_record_enabled()@Base" 3.8
+ (c++)"aud_drct_get_record_plugin()@Base" 3.8
+ (c++)"aud_drct_get_time()@Base" 3.8
+ (c++)"aud_drct_get_title()@Base" 3.8
+ (c++)"aud_drct_get_tuple()@Base" 3.8
+ (c++)"aud_drct_get_volume_balance()@Base" 3.8
+ (c++)"aud_drct_get_volume()@Base" 3.8
  (c++)"aud_drct_get_volume_main()@Base" 3.8
+ (c++)"aud_drct_pause()@Base" 3.8
+ (c++)"aud_drct_pl_add(char const*, int)@Base" 3.8
+ (c++)"aud_drct_pl_add_list(Index<PlaylistAddItem>&&, int)@Base" 3.8
+ (c++)"aud_drct_play()@Base" 3.8
+ (c++)"aud_drct_play_pause()@Base" 3.8
+ (c++)"aud_drct_pl_next_album()@Base" 4.0
+ (c++)"aud_drct_pl_next()@Base" 3.8
+ (c++)"aud_drct_pl_open(char const*)@Base" 3.8
+ (c++)"aud_drct_pl_open_list(Index<PlaylistAddItem>&&)@Base" 3.8
+ (c++)"aud_drct_pl_open_temp(char const*)@Base" 3.8
+ (c++)"aud_drct_pl_open_temp_list(Index<PlaylistAddItem>&&)@Base" 3.8
+ (c++)"aud_drct_pl_prev_album()@Base" 4.0
+ (c++)"aud_drct_pl_prev()@Base" 3.8
+ (c++)"aud_drct_seek(int)@Base" 3.8
+ (c++)"aud_drct_set_ab_repeat(int, int)@Base" 3.8
+ (c++)"aud_drct_set_volume_balance(int)@Base" 3.8
  (c++)"aud_drct_set_volume_main(int)@Base" 3.8
+ (c++)"aud_drct_set_volume(StereoVolume)@Base" 3.8
+ (c++)"aud_drct_stop()@Base" 3.8
+ (c++)"aud_eq_apply_preset(EqualizerPreset const&)@Base" 3.8
+ (c++)"aud_eq_get_band(int)@Base" 3.8
+ (c++)"aud_eq_get_bands(double*)@Base" 3.8
+ (c++)"aud_eq_read_presets(char const*)@Base" 3.8
+ (c++)"aud_eq_set_band(int, double)@Base" 3.8
+ (c++)"aud_eq_set_bands(double const*)@Base" 3.8
+ (c++)"aud_eq_update_preset(EqualizerPreset&)@Base" 3.8
+ (c++)"aud_eq_write_presets(Index<EqualizerPreset> const&, char const*)@Base" 3.8
  (c++)"aud_export_winamp_preset(EqualizerPreset const&, VFSFile&)@Base" 3.8
  (c++)"aud_file_can_write_tuple(char const*, PluginHandle*)@Base" 3.8
+ (c++)"aud_file_find_decoder(char const*, bool, VFSFile&, String*)@Base" 3.8
+ (c++)"aud_file_read_tag(char const*, PluginHandle*, VFSFile&, Tuple&, Index<char>*, String*)@Base" 3.8
+ (c++)"aud_file_write_tuple(char const*, PluginHandle*, Tuple const&)@Base" 3.8
+ (c++)"aud_get_bool(char const*, char const*)@Base" 3.8
+ (c++)"aud_get_double(char const*, char const*)@Base" 3.8
+ (c++)"aud_get_headless_mode()@Base" 3.8
+ (c++)"aud_get_instance()@Base" 3.8
+ (c++)"aud_get_int(char const*, char const*)@Base" 3.8
+ (c++)"aud_get_mainloop_type()@Base" 3.8
+ (c++)"aud_get_path(AudPath)@Base" 3.8
+ (c++)"aud_get_str(char const*, char const*)@Base" 3.8
+ (c++)"aud_history_add(char const*)@Base" 3.8
+ (c++)"aud_history_clear()@Base" 4.0
+ (c++)"aud_history_get(int)@Base" 3.8
+ (c++)"aud_import_winamp_presets(VFSFile&)@Base" 3.8
+ (c++)"aud_init()@Base" 3.8
+ (c++)"aud_init_i18n()@Base" 3.8
+ (c++)"audio_amplify(float*, int, int, float const*)@Base" 3.8
+ (c++)"audio_amplify(float*, int, int, StereoVolume)@Base" 3.8
+ (c++)"audio_deinterlace(void const*, int, int, void* const*, int)@Base" 3.8
+ (c++)"audio_from_int(void const*, int, float*, int)@Base" 3.8
+ (c++)"audio_interlace(void const* const*, int, int, void*, int)@Base" 3.8
+ (c++)"audio_soft_clip(float*, int)@Base" 3.8
+ (c++)"audio_to_int(float const*, void*, int, int)@Base" 3.8
+ (c++)"aud_leak_check()@Base" 3.8
+ (c++)"aud_load_preset_file(EqualizerPreset&, VFSFile&)@Base" 3.8
+ (c++)"audlog::get_level_name(audlog::Level)@Base" 3.8
+ (c++)"audlog::log(audlog::Level, char const*, int, char const*, char const*, ...)@Base" 3.8
+ (c++)"audlog::set_stderr_level(audlog::Level)@Base" 3.8
+ (c++)"audlog::subscribe(void (*)(audlog::Level, char const*, int, char const*, char const*), audlog::Level)@Base" 3.8
+ (c++)"audlog::unsubscribe(void (*)(audlog::Level, char const*, int, char const*, char const*))@Base" 3.8
+ (c++)"aud_output_reset(OutputReset)@Base" 3.8
+ (c++)"aud_plugin_add_watch(PluginHandle*, bool (*)(PluginHandle*, void*), void*)@Base" 3.8
+ (c++)"aud_plugin_by_header(void const*)@Base" 3.8
+ (c++)"aud_plugin_enable(PluginHandle*, bool)@Base" 3.8
+ (c++)"aud_plugin_get_basename(PluginHandle*)@Base" 3.8
+ (c++)"aud_plugin_get_current(PluginType)@Base" 3.8
+ (c++)"aud_plugin_get_enabled(PluginHandle*)@Base" 3.8
+ (c++)"aud_plugin_get_gtk_widget(PluginHandle*)@Base" 3.8
+ (c++)"aud_plugin_get_header(PluginHandle*)@Base" 3.8
+ (c++)"aud_plugin_get_name(PluginHandle*)@Base" 3.8
  (c++)"aud_plugin_get_qt_widget(PluginHandle*)@Base" 3.8
+ (c++)"aud_plugin_get_supported_mime_types()@Base" 4.0
+ (c++)"aud_plugin_get_type(PluginHandle*)@Base" 3.8
+ (c++)"aud_plugin_has_about(PluginHandle*)@Base" 3.8
  (c++)"aud_plugin_has_configure(PluginHandle*)@Base" 3.8
+ (c++)"aud_plugin_list(PluginType)@Base" 3.8
+ (c++)"aud_plugin_lookup_basename(char const*)@Base" 3.8
+ (c++)"aud_plugin_menu_add(AudMenuID, void (*)(), char const*, char const*)@Base" 3.8
+ (c++)"aud_plugin_menu_remove(AudMenuID, void (*)())@Base" 3.8
+ (c++)"aud_plugin_remove_watch(PluginHandle*, bool (*)(PluginHandle*, void*), void*)@Base" 3.8
+ (c++)"aud_plugin_send_message(PluginHandle*, char const*, void const*, int)@Base" 3.8
+ (c++)"aud_quit()@Base" 3.8
+ (c++)"aud_request_restart()@Base" 4.1
+ (c++)"aud_restart_requested()@Base" 4.1
+ (c++)"aud_resume()@Base" 3.8
+ (c++)"aud_run()@Base" 3.8
+ (c++)"aud_save_preset_file(EqualizerPreset const&, VFSFile&)@Base" 3.8
+ (c++)"aud_set_bool(char const*, char const*, bool)@Base" 3.8
+ (c++)"aud_set_double(char const*, char const*, double)@Base" 3.8
+ (c++)"aud_set_headless_mode(bool)@Base" 3.8
+ (c++)"aud_set_instance(int)@Base" 3.8
+ (c++)"aud_set_int(char const*, char const*, int)@Base" 3.8
+ (c++)"aud_set_mainloop_type(MainloopType)@Base" 3.8
+ (c++)"aud_set_str(char const*, char const*, char const*)@Base" 3.8
+ (c++)"aud::spinlock::lock()@Base" 4.1
+ (c++)"aud::spinlock_rw::lock_r()@Base" 4.1
+ (c++)"aud::spinlock_rw::lock_w()@Base" 4.1
+ (c++)"aud::spinlock_rw::unlock_r()@Base" 4.1
+ (c++)"aud::spinlock_rw::unlock_w()@Base" 4.1
+ (c++)"aud::spinlock::unlock()@Base" 4.1
+ (c++)"aud_toggle_bool(char const*, char const*)@Base" 3.9
  (c++)"aud_ui_hide_about_window()@Base" 3.8
+ (c++)"aud_ui_hide_filebrowser()@Base" 3.8
  (c++)"aud_ui_hide_jump_to_song()@Base" 3.8
  (c++)"aud_ui_hide_prefs_window()@Base" 3.8
+ (c++)"aud_ui_is_shown()@Base" 3.8
  (c++)"aud_ui_show_about_window()@Base" 3.8
+ (c++)"aud_ui_show(bool)@Base" 3.8
+ (c++)"aud_ui_show_error(char const*)@Base" 3.8
+ (c++)"aud_ui_show_filebrowser(bool)@Base" 3.8
  (c++)"aud_ui_show_jump_to_song()@Base" 3.8
  (c++)"aud_ui_show_prefs_window()@Base" 3.8
- (c++)"aud_import_winamp_presets(VFSFile&)@Base" 3.8
- (c++)"aud_plugin_get_gtk_widget(PluginHandle*)@Base" 3.8
- (c++)"aud_drct_get_record_plugin()@Base" 3.8
- (c++)"aud_drct_pl_open_temp_list(Index<PlaylistAddItem>&&)@Base" 3.8
- (c++)"aud_plugin_lookup_basename(char const*)@Base" 3.8
- (c++)"aud_drct_get_record_enabled()@Base" 3.8
- (c++)"aud_drct_get_volume_balance()@Base" 3.8
- (c++)"aud_drct_set_volume_balance(int)@Base" 3.8
- (c++)"vfs_async_file_get_contents(char const*, void (*)(char const*, Index<char> const&, void*), void*)@Base" 3.8
- (c++)"vfs_async_file_get_contents(char const*, std::function<void (char const*, Index<char> const&)>)@Base" 4.0
- (c++)"aud_plugin_get_supported_mime_types()@Base" 4.0
- (c++)"aud_run()@Base" 3.8
- (c++)"aud_init()@Base" 3.8
- (c++)"aud_quit()@Base" 3.8
- (c++)"str_copy(char const*, int)@Base" 3.8
+ (c++)"aud_ui_startup_notify(char const*)@Base" 3.8
+ (c++)"aud_visualizer_add(Visualizer*)@Base" 3.8
+ (c++)"aud_visualizer_remove(Visualizer*)@Base" 3.8
+ (c++)"DockablePlugin::get_gtk_widget()@Base" 3.8
+ (c++)"DockablePlugin::get_qt_widget()@Base" 3.8
+ (c++)"double_array_to_str(double const*, int)@Base" 3.8
+ (c++)"double_to_str(double)@Base" 3.8
+ (c++)"EffectPlugin::adjust_delay(int)@Base" 3.8
+ (c++)"EffectPlugin::finish(Index<float>&, bool)@Base" 3.8
+ (c++)"EffectPlugin::flush(bool)@Base" 3.8
+ (c++)"event_queue_cancel(char const*, void*)@Base" 3.8
+ (c++)"event_queue(char const*, void*, void (*)(void*))@Base" 3.8
+ (c++)"filename_build(std::initializer_list<char const*> const&)@Base" 3.8
+ (c++)"filename_contract(StringBuf&&)@Base" 3.8
+ (c++)"filename_expand(StringBuf&&)@Base" 3.8
+ (c++)"filename_get_base(char const*)@Base" 3.8
+ (c++)"filename_get_parent(char const*)@Base" 3.8
+ (c++)"filename_normalize(StringBuf&&)@Base" 3.8
+ (c++)"filename_to_uri(char const*)@Base" 3.8
+ (c++)"HashBase::add(HashBase::Node*, unsigned int)@Base" 3.8
+ (c++)"HashBase::iterate(bool (*)(HashBase::Node*, void*), void*)@Base" 3.8
+ (c++)"HashBase::lookup(bool (*)(HashBase::Node const*, void const*), void const*, unsigned int, HashBase::NodeLoc*) const@Base" 3.8
+ (c++)"HashBase::remove(HashBase::NodeLoc const&)@Base" 3.8
+ (c++)"hook_associate(char const*, void (*)(void*, void*), void*)@Base" 3.8
  (c++)"hook_call(char const*, void*)@Base" 3.8
- (c++)"timer_add(TimerRate, void (*)(void*), void*)@Base" 3.8
- (c++)"tiny_lock(char*)@Base" 3.8
- (c++)"uri_parse(char const*, char const**, char const**, char const**, int*)@Base" 3.8
- (c++)"QueuedFunc::inhibit_all()@Base" 4.0
- (c++)"QueuedFunc::stop()@Base" 3.8
- (c++)"QueuedFunc::queue(void (*)(void*), void*)@Base" 3.8
- (c++)"QueuedFunc::queue(int, void (*)(void*), void*)@Base" 3.8
- (c++)"QueuedFunc::start(int, void (*)(void*), void*)@Base" 3.8
- (c++)"Visualizer::render_freq(float const*)@Base" 3.8
- (c++)"Visualizer::render_mono_pcm(float const*)@Base" 3.8
- (c++)"Visualizer::render_multi_pcm(float const*, int)@Base" 3.8
- (c++)"Visualizer::compute_freq_band(float const*, float const*, int, int)@Base" 4.0
- (c++)"Visualizer::compute_log_xscale(float*, int)@Base" 4.0
+ (c++)"hook_dissociate(char const*, void (*)(void*, void*), void*)@Base" 3.8
  (c++)"IfacePlugin::startup_notify(char const*)@Base" 3.8
+ (c++)"IndexBase::bsearch(void const*, int (*)(void const*, void const*, void*), int, void*) const@Base" 3.8
+ (c++)"IndexBase::clear(void (*)(void*, int))@Base" 3.8
+ (c++)"IndexBase::erase(int, int, void (*)(void*, int), void (*)(void*, int))@Base" 3.8
+ (c++)"IndexBase::insert(int, int)@Base" 3.8
+ (c++)"IndexBase::insert(int, int, void (*)(void*, int))@Base" 3.8
+ (c++)"IndexBase::insert(void const*, int, int, void (*)(void const*, void*, int))@Base" 3.8
+ (c++)"IndexBase::move_from(IndexBase&, int, int, int, bool, bool, void (*)(void*, int), void (*)(void*, int))@Base" 3.8
+ (c++)"IndexBase::remove(int, int, void (*)(void*, int))@Base" 3.8
+ (c++)"IndexBase::shift(int, int, int, void (*)(void*, int), void (*)(void*, int))@Base" 3.8
+ (c++)"IndexBase::sort(int (*)(void const*, void const*, void*), int, void*)@Base" 3.8
+ (c++)"index_to_str_list(Index<String> const&, char const*)@Base" 3.8
+ (c++)"inifile_write_entry(VFSFile&, char const*, char const*)@Base" 3.8
+ (c++)"inifile_write_heading(VFSFile&, char const*)@Base" 3.8
+ (c++)"IniParser::parse(VFSFile&)@Base" 3.8
  (c++)"InputPlugin::check_seek()@Base" 3.8
  (c++)"InputPlugin::check_stop()@Base" 3.8
+ (c++)"InputPlugin::file_info_box(char const*, VFSFile&)@Base" 3.8
+ (c++)"InputPlugin::get_playback_tuple()@Base" 3.8
  (c++)"InputPlugin::open_audio(int, int, int)@Base" 3.8
+ (c++)"InputPlugin::set_playback_tuple(Tuple&&)@Base" 3.8
+ (c++)"InputPlugin::set_replay_gain(ReplayGainInfo const&)@Base" 3.8
+ (c++)"InputPlugin::set_stream_bitrate(int)@Base" 3.8
  (c++)"InputPlugin::write_audio(void const*, int)@Base" 3.8
  (c++)"InputPlugin::write_tuple(char const*, VFSFile&, Tuple const&)@Base" 3.8
- (c++)"InputPlugin::file_info_box(char const*, VFSFile&)@Base" 3.8
- (c++)"InputPlugin::set_replay_gain(ReplayGainInfo const&)@Base" 3.8
- (c++)"InputPlugin::get_playback_tuple()@Base" 3.8
- (c++)"InputPlugin::set_playback_tuple(Tuple&&)@Base" 3.8
- (c++)"InputPlugin::set_stream_bitrate(int)@Base" 3.8
+ (c++)"int_array_to_str(int const*, int)@Base" 3.8
+ (c++)"int_to_str(int)@Base" 3.8
+ (c++)"ListBase::clear(void (*)(ListNode*))@Base" 3.8
+ (c++)"ListBase::insert_after(ListNode*, ListNode*)@Base" 3.8
+ (c++)"ListBase::remove(ListNode*)@Base" 3.8
+ (c++)"mainloop_quit()@Base" 3.8
+ (c++)"mainloop_run()@Base" 3.8
+ (c++)"MultiHash::iterate(bool (*)(HashBase::Node*, void*), void*)@Base" 3.8
+ (c++)"MultiHash::iterate(bool (*)(HashBase::Node*, void*), void*, void (*)(void*), void*)@Base" 4.0
+ (c++)"MultiHash::lookup(void const*, unsigned int, HashBase::Node* (*)(void const*, void*), bool (*)(HashBase::Node*, void*), void*)@Base" 3.8
+ (c++|optional|regex)"std::once_flag::.*@Base" 4.0.5
+ (c++|optional)"std::_Function_base::~_Function_base()@Base" 4.0.5
+ (c++|optional)"std::unique_lock<std::mutex>::unlock()@Base" 4.0.5
+ (c++)"OutputPlugin::set_info(char const*, Tuple const&)@Base" 3.8
+ (c++)"Playlist::activate() const@Base" 3.9
+ (c++)"Playlist::active_playlist()@Base" 3.9
+ (c++)"Playlist::add_in_progress_any()@Base" 3.9
+ (c++)"Playlist::add_in_progress() const@Base" 3.9
+ (c++)"Playlist::blank_playlist()@Base" 3.9
+ (c++)"Playlist::by_index(int)@Base" 3.9
+ (c++)"Playlist::cache_selected() const@Base" 3.9
+ (c++)"Playlist::entry_decoder(int, Playlist::GetMode, String*) const@Base" 3.9
+ (c++)"Playlist::entry_filename(int) const@Base" 3.9
+ (c++)"Playlist::entry_selected(int) const@Base" 3.9
+ (c++)"Playlist::entry_tuple(int, Playlist::GetMode, String*) const@Base" 3.9
+ (c++)"PlaylistEx::stamp() const@Base" 3.9
+ (c++)"Playlist::filename_is_playlist(char const*)@Base" 3.9
+ (c++)"Playlist::get_filename() const@Base" 3.9
+ (c++)"Playlist::get_focus() const@Base" 3.9
+ (c++)"Playlist::get_position() const@Base" 3.9
+ (c++)"Playlist::get_title() const@Base" 3.9
+ (c++)"Playlist::index() const@Base" 3.9
+ (c++)"Playlist::insert_entry(int, char const*, Tuple&&, bool) const@Base" 3.9
+ (c++)"Playlist::insert_filtered(int, Index<PlaylistAddItem>&&, bool (*)(char const*, void*), void*, bool) const@Base" 3.9
+ (c++)"Playlist::insert_items(int, Index<PlaylistAddItem>&&, bool) const@Base" 3.9
+ (c++)"Playlist::insert_playlist(int)@Base" 3.9
+ (c++)"Playlist::n_entries() const@Base" 3.9
+ (c++)"Playlist::new_playlist()@Base" 3.9
+ (c++)"Playlist::next_album(bool) const@Base" 4.0
+ (c++)"Playlist::next_song(bool) const@Base" 3.9
+ (c++)"Playlist::n_playlists()@Base" 3.9
+ (c++)"Playlist::n_queued() const@Base" 3.9
+ (c++)"Playlist::n_selected(int, int) const@Base" 3.9
+ (c++)"Playlist::playing_playlist()@Base" 3.9
+ (c++)"PlaylistPlugin::save(char const*, VFSFile&, char const*, Index<PlaylistAddItem> const&)@Base" 3.8
+ (c++)"Playlist::prev_album() const@Base" 4.0
+ (c++)"Playlist::prev_song() const@Base" 3.9
+ (c++)"Playlist::process_pending_update()@Base" 4.0
+ (c++)"Playlist::queue_find_entry(int) const@Base" 3.9
+ (c++)"Playlist::queue_get_entry(int) const@Base" 3.9
+ (c++)"Playlist::queue_insert(int, int) const@Base" 3.9
+ (c++)"Playlist::queue_insert_selected(int) const@Base" 3.9
+ (c++)"Playlist::queue_remove(int, int) const@Base" 3.9
+ (c++)"Playlist::queue_remove_selected() const@Base" 3.9
+ (c++)"Playlist::randomize_order() const@Base" 3.9
+ (c++)"Playlist::randomize_selected() const@Base" 3.9
+ (c++)"Playlist::remove_duplicates(Playlist::SortType) const@Base" 3.9
+ (c++)"Playlist::remove_entries(int, int) const@Base" 3.9
+ (c++)"Playlist::remove_playlist() const@Base" 3.9
+ (c++)"Playlist::remove_selected() const@Base" 3.9
+ (c++)"Playlist::remove_unavailable() const@Base" 3.9
+ (c++)"Playlist::reorder_playlists(int, int, int)@Base" 3.9
+ (c++)"Playlist::rescan_all() const@Base" 3.9
+ (c++)"Playlist::rescan_file(char const*)@Base" 3.9
+ (c++)"Playlist::rescan_selected() const@Base" 3.9
+ (c++)"Playlist::reverse_order() const@Base" 3.9
+ (c++)"Playlist::reverse_selected() const@Base" 3.9
+ (c++)"Playlist::save_formats()@Base" 3.9
+ (c++)"Playlist::save_to_file(char const*, Playlist::GetMode) const@Base" 3.9
+ (c++)"Playlist::scan_in_progress_any()@Base" 3.9
+ (c++)"Playlist::scan_in_progress() const@Base" 3.9
+ (c++)"Playlist::select_all(bool) const@Base" 3.9
+ (c++)"Playlist::select_by_patterns(Tuple const&) const@Base" 3.9
+ (c++)"Playlist::selected_length_ms() const@Base" 3.9
+ (c++)"Playlist::select_entry(int, bool) const@Base" 3.9
+ (c++)"Playlist::set_filename(char const*) const@Base" 3.9
+ (c++)"Playlist::set_focus(int) const@Base" 3.9
+ (c++)"Playlist::set_position(int) const@Base" 3.9
+ (c++)"Playlist::set_title(char const*) const@Base" 3.9
+ (c++)"Playlist::shift_entries(int, int) const@Base" 3.9
+ (c++)"Playlist::sort_by_filename(int (*)(char const*, char const*)) const@Base" 3.9
+ (c++)"Playlist::sort_by_tuple(int (*)(Tuple const&, Tuple const&)) const@Base" 3.9
+ (c++)"Playlist::sort_entries(Playlist::SortType) const@Base" 3.9
+ (c++)"Playlist::sort_selected_by_filename(int (*)(char const*, char const*)) const@Base" 3.9
+ (c++)"Playlist::sort_selected_by_tuple(int (*)(Tuple const&, Tuple const&)) const@Base" 3.9
+ (c++)"Playlist::sort_selected(Playlist::SortType) const@Base" 3.9
+ (c++)"Playlist::start_playback(bool) const@Base" 3.9
+ (c++)"Playlist::temporary_playlist()@Base" 3.9
+ (c++)"Playlist::total_length_ms() const@Base" 3.9
+ (c++)"Playlist::update_detail() const@Base" 3.9
+ (c++)"Playlist::update_pending_any()@Base" 3.9
+ (c++)"Playlist::update_pending() const@Base" 3.9
+ (c++)"Plugin::cleanup()@Base" 3.8
+ (c++)"Plugin::init()@Base" 3.8
+ (c++)"Plugin::take_message(char const*, void const*, int)@Base" 3.8
+ (c++)"QueuedFunc::inhibit_all()@Base" 4.0
+ (c++)"QueuedFunc::queue(int, std::function<void ()>)@Base" 4.1
+ (c++)"QueuedFunc::queue(int, void (*)(void*), void*)@Base" 3.8
+ (c++)"QueuedFunc::queue(std::function<void ()>)@Base" 4.1
+ (c++)"QueuedFunc::queue(void (*)(void*), void*)@Base" 3.8
+ (c++)"QueuedFunc::start(int, std::function<void ()>)@Base" 4.1
+ (c++)"QueuedFunc::start(int, void (*)(void*), void*)@Base" 3.8
+ (c++)"QueuedFunc::stop()@Base" 3.8
+ (c++|regex)"^str_append_vprintf\(StringBuf&, char const\*, (__va_list_tag\*?|char\*|std::__va_list|void\*)\)@Base" 4.0
+ (c++|regex)"^str_format_time\((long|long long)\)@Base$" 3.8
+ (c++|regex)"^str_vprintf\(char const\*, (__va_list_tag\*?|char\*|std::__va_list|void\*)\)@Base$" 3.9
+ (c++|regex)"^VFSFile::copy_from\(VFSFile&, (long|long long)\)@Base$" 3.8
+ (c++|regex)"^VFSFile::fread\(void\*, (long|long long), (long|long long)\)@Base$" 3.8
+ (c++|regex)"^VFSFile::fseek\((long|long long), VFSSeekType\)@Base$" 3.8
+ (c++|regex)"^VFSFile::ftruncate\((long|long long)\)@Base$" 3.8
+ (c++|regex)"^VFSFile::fwrite\(void const\*, (long|long long), (long|long long)\)@Base$" 3.8
+ (c++|regex)"^VFSFile::write_file\(char const\*, void const\*, (long|long long)\)@Base$" 4.0
  (c++)"RingBufBase::add(int)@Base" 3.8
  (c++)"RingBufBase::alloc(int)@Base" 3.8
- (c++)"RingBufBase::remove(int)@Base" 3.8
  (c++)"RingBufBase::copy_in(void const*, int, void (*)(void const*, void*, int))@Base" 3.8
  (c++)"RingBufBase::destroy(void (*)(void*, int))@Base" 3.8
  (c++)"RingBufBase::discard(int, void (*)(void*, int))@Base" 3.8
- (c++)"RingBufBase::move_in(void*, int, void (*)(void*, int))@Base" 3.8
  (c++)"RingBufBase::move_in(IndexBase&, int, int)@Base" 3.8
- (c++)"RingBufBase::move_out(void*, int, void (*)(void*, int))@Base" 3.8
+ (c++)"RingBufBase::move_in(void*, int, void (*)(void*, int))@Base" 3.8
  (c++)"RingBufBase::move_out(IndexBase&, int, int)@Base" 3.8
- (c++)"EffectPlugin::adjust_delay(int)@Base" 3.8
- (c++)"EffectPlugin::flush(bool)@Base" 3.8
- (c++)"EffectPlugin::finish(Index<float>&, bool)@Base" 3.8
- (c++)"OutputPlugin::set_info(char const*, Tuple const&)@Base" 3.8
- (c++)"DockablePlugin::get_qt_widget()@Base" 3.8
- (c++)"DockablePlugin::get_gtk_widget()@Base" 3.8
- (c++)"PlaylistPlugin::save(char const*, VFSFile&, char const*, Index<PlaylistAddItem> const&)@Base" 3.8
- (c++)"TransportPlugin::read_folder(char const*, String&)@Base" 3.8
- (c++)"TransportPlugin::test_file(char const*, VFSFileTest, String&)@Base" 3.8
- (c++)"Tuple::set_format(char const*, int, int, int)@Base" 3.8
- (c++)"Tuple::set_filename(char const*)@Base" 3.8
- (c++)"Tuple::set_subtunes(short, short const*)@Base" 3.8
- (c++)"Tuple::field_by_name(char const*)@Base" 3.8
- (c++)"Tuple::field_get_name(Tuple::Field)@Base" 3.8
- (c++)"Tuple::field_get_type(Tuple::Field)@Base" 3.8
- (c++)"Tuple::generate_title()@Base" 3.8
- (c++)"Tuple::delete_fallbacks()@Base" 3.8
- (c++)"Tuple::fetch_stream_info(VFSFile&)@Base" 3.8
- (c++)"Tuple::generate_fallbacks()@Base" 3.8
- (c++)"Tuple::unset(Tuple::Field)@Base" 3.8
- (c++)"Tuple::set_int(Tuple::Field, int)@Base" 3.8
- (c++)"Tuple::set_str(Tuple::Field, char const*)@Base" 3.8
- (c++)"Tuple::set_gain(Tuple::Field, Tuple::Field, char const*)@Base" 3.8
- (c++)"Tuple::set_state(Tuple::State)@Base" 3.8
- (c++)"Tuple::~Tuple()@Base" 3.8
- (c++)"Tuple::~Tuple()@Base" 3.8
- (c++)"Plugin::take_message(char const*, void const*, int)@Base" 3.8
- (c++)"Plugin::init()@Base" 3.8
- (c++)"Plugin::cleanup()@Base" 3.8
- (c++)"String::raw_get(char const*)@Base" 3.8
- (c++)"String::raw_ref(char const*)@Base" 3.8
- (c++)"String::raw_hash(char const*)@Base" 3.8
- (c++)"String::raw_equal(char const*, char const*)@Base" 3.8
- (c++)"String::raw_unref(char*)@Base" 3.8
- (c++)"audlog::unsubscribe(void (*)(audlog::Level, char const*, int, char const*, char const*))@Base" 3.8
- (c++)"audlog::get_level_name(audlog::Level)@Base" 3.8
- (c++)"audlog::set_stderr_level(audlog::Level)@Base" 3.8
- (c++)"audlog::log(audlog::Level, char const*, int, char const*, char const*, ...)@Base" 3.8
- (c++)"audlog::subscribe(void (*)(audlog::Level, char const*, int, char const*, char const*), audlog::Level)@Base" 3.8
- (c++|regex)"^VFSFile::write_file\(char const\*, void const\*, (long|long long)\)@Base$" 4.0
- (c++)"VFSFile::read_folder(char const*, String&)@Base" 3.8
- (c++)"VFSFile::get_metadata(char const*)@Base" 3.8
- (c++)"VFSFile::replace_with(VFSFile&)@Base" 3.8
- (c++)"VFSFile::set_limit_to_buffer(bool)@Base" 3.8
- (c++)"VFSFile::supported_uri_schemes()@Base" 4.0
- (c++)"VFSFile::feof()@Base" 3.8
- (c++|regex)"^VFSFile::fread\(void\*, (long|long long), (long|long long)\)@Base$" 3.8
- (c++|regex)"^VFSFile::fseek\((long|long long), VFSSeekType\)@Base$" 3.8
- (c++)"VFSFile::fsize()@Base" 3.8
- (c++)"VFSFile::ftell()@Base" 3.8
- (c++)"VFSFile::fflush()@Base" 3.8
- (c++|regex)"^VFSFile::fwrite\(void const\*, (long|long long), (long|long long)\)@Base$" 3.8
- (c++)"VFSFile::tmpfile()@Base" 3.8
- (c++)"VFSFile::read_all()@Base" 3.8
- (c++|regex)"^VFSFile::copy_from\(VFSFile&, (long|long long)\)@Base$" 3.8
- (c++|regex)"^VFSFile::ftruncate\((long|long long)\)@Base$" 3.8
- (c++)"VFSFile::read_file(char const*, VFSReadOptions)@Base" 4.0
- (c++)"VFSFile::test_file(char const*, VFSFileTest)@Base" 3.8
- (c++)"VFSFile::test_file(char const*, VFSFileTest, String&)@Base" 3.8
- (c++)"VFSFile::VFSFile(char const*, char const*)@Base" 3.8
- (c++)"VFSFile::VFSFile(char const*, char const*)@Base" 3.8
- (c++)"VFSImpl::get_metadata(char const*)@Base" 3.8
- (c++)"HashBase::add(HashBase::Node*, unsigned int)@Base" 3.8
- (c++)"HashBase::remove(HashBase::NodeLoc const&)@Base" 3.8
- (c++)"HashBase::iterate(bool (*)(HashBase::Node*, void*), void*)@Base" 3.8
- (c++)"ListBase::insert_after(ListNode*, ListNode*)@Base" 3.8
- (c++)"ListBase::clear(void (*)(ListNode*))@Base" 3.8
- (c++)"ListBase::remove(ListNode*)@Base" 3.8
- (c++)"Playlist::n_playlists()@Base" 3.9
- (c++)"Playlist::rescan_file(char const*)@Base" 3.9
- (c++)"Playlist::new_playlist()@Base" 3.9
- (c++)"Playlist::save_formats()@Base" 3.9
- (c++)"Playlist::blank_playlist()@Base" 3.9
- (c++)"Playlist::active_playlist()@Base" 3.9
- (c++)"Playlist::insert_playlist(int)@Base" 3.9
- (c++)"Playlist::playing_playlist()@Base" 3.9
- (c++)"Playlist::reorder_playlists(int, int, int)@Base" 3.9
- (c++)"Playlist::temporary_playlist()@Base" 3.9
- (c++)"Playlist::update_pending_any()@Base" 3.9
- (c++)"Playlist::add_in_progress_any()@Base" 3.9
- (c++)"Playlist::filename_is_playlist(char const*)@Base" 3.9
- (c++)"Playlist::scan_in_progress_any()@Base" 3.9
- (c++)"Playlist::process_pending_update()@Base" 4.0
- (c++)"Playlist::by_index(int)@Base" 3.9
- (c++)"IndexBase::sort(int (*)(void const*, void const*, void*), int, void*)@Base" 3.8
- (c++)"IndexBase::clear(void (*)(void*, int))@Base" 3.8
- (c++)"IndexBase::erase(int, int, void (*)(void*, int), void (*)(void*, int))@Base" 3.8
- (c++)"IndexBase::shift(int, int, int, void (*)(void*, int), void (*)(void*, int))@Base" 3.8
- (c++)"IndexBase::insert(void const*, int, int, void (*)(void const*, void*, int))@Base" 3.8
- (c++)"IndexBase::insert(int, int)@Base" 3.8
- (c++)"IndexBase::insert(int, int, void (*)(void*, int))@Base" 3.8
- (c++)"IndexBase::remove(int, int, void (*)(void*, int))@Base" 3.8
- (c++)"IndexBase::move_from(IndexBase&, int, int, int, bool, bool, void (*)(void*, int), void (*)(void*, int))@Base" 3.8
- (c++)"IniParser::parse(VFSFile&)@Base" 3.8
- (c++)"MultiHash::lookup(void const*, unsigned int, HashBase::Node* (*)(void const*, void*), bool (*)(HashBase::Node*, void*), void*)@Base" 3.8
- (c++)"MultiHash::iterate(bool (*)(HashBase::Node*, void*), void*)@Base" 3.8
- (c++)"MultiHash::iterate(bool (*)(HashBase::Node*, void*), void*, void (*)(void*), void*)@Base" 4.0
- (c++)"StringBuf::steal(StringBuf&&)@Base" 3.8
- (c++)"StringBuf::insert(int, char const*, int)@Base" 3.8
- (c++)"StringBuf::remove(int, int)@Base" 3.8
- (c++)"StringBuf::resize(int)@Base" 3.8
- (c++)"StringBuf::settle()@Base" 4.0
- (c++)"StringBuf::combine(StringBuf&&)@Base" 3.8
- (c++)"StringBuf::~StringBuf()@Base" 3.8
- (c++)"StringBuf::~StringBuf()@Base" 3.8
- (c++)"PlaylistEx::stamp() const@Base" 3.9
- (c++)"WidgetConfig::get_string() const@Base" 3.8
- (c++)"WidgetConfig::set_string(char const*) const@Base" 3.8
- (c++)"WidgetConfig::get_int() const@Base" 3.8
- (c++)"WidgetConfig::set_int(int) const@Base" 3.8
- (c++)"WidgetConfig::get_bool() const@Base" 3.8
- (c++)"WidgetConfig::set_bool(bool) const@Base" 3.8
- (c++)"WidgetConfig::get_float() const@Base" 3.8
- (c++)"WidgetConfig::set_float(double) const@Base" 3.8
- (c++)"Tuple::get_n_subtunes() const@Base" 3.8
- (c++)"Tuple::get_value_type(Tuple::Field) const@Base" 3.8
- (c++)"Tuple::get_nth_subtune(short) const@Base" 3.8
- (c++)"Tuple::get_replay_gain() const@Base" 3.8
- (c++)"Tuple::has_replay_gain() const@Base" 4.0
- (c++)"Tuple::ref() const@Base" 3.8
- (c++)"Tuple::state() const@Base" 3.8
- (c++)"Tuple::get_int(Tuple::Field) const@Base" 3.8
- (c++)"Tuple::get_str(Tuple::Field) const@Base" 3.8
- (c++)"Tuple::operator==(Tuple const&) const@Base" 3.8
- (c++)"HashBase::lookup(bool (*)(HashBase::Node const*, void const*), void const*, unsigned int, HashBase::NodeLoc*) const@Base" 3.8
- (c++)"Playlist::n_selected(int, int) const@Base" 3.9
- (c++)"Playlist::next_album(bool) const@Base" 4.0
- (c++)"Playlist::prev_album() const@Base" 4.0
- (c++)"Playlist::rescan_all() const@Base" 3.9
- (c++)"Playlist::select_all(bool) const@Base" 3.9
- (c++)"Playlist::entry_tuple(int, Playlist::GetMode, String*) const@Base" 3.9
- (c++)"Playlist::get_filename() const@Base" 3.9
- (c++)"Playlist::get_position() const@Base" 3.9
- (c++)"Playlist::insert_entry(int, char const*, Tuple&&, bool) const@Base" 3.9
- (c++)"Playlist::insert_items(int, Index<PlaylistAddItem>&&, bool) const@Base" 3.9
- (c++)"Playlist::queue_insert(int, int) const@Base" 3.9
- (c++)"Playlist::queue_remove(int, int) const@Base" 3.9
- (c++)"Playlist::save_to_file(char const*, Playlist::GetMode) const@Base" 3.9
- (c++)"Playlist::select_entry(int, bool) const@Base" 3.9
- (c++)"Playlist::set_filename(char const*) const@Base" 3.9
- (c++)"Playlist::set_position(int) const@Base" 3.9
- (c++)"Playlist::sort_entries(Playlist::SortType) const@Base" 3.9
- (c++)"Playlist::entry_decoder(int, Playlist::GetMode, String*) const@Base" 3.9
- (c++)"Playlist::reverse_order() const@Base" 3.9
- (c++)"Playlist::shift_entries(int, int) const@Base" 3.9
- (c++)"Playlist::sort_by_tuple(int (*)(Tuple const&, Tuple const&)) const@Base" 3.9
- (c++)"Playlist::sort_selected(Playlist::SortType) const@Base" 3.9
- (c++)"Playlist::update_detail() const@Base" 3.9
- (c++)"Playlist::cache_selected() const@Base" 3.9
- (c++)"Playlist::entry_filename(int) const@Base" 3.9
- (c++)"Playlist::entry_selected(int) const@Base" 3.9
- (c++)"Playlist::remove_entries(int, int) const@Base" 3.9
- (c++)"Playlist::start_playback(bool) const@Base" 3.9
- (c++)"Playlist::update_pending() const@Base" 3.9
- (c++)"Playlist::add_in_progress() const@Base" 3.9
- (c++)"Playlist::insert_filtered(int, Index<PlaylistAddItem>&&, bool (*)(char const*, void*), void*, bool) const@Base" 3.9
- (c++)"Playlist::queue_get_entry(int) const@Base" 3.9
- (c++)"Playlist::randomize_order() const@Base" 3.9
- (c++)"Playlist::remove_playlist() const@Base" 3.9
- (c++)"Playlist::remove_selected() const@Base" 3.9
- (c++)"Playlist::rescan_selected() const@Base" 3.9
- (c++)"Playlist::total_length_ms() const@Base" 3.9
- (c++)"Playlist::queue_find_entry(int) const@Base" 3.9
- (c++)"Playlist::reverse_selected() const@Base" 3.9
- (c++)"Playlist::scan_in_progress() const@Base" 3.9
- (c++)"Playlist::sort_by_filename(int (*)(char const*, char const*)) const@Base" 3.9
- (c++)"Playlist::remove_duplicates(Playlist::SortType) const@Base" 3.9
- (c++)"Playlist::randomize_selected() const@Base" 3.9
- (c++)"Playlist::remove_unavailable() const@Base" 3.9
- (c++)"Playlist::select_by_patterns(Tuple const&) const@Base" 3.9
- (c++)"Playlist::selected_length_ms() const@Base" 3.9
- (c++)"Playlist::queue_insert_selected(int) const@Base" 3.9
- (c++)"Playlist::queue_remove_selected() const@Base" 3.9
- (c++)"Playlist::sort_selected_by_tuple(int (*)(Tuple const&, Tuple const&)) const@Base" 3.9
- (c++)"Playlist::sort_selected_by_filename(int (*)(char const*, char const*)) const@Base" 3.9
- (c++)"Playlist::index() const@Base" 3.9
- (c++)"Playlist::activate() const@Base" 3.9
- (c++)"Playlist::n_queued() const@Base" 3.9
- (c++)"Playlist::get_focus() const@Base" 3.9
- (c++)"Playlist::get_title() const@Base" 3.9
- (c++)"Playlist::n_entries() const@Base" 3.9
- (c++)"Playlist::next_song(bool) const@Base" 3.9
- (c++)"Playlist::prev_song() const@Base" 3.9
- (c++)"Playlist::set_focus(int) const@Base" 3.9
- (c++)"Playlist::set_title(char const*) const@Base" 3.9
- (c++)"IndexBase::bsearch(void const*, int (*)(void const*, void const*, void*), int, void*) const@Base" 3.8
+ (c++)"RingBufBase::move_out(void*, int, void (*)(void*, int))@Base" 3.8
+ (c++)"RingBufBase::remove(int)@Base" 3.8
+ (c++)"std::_Function_handler<void (), std::_Bind<void (*(void*))(void*)> >::_M_invoke(std::_Any_data const&)@Base" 4.1
+ (c++)"std::_Function_handler<void (), std::_Bind<void (*(void*))(void*)> >::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)@Base" 4.1
+ (c++)"std::_Function_handler<void (), void (*)()>::_M_invoke(std::_Any_data const&)@Base" 4.1
+ (c++)"std::_Function_handler<void (), void (*)()>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)@Base" 4.1
+ (c++)"std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)()> > >::_M_run()@Base" 4.0
  (c++)"std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(QueuedData*), QueuedData*> > >::_M_run()@Base" 4.0
  (c++)"std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(QueuedData*), QueuedData*> > >::~_State_impl()@Base" 4.0
  (c++)"std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(QueuedData*), QueuedData*> > >::~_State_impl()@Base" 4.0
  (c++)"std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(QueuedData*), QueuedData*> > >::~_State_impl()@Base" 4.0
- (c++)"std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)()> > >::_M_run()@Base" 4.0
  (c++)"std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)()> > >::~_State_impl()@Base" 4.0
  (c++)"std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)()> > >::~_State_impl()@Base" 4.0
  (c++)"std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)()> > >::~_State_impl()@Base" 4.0
  (c++)"std::thread::~thread()@Base" 4.0
  (c++)"std::thread::~thread()@Base" 4.0
- (c++)"typeinfo for TransportPlugin@Base" 3.8
- (c++)"typeinfo for Plugin@Base" 3.8
- (c++)"typeinfo for VFSImpl@Base" 3.8
+ (c++)"str_append_printf(StringBuf&, char const*, ...)@Base" 4.0
+ (c++)"str_calc_hash(char const*)@Base" 3.8
+ (c++)"strcmp_nocase(char const*, char const*, int)@Base" 3.8
+ (c++)"strcmp_safe(char const*, char const*, int)@Base" 3.8
+ (c++)"str_compare(char const*, char const*)@Base" 3.8
+ (c++)"str_compare_encoded(char const*, char const*)@Base" 3.8
+ (c++)"str_concat(std::initializer_list<char const*> const&)@Base" 3.8
+ (c++)"str_convert(char const*, int, char const*, char const*)@Base" 3.8
+ (c++)"str_copy(char const*, int)@Base" 3.8
+ (c++)"str_decode_percent(char const*, int)@Base" 3.8
+ (c++)"str_encode_percent(char const*, int)@Base" 3.8
+ (c++)"str_from_locale(char const*, int)@Base" 3.8
+ (c++)"str_has_prefix_nocase(char const*, char const*)@Base" 3.8
+ (c++)"str_has_suffix_nocase(char const*, char const*)@Base" 3.8
+ (c++)"StringBuf::combine(StringBuf&&)@Base" 3.8
+ (c++)"StringBuf::insert(int, char const*, int)@Base" 3.8
+ (c++)"StringBuf::remove(int, int)@Base" 3.8
+ (c++)"StringBuf::resize(int)@Base" 3.8
+ (c++)"StringBuf::settle()@Base" 4.0
+ (c++)"StringBuf::steal(StringBuf&&)@Base" 3.8
+ (c++)"StringBuf::~StringBuf()@Base" 3.8
+ (c++)"StringBuf::~StringBuf()@Base" 3.8
+ (c++)"String::raw_equal(char const*, char const*)@Base" 3.8
+ (c++)"String::raw_get(char const*)@Base" 3.8
+ (c++)"String::raw_hash(char const*)@Base" 3.8
+ (c++)"String::raw_ref(char const*)@Base" 3.8
+ (c++)"String::raw_unref(char*)@Base" 3.8
+ (c++)"str_insert_double(StringBuf&, int, double)@Base" 4.0
+ (c++)"str_insert_int(StringBuf&, int, int)@Base" 4.0
+ (c++)"strlen_bounded(char const*, int)@Base" 3.8
+ (c++)"str_list_to_index(char const*, char const*)@Base" 3.8
+ (c++)"str_printf(char const*, ...)@Base" 3.8
+ (c++)"str_replace_char(char*, char, char)@Base" 3.8
+ (c++)"strstr_nocase(char const*, char const*)@Base" 3.8
+ (c++)"strstr_nocase_utf8(char const*, char const*)@Base" 3.8
+ (c++)"str_to_double_array(char const*, double*, int)@Base" 3.8
+ (c++)"str_to_double(char const*)@Base" 3.8
+ (c++)"str_to_int_array(char const*, int*, int)@Base" 3.8
+ (c++)"str_to_int(char const*)@Base" 3.8
+ (c++)"str_to_locale(char const*, int)@Base" 3.8
+ (c++)"str_tolower(char const*)@Base" 3.8
+ (c++)"str_tolower_utf8(char const*)@Base" 3.8
+ (c++)"str_toupper(char const*)@Base" 3.9
+ (c++)"str_toupper_utf8(char const*)@Base" 3.9
+ (c++)"str_to_utf8(char const*, int)@Base" 3.8
+ (c++)"str_to_utf8(StringBuf&&)@Base" 3.8
+ (c++)"timer_add(TimerRate, void (*)(void*), void*)@Base" 3.8
+ (c++)"timer_remove(TimerRate, void (*)(void*), void*)@Base" 3.8
+ (c++)"tiny_lock(char*)@Base" 3.8
+ (c++)"tiny_lock_read(unsigned short*)@Base" 3.8
+ (c++)"tiny_lock_write(unsigned short*)@Base" 3.8
+ (c++)"tiny_unlock(char*)@Base" 3.8
+ (c++)"tiny_unlock_read(unsigned short*)@Base" 3.8
+ (c++)"tiny_unlock_write(unsigned short*)@Base" 3.8
+ (c++)"TransportPlugin::read_folder(char const*, String&)@Base" 3.8
+ (c++)"TransportPlugin::test_file(char const*, VFSFileTest, String&)@Base" 3.8
+ (c++)"Tuple::delete_fallbacks()@Base" 3.8
+ (c++)"Tuple::fetch_stream_info(VFSFile&)@Base" 3.8
+ (c++)"Tuple::field_by_name(char const*)@Base" 3.8
+ (c++)"Tuple::field_get_name(Tuple::Field)@Base" 3.8
+ (c++)"Tuple::field_get_type(Tuple::Field)@Base" 3.8
+ (c++)"Tuple::generate_fallbacks()@Base" 3.8
+ (c++)"Tuple::generate_title()@Base" 3.8
+ (c++)"Tuple::get_int(Tuple::Field) const@Base" 3.8
+ (c++)"Tuple::get_n_subtunes() const@Base" 3.8
+ (c++)"Tuple::get_nth_subtune(short) const@Base" 3.8
+ (c++)"Tuple::get_replay_gain() const@Base" 3.8
+ (c++)"Tuple::get_str(Tuple::Field) const@Base" 3.8
+ (c++)"Tuple::get_value_type(Tuple::Field) const@Base" 3.8
+ (c++)"Tuple::has_replay_gain() const@Base" 4.0
+ (c++)"Tuple::operator==(Tuple const&) const@Base" 3.8
+ (c++)"Tuple::ref() const@Base" 3.8
+ (c++)"Tuple::set_filename(char const*)@Base" 3.8
+ (c++)"Tuple::set_format(char const*, int, int, int)@Base" 3.8
+ (c++)"Tuple::set_gain(Tuple::Field, Tuple::Field, char const*)@Base" 3.8
+ (c++)"Tuple::set_int(Tuple::Field, int)@Base" 3.8
+ (c++)"Tuple::set_state(Tuple::State)@Base" 3.8
+ (c++)"Tuple::set_str(Tuple::Field, char const*)@Base" 3.8
+ (c++)"Tuple::set_subtunes(short, short const*)@Base" 3.8
+ (c++)"Tuple::state() const@Base" 3.8
+ (c++)"Tuple::~Tuple()@Base" 3.8
+ (c++)"Tuple::~Tuple()@Base" 3.8
+ (c++)"Tuple::unset(Tuple::Field)@Base" 3.8
  (c++)"typeinfo for IniParser@Base" 3.8
- (c++)"typeinfo for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(QueuedData*), QueuedData*> > >@Base" 4.0
+ (c++)"typeinfo for Plugin@Base" 3.8
+ (c++)"typeinfo for std::_Bind<void (*(void*))(void*)>@Base" 4.1
  (c++)"typeinfo for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)()> > >@Base" 4.0
- (c++)"typeinfo name for TransportPlugin@Base" 3.8
- (c++)"typeinfo name for Plugin@Base" 3.8
- (c++)"typeinfo name for VFSImpl@Base" 3.8
+ (c++)"typeinfo for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(QueuedData*), QueuedData*> > >@Base" 4.0
+ (c++)"typeinfo for std::_Weak_result_type_impl<void (*)(void*)>@Base" 4.1
+ (c++)"typeinfo for std::_Weak_result_type_memfun<void (*)(void*), false>@Base" 4.1
+ (c++)"typeinfo for std::_Weak_result_type<void (*)(void*)>@Base" 4.1
+ (c++)"typeinfo for TransportPlugin@Base" 3.8
+ (c++)"typeinfo for VFSImpl@Base" 3.8
+ (c++)"typeinfo for void ()@Base" 4.1
+ (c++)"typeinfo for void (*)()@Base" 4.1
  (c++)"typeinfo name for IniParser@Base" 3.8
- (c++)"typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(QueuedData*), QueuedData*> > >@Base" 4.0
+ (c++)"typeinfo name for Plugin@Base" 3.8
+ (c++)"typeinfo name for std::_Bind<void (*(void*))(void*)>@Base" 4.1
  (c++)"typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)()> > >@Base" 4.0
- (c++)"vtable for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(QueuedData*), QueuedData*> > >@Base" 4.0
+ (c++)"typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(QueuedData*), QueuedData*> > >@Base" 4.0
+ (c++)"typeinfo name for std::_Weak_result_type_impl<void (*)(void*)>@Base" 4.1
+ (c++)"typeinfo name for std::_Weak_result_type_memfun<void (*)(void*), false>@Base" 4.1
+ (c++)"typeinfo name for std::_Weak_result_type<void (*)(void*)>@Base" 4.1
+ (c++)"typeinfo name for TransportPlugin@Base" 3.8
+ (c++)"typeinfo name for VFSImpl@Base" 3.8
+ (c++)"typeinfo name for void ()@Base" 4.1
+ (c++)"typeinfo name for void (*)()@Base" 4.1
+ (c++)"uri_construct(char const*, char const*)@Base" 3.8
+ (c++)"uri_deconstruct(char const*, char const*)@Base" 4.0
+ (c++)"uri_get_display_base(char const*)@Base" 4.0
+ (c++)"uri_get_extension(char const*)@Base" 3.8
+ (c++)"uri_get_scheme(char const*)@Base" 3.8
+ (c++)"uri_parse(char const*, char const**, char const**, char const**, int*)@Base" 3.8
+ (c++)"uri_to_display(char const*)@Base" 3.8
+ (c++)"uri_to_filename(char const*, bool)@Base" 3.8
+ (c++)"vfs_async_file_get_contents(char const*, std::function<void (char const*, Index<char> const&)>)@Base" 4.0
+ (c++)"vfs_async_file_get_contents(char const*, void (*)(char const*, Index<char> const&, void*), void*)@Base" 3.8
+ (c++)"VFSFile::feof()@Base" 3.8
+ (c++)"VFSFile::fflush()@Base" 3.8
+ (c++)"VFSFile::fsize()@Base" 3.8
+ (c++)"VFSFile::ftell()@Base" 3.8
+ (c++)"VFSFile::get_metadata(char const*)@Base" 3.8
+ (c++)"VFSFile::read_all()@Base" 3.8
+ (c++)"VFSFile::read_file(char const*, VFSReadOptions)@Base" 4.0
+ (c++)"VFSFile::read_folder(char const*, String&)@Base" 3.8
+ (c++)"VFSFile::replace_with(VFSFile&)@Base" 3.8
+ (c++)"VFSFile::set_limit_to_buffer(bool)@Base" 3.8
+ (c++)"VFSFile::supported_uri_schemes()@Base" 4.0
+ (c++)"VFSFile::test_file(char const*, VFSFileTest)@Base" 3.8
+ (c++)"VFSFile::test_file(char const*, VFSFileTest, String&)@Base" 3.8
+ (c++)"VFSFile::tmpfile()@Base" 3.8
+ (c++)"VFSFile::VFSFile(char const*, char const*)@Base" 3.8
+ (c++)"VFSFile::VFSFile(char const*, char const*)@Base" 3.8
+ (c++)"VFSImpl::get_metadata(char const*)@Base" 3.8
+ (c++)"Visualizer::compute_freq_band(float const*, float const*, int, int)@Base" 4.0
+ (c++)"Visualizer::compute_log_xscale(float*, int)@Base" 4.0
+ (c++)"Visualizer::render_freq(float const*)@Base" 3.8
+ (c++)"Visualizer::render_mono_pcm(float const*)@Base" 3.8
+ (c++)"Visualizer::render_multi_pcm(float const*, int)@Base" 3.8
  (c++)"vtable for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)()> > >@Base" 4.0
+ (c++)"vtable for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(QueuedData*), QueuedData*> > >@Base" 4.0
+ (c++)"WidgetConfig::get_bool() const@Base" 3.8
+ (c++)"WidgetConfig::get_float() const@Base" 3.8
+ (c++)"WidgetConfig::get_int() const@Base" 3.8
+ (c++)"WidgetConfig::get_string() const@Base" 3.8
+ (c++)"WidgetConfig::set_bool(bool) const@Base" 3.8
+ (c++)"WidgetConfig::set_float(double) const@Base" 3.8
+ (c++)"WidgetConfig::set_int(int) const@Base" 3.8
+ (c++)"WidgetConfig::set_string(char const*) const@Base" 3.8

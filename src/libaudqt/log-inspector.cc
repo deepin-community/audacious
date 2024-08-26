@@ -209,6 +209,7 @@ private:
 LogEntryInspector::LogEntryInspector(QWidget * parent) : QDialog(parent)
 {
     setWindowTitle(_("Log Inspector"));
+    setWindowRole("log-inspector");
     setContentsMargins(margins.TwoPt);
 
     auto view = new QTreeView(this);
@@ -235,7 +236,7 @@ LogEntryInspector::LogEntryInspector(QWidget * parent) : QDialog(parent)
 
     auto btn1 = btnbox->addButton(translate_str(N_("Cl_ear")),
                                   QDialogButtonBox::ActionRole);
-    btn1->setIcon(audqt::get_icon("edit-clear-all"));
+    btn1->setIcon(QIcon::fromTheme("edit-clear-all"));
     btn1->setAutoDefault(false);
     QObject::connect(btn1, &QPushButton::clicked,
                      []() { s_model.get()->cleanup(); });

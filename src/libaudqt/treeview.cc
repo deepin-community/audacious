@@ -18,6 +18,7 @@
  */
 
 #include "treeview.h"
+#include "libaudqt.h"
 
 #include <QApplication>
 #include <QKeyEvent>
@@ -44,9 +45,7 @@ class TreeViewStyleOverrides : public QProxyStyle
 public:
     TreeViewStyleOverrides()
     {
-        // detect and respond to application-wide style change
-        connect(qApp->style(), &QObject::destroyed, this,
-                &TreeViewStyleOverrides::resetBaseStyle);
+        setup_proxy_style(this);
     }
 
     int styleHint(StyleHint hint, const QStyleOption * option = nullptr,
@@ -59,12 +58,23 @@ public:
         return QProxyStyle::styleHint(hint, option, widget, returnData);
     }
 
-private:
-    void resetBaseStyle()
+    void drawPrimitive(PrimitiveElement element, const QStyleOption * option,
+                       QPainter * painter,
+                       const QWidget * widget) const override
     {
-        setBaseStyle(nullptr);
-        connect(qApp->style(), &QObject::destroyed, this,
-                &TreeViewStyleOverrides::resetBaseStyle);
+        // extend the drag-and-drop indicator line across all columns
+        if (element == QStyle::PE_IndicatorItemViewItemDrop &&
+            !option->rect.isNull() && widget)
+        {
+            QStyleOption opt(*option);
+            opt.rect.setLeft(0);
+            opt.rect.setWidth(widget->width());
+
+            QProxyStyle::drawPrimitive(element, &opt, painter, widget);
+            return;
+        }
+
+        QProxyStyle::drawPrimitive(element, option, painter, widget);
     }
 };
 
@@ -74,7 +84,6 @@ EXPORT TreeView::TreeView(QWidget * parent) : QTreeView(parent)
     style->setParent(this);
     setStyle(style);
 
-    // activate() is perhaps a bit redundant with activated()
     connect(this, &QTreeView::activated, this, &TreeView::activate);
 }
 
@@ -109,7 +118,6 @@ EXPORT void TreeView::removeSelectedRows()
         m->removeRow(row);
 }
 
-// TODO: unnecessary, remove at next API break
 EXPORT void TreeView::mouseDoubleClickEvent(QMouseEvent * event)
 {
     QTreeView::mouseDoubleClickEvent(event);

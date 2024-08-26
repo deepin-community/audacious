@@ -1,37 +1,73 @@
 project('audacious', 'c', 'cpp',
-        version: '4.0-devel',
-        meson_version: '>= 0.50')
+        version: '4.3.1',
+        meson_version: '>= 0.46',
+        default_options: [
+          'c_std=gnu99',
+          'cpp_std=gnu++17',
+          'warning_level=1'
+        ])
 
 
-copyright = 'Copyright (C) 2001-2020 Audacious developers and others'
+copyright = 'Copyright (C) 2001-2023 Audacious developers and others'
 
 
-qt5 = import('qt5')
 gnome = import('gnome')
 
 
 glib_req = '>= 2.32'
 glib_dep = dependency('glib-2.0', version: glib_req, required: true)
 gmodule_dep = dependency('gmodule-2.0', version: glib_req, required: true)
+thread_dep = dependency('threads', required: true)
 
 
 if get_option('qt')
-  qt_req = '>= 5.2'
-  qt_dep = dependency('qt5', version: qt_req, required: true, modules: ['Core', 'Widgets', 'Gui'])
+  if get_option('qt6')
+    if meson.version().version_compare('>= 0.57')
+      qt = import('qt6')
+    else
+      error('Qt 6 is only supported since Meson 0.57.')
+    endif
+
+    qt_req = '>= 6.0'
+    qt_dep = dependency('qt6', version: qt_req, required: true, modules: ['Core', 'Widgets', 'Gui'])
+  else
+    qt = import('qt5')
+    qt_req = '>= 5.2'
+    qt_dep = dependency('qt5', version: qt_req, required: true, modules: ['Core', 'Widgets', 'Gui'])
+  endif
 endif
+
+
+if get_option('gtk')
+  if get_option('gtk3')
+    gtk_req = '>= 3.22'
+    gtk_dep = dependency('gtk+-3.0', version: gtk_req, required: true)
+  else
+    gtk_req = '>= 2.24'
+    gtk_dep = dependency('gtk+-2.0', version: gtk_req, required: true)
+  endif
+endif
+
+
+if get_option('libarchive')
+  libarchive_dep = dependency('libarchive', required: true)
+endif
+
+
+have_darwin = host_machine.system() == 'darwin'
+have_windows = host_machine.system() == 'windows'
 
 
 cc = meson.get_compiler('c')
 cxx = meson.get_compiler('cpp')
 
 
-if cc.get_id() == 'gcc' or cc.get_id() == 'clang'
+if cc.get_id() in ['gcc', 'clang']
   common_flags = [
-    '-pipe',
     '-ffast-math',
-    '-Wall',
     '-Wtype-limits',
-    '-Wno-stringop-truncation'
+    '-Wno-stringop-truncation',
+    '-fvisibility=hidden'
   ]
 
   cxx_flags = [
@@ -39,25 +75,16 @@ if cc.get_id() == 'gcc' or cc.get_id() == 'clang'
     '-Woverloaded-virtual'
   ]
 
-  check_cflags = ['-std=gnu99'] + common_flags
-  check_cxxflags = ['-std=gnu++11'] + common_flags + cxx_flags
+  check_cflags = common_flags
+  check_cxxflags = common_flags + cxx_flags
 
-  foreach arg : check_cflags
-    if cc.has_argument(arg)
-      add_project_arguments(arg, language: 'c')
-    endif
-  endforeach
-
-  foreach arg : check_cxxflags
-    if cxx.has_argument(arg)
-      add_project_arguments(arg, language: 'cpp')
-    endif
-  endforeach
+  add_project_arguments(cc.get_supported_arguments(check_cflags), language: 'c')
+  add_project_arguments(cxx.get_supported_arguments(check_cxxflags), language: 'cpp')
 endif
 
 
 conf = configuration_data()
-conf.set_quoted('BUILDSTAMP', '???')
+conf.set_quoted('BUILDSTAMP', get_option('buildstamp'))
 conf.set_quoted('COPYRIGHT', copyright)
 conf.set_quoted('PACKAGE', meson.project_name())
 conf.set_quoted('VERSION', meson.project_version())
@@ -71,21 +98,44 @@ endif
 
 
 # XXX - investigate to see if we can do better
-conf.set_quoted('PLUGIN_SUFFIX', '.so')
-if host_machine.system() == 'windows'
+if have_windows
   conf.set_quoted('PLUGIN_SUFFIX', '.dll')
-elif host_machine.system() == 'darwin'
+elif have_darwin
   conf.set_quoted('PLUGIN_SUFFIX', '.dylib')
+else
+  conf.set_quoted('PLUGIN_SUFFIX', '.so')
 endif
 
 
-if host_machine.system() == 'windows'
+if have_windows
   conf.set('EXPORT', '__declspec(dllexport)')
-  conf.set_quoted('PLUGIN_SUFFIX', '.dll')
-elif cc.get_id() == 'gcc' or cc.get_id() == 'clang'
-  add_project_arguments('-fvisibility=hidden', language: 'c')
-  add_project_arguments('-fvisibility=hidden', language: 'cpp')
+elif cxx.has_argument('-fvisibility=default')
   conf.set('EXPORT', '__attribute__((visibility("default")))')
+else
+  error('Could not define EXPORT keyword for public symbols.')
+endif
+
+
+if cxx.has_function('sigwait')
+  conf.set10('HAVE_SIGWAIT', true)
+endif
+
+
+if meson.version().version_compare('>= 0.59')
+  intl_dep = dependency('intl', required: false)
+  intl_found = intl_dep.found()
+else
+  if cxx.has_function('ngettext', prefix: '#include <libintl.h>')
+    intl_dep = dependency('', required: false)
+    intl_found = true
+  else
+    intl_dep = cxx.find_library('intl', required: false)
+    intl_found = intl_dep.found()
+  endif
+endif
+
+if intl_found
+  conf.set10('HAVE_GETTEXT', true)
 endif
 
 
@@ -121,6 +171,24 @@ if get_option('qt')
 endif
 
 
+if get_option('gtk')
+  conf.set10('USE_GTK', true)
+  if (get_option('gtk3'))
+    conf.set10('USE_GTK3', true)
+  endif
+endif
+
+
+if get_option('libarchive')
+  conf.set10('USE_LIBARCHIVE', true)
+endif
+
+
+if get_option('valgrind')
+  conf.set10('VALGRIND_FRIENDLY', true)
+endif
+
+
 subdir('src')
 subdir('po')
 subdir('man')
@@ -128,8 +196,6 @@ subdir('images')
 
 
 install_data('AUTHORS', 'COPYING')
-
-
 install_data('audacious.desktop', install_dir: install_desktoppath)
 
 
@@ -139,7 +205,7 @@ pkg = import('pkgconfig')
 # https://github.com/mesonbuild/meson/issues/5836,
 # use libaudcore_lib as base dependency here.
 pkg.generate(
-  libraries: ['-L${libdir} -laudcore'],
+  libraries: ['-L${libdir} -laudcore', intl_dep],
   variables: [
     'plugin_dir=${libdir}/audacious',
 
@@ -152,3 +218,24 @@ pkg.generate(
   name: 'audacious',
   url: 'https://audacious-media-player.org'
 )
+
+
+if meson.version().version_compare('>= 0.53')
+  summary({
+    'Prefix': get_option('prefix'),
+    'Bin dir': get_option('bindir'),
+    'Lib dir': get_option('libdir'),
+    'Data dir': get_option('datadir'),
+  }, section: 'Directories')
+
+  summary({
+    'D-Bus support': get_option('dbus'),
+    'Qt 5 support': get_option('qt') and not get_option('qt6'),
+    'Qt 6 support': get_option('qt6'),
+    'GTK2 support': get_option('gtk') and not get_option('gtk3'),
+    'GTK3 support': get_option('gtk3'),
+    'Libarchive support': get_option('libarchive'),
+    'Valgrind analysis support': get_option('valgrind'),
+    'Build stamp': get_option('buildstamp'),
+  }, section: 'Configuration')
+endif

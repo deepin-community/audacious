@@ -1,3 +1,6 @@
-usr/include
+usr/include/libaudcore usr/include/${DEB_HOST_MULTIARCH}
+usr/include/audacious
+usr/include/libaudgui
+usr/include/libaudqt
 usr/lib/*/*.so
 usr/lib/*/pkgconfig

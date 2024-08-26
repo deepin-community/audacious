@@ -5,14 +5,16 @@ Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Uploaders:
  Andrej Shadura <andrewsh@debian.org>,
  Mateusz Łukasik <mati75@linuxmint.pl>
-Build-Depends:
+Build-Depends: dpkg-dev (>= 1.22.5),
  debhelper-compat (= 13),
- imagemagick,
+ meson,
+ libarchive-dev,
  libglib2.0-dev,
- libgtk2.0-dev,
+ libgtk-3-dev,
  librsvg2-bin,
- qtbase5-dev
-Standards-Version: 4.6.0
+ qt6-base-dev
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
 Homepage: https://www.audacious-media-player.org/
 Vcs-Browser: https://salsa.debian.org/multimedia-team/audacious
 Vcs-Git: https://salsa.debian.org/multimedia-team/audacious.git
@@ -22,7 +24,6 @@ Architecture: any
 Depends:
  audacious-plugins (>= ${source:Upstream-Version}),
  default-dbus-session-bus | dbus-session-bus | dbus-x11,
- gtk2-engines-pixbuf,
  libaudcore5 (= ${binary:Version}),
  ${misc:Depends},
  ${shlibs:Depends}
@@ -58,8 +59,8 @@ Depends:
  libaudtag3 (= ${binary:Version}),
  libaudqt2 (= ${binary:Version}),
  libglib2.0-dev,
- libgtk2.0-dev,
- qtbase5-dev,
+ libgtk-3-dev,
+ qt6-base-dev,
  ${misc:Depends}
 Description: audacious development files
  Audacious is a fork of beep-media-player which supports Winamp skins
@@ -86,6 +87,9 @@ Description: audacious development files
  libaudacious was dropped in Audacious 1.4.
 
 Package: libaudcore5
+Provides: ${Provides}
+Replaces: libaudcore5
+Breaks: libaudcore5 (<< ${source:Version})
 Section: libs
 Architecture: any
 Multi-Arch: same
@@ -114,6 +118,9 @@ Description: audacious core engine library
  of Audacious.
 
 Package: libaudgui5
+Provides: ${Provides}
+Replaces: libaudgui5
+Breaks: libaudgui5 (<< ${source:Version})
 Section: libs
 Architecture: any
 Multi-Arch: same
@@ -141,6 +148,9 @@ Description: audacious media player (libaudgui shared library)
  This package provides the libaudgui shared library.
 
 Package: libaudtag3
+Provides: ${Provides}
+Replaces: libaudtag3
+Breaks: libaudtag3 (<< ${source:Version})
 Section: libs
 Architecture: any
 Multi-Arch: same
@@ -168,6 +178,9 @@ Description: audacious media player (libaudtag shared library)
  This package provides the libaudtag shared library.
 
 Package: libaudqt2
+Provides: ${Provides}
+Replaces: libaudqt2
+Breaks: libaudqt2 (<< ${source:Version})
 Section: libs
 Architecture: any
 Multi-Arch: same

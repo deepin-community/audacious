@@ -59,6 +59,7 @@ and license of each project can be found on the Internet.
     GDK-Pixbuf       http://developer.gnome.org/gdk-pixbuf
     ATK              http://developer.gnome.org/atk
     GTK+             http://www.gtk.org
+    Qt               http://www.qt.io
     libguess         http://atheme.org/projects/libguess.html
     libxml2          http://xmlsoft.org
     mpg123           http://mpg123.de
@@ -81,6 +82,8 @@ and license of each project can be found on the Internet.
     libmms           http://libmms.sourceforge.net
     sidplayfp        http://sidplay-residfp.sourceforge.net
     FluidSynth       http://fluidsynth.org
+    OpenMPT          http://openmpt.org
+    Opus             http://www.opus-codec.org
 
 If you are an author of one of these projects and do not wish your software
 included with Audacious in binary form, please contact us via the support forum:

@@ -7,7 +7,8 @@
 #   have been introduced, and then continue with 'make update-po' or
 #   'make update-pot' respectively.
 #
-LOCALES = ar.po \
+LOCALES = af.po \
+	  ar.po \
 	  be.po \
 	  bg.po \
 	  ca.po \
@@ -21,6 +22,8 @@ LOCALES = ar.po \
 	  es_MX.po \
 	  es.po \
 	  et.po \
+	  eu.po \
+	  fa_IR.po \
 	  fi.po \
 	  fr.po \
 	  gl.po \
@@ -37,15 +40,19 @@ LOCALES = ar.po \
 	  pl.po \
 	  pt_BR.po \
 	  pt_PT.po \
+	  ro.po \
 	  ru.po \
 	  si.po \
 	  sk.po \
+	  sl.po \
+	  sq.po \
 	  sr.po \
 	  sr_RS.po \
 	  sv.po \
 	  ta.po \
 	  tr.po \
 	  uk.po \
+	  uz.po \
 	  zh_CN.po \
 	  zh_TW.po
 

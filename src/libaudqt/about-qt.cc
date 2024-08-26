@@ -62,6 +62,7 @@ static QDialog * buildAboutWindow()
 
     auto window = new QDialog;
     window->setWindowTitle(_("About Audacious"));
+    window->setWindowRole("about");
 
     auto logo = new QLabel(window);
     int logo_size = audqt::to_native_dpi(400);
@@ -71,10 +72,14 @@ static QDialog * buildAboutWindow()
     auto text = new QLabel(about_text, window);
     text->setAlignment(Qt::AlignHCenter);
 
-    auto anchor = QString("<a href='%1'>%1</a>").arg(website);
+    auto anchor = QString("<a href=\"%1\">%1</a>").arg(website);
     auto link_label = new QLabel(anchor, window);
     link_label->setAlignment(Qt::AlignHCenter);
     link_label->setOpenExternalLinks(true);
+
+#ifdef Q_OS_MAC
+    link_label->setContentsMargins(0, 0, 0, audqt::sizes.EightPt);
+#endif
 
     auto layout = audqt::make_vbox(window);
     layout->addSpacing(audqt::sizes.EightPt);

@@ -27,10 +27,11 @@ void id3_associate_string (Tuple & tuple, Tuple::Field field, const char * data,
 void id3_associate_int (Tuple & tuple, Tuple::Field field, const char * data, int size);
 void id3_associate_length (Tuple & tuple, const char * data, int size);
 void id3_decode_genre (Tuple & tuple, const char * data, int size);
-void id3_decode_comment (Tuple & tuple, const char * data, int size);
+void id3_associate_memo (Tuple & tuple, Tuple::Field field, const char * data, int size);
 void id3_decode_rva (Tuple & tuple, const char * data, int size);
 void id3_decode_txxx (Tuple & tuple, const char * data, int size);
 
-Index<char> id3_decode_picture (const char * data, int size);
+Index<char> id3_decode_pic (const char * data, int size);
+Index<char> id3_decode_apic (const char * data, int size);
 
 #endif

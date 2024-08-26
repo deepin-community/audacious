@@ -101,12 +101,14 @@ AC_REQUIRE([AC_SYS_LARGEFILE])
 
 if test "x$GCC" = "xyes"; then
     CFLAGS="$CFLAGS -std=gnu99 -ffast-math -Wall -pipe"
-    if test "x$HAVE_DARWIN" = "xyes"; then
-        CXXFLAGS="$CXXFLAGS -std=gnu++11 -ffast-math -Wall -pipe"
-        LDFLAGS="$LDFLAGS"
-    else
-        CXXFLAGS="$CXXFLAGS -std=gnu++11 -ffast-math -Wall -pipe"
+    CXXFLAGS="$CXXFLAGS -ffast-math -Wall -pipe"
+
+    # use C++17 if possible (Qt 6 requires it)
+    AUD_CHECK_CXXFLAGS(-std=gnu++17)
+    if test "${CXXFLAGS%gnu++17}" = "$CXXFLAGS" ; then
+        CXXFLAGS="$CXXFLAGS -std=gnu++11"
     fi
+
     AUD_CHECK_CFLAGS(-Wtype-limits)
     AUD_CHECK_CFLAGS(-Wno-stringop-truncation)
     AUD_CHECK_CXXFLAGS(-Woverloaded-virtual)
@@ -165,7 +167,7 @@ AC_PATH_PROG([MV], [mv])
 AC_PATH_PROG([CP], [cp])
 AC_PATH_TOOL([AR], [ar])
 AC_PATH_TOOL([RANLIB], [ranlib])
-AC_PATH_TOOL([WINDRES], [windres])
+AC_PATH_TOOL([RC], [windres])
 
 dnl Check for POSIX threads
 dnl =======================
@@ -182,11 +184,23 @@ AC_DEFINE([GLIB_VERSION_MIN_REQUIRED], [GLIB_VERSION_2_32], [target GLib 2.32])
 dnl GTK+ support
 dnl =============
 
-AC_ARG_ENABLE(gtk,
- AS_HELP_STRING(--enable-gtk, [Enable GTK+ support (default=disabled)]),
- USE_GTK=$enableval, USE_GTK=no)
+AC_ARG_ENABLE(gtk3,
+ AS_HELP_STRING(--enable-gtk3, [Use GTK3 instead of GTK2 (default=disabled)]),
+ USE_GTK3=$enableval, USE_GTK3=no)
 
-if test $USE_GTK = yes ; then
+if test $USE_GTK3 = yes ; then
+    PKG_CHECK_MODULES(GTK, gtk+-3.0 >= 3.22)
+    AC_DEFINE(USE_GTK, 1, [Define if GTK+ support enabled])
+    AC_DEFINE(USE_GTK3, 1, [Define if GTK3+ support enabled])
+fi
+
+AC_SUBST(USE_GTK3)
+
+AC_ARG_ENABLE(gtk,
+ AS_HELP_STRING(--disable-gtk, [Disable GTK+ support (default=enabled)]),
+ USE_GTK=$enableval, USE_GTK=yes)
+
+if test $USE_GTK = yes -a $USE_GTK3 = no ; then
     PKG_CHECK_MODULES(GTK, gtk+-2.0 >= 2.24)
     AC_DEFINE([USE_GTK], [1], [Define if GTK+ support enabled])
 fi
@@ -220,7 +234,6 @@ if test $USE_QT = yes ; then
     PKG_CHECK_VAR([QTBINPATH], [Qt5Core >= 5.2], [host_bins])
     PKG_CHECK_MODULES([QT], [Qt5Core Qt5Gui Qt5Widgets >= 5.2])
     AC_DEFINE([USE_QT], [1], [Define if Qt support enabled])
-    AC_DEFINE([QT_NO_DEPRECATED_WARNINGS], [1], [Qt 6 is not supported yet])
 
     # needed if Qt was built with -reduce-relocations
     QTCORE_CFLAGS="$QTCORE_CFLAGS -fPIC"
