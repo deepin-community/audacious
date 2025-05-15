@@ -1,7 +1,7 @@
 /*
  * id3v22.c
  * Copyright 2009-2014 Paula Stanciu, Tony Vroon, John Lindgren,
- *                     and Ariadne Conill
+ *                     and William Pitcock
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -45,11 +45,9 @@ enum
     ID3_GENRE,
     ID3_COMMENT,
     ID3_ENCODER,
-    ID3_PUBLISHER,
     ID3_TXX,
     ID3_RVA,
     ID3_PIC,
-    ID3_LYRICS,
     ID3_TAGS_NO
 };
 
@@ -67,16 +65,14 @@ static const char * id3_frames[ID3_TAGS_NO] = {
     "TCO",
     "COM",
     "TSS",
-    "TPB",
     "TXX",
     "RVA",
-    "PIC",
-    "LYR"
+    "PIC"
 };
 
 #pragma pack(push) /* must be byte-aligned */
 #pragma pack(1)
-struct ID3v22Header {
+struct ID3v2Header {
     char magic[3];
     unsigned char version;
     unsigned char revision;
@@ -84,7 +80,7 @@ struct ID3v22Header {
     uint32_t size;
 };
 
-struct ID3v22FrameHeader {
+struct ID3v2FrameHeader {
     char key[3];
     unsigned char size[3];
 };
@@ -99,7 +95,7 @@ struct GenericFrame : public Index<char> {
 
 namespace audtag {
 
-static bool validate_header (ID3v22Header * header)
+static bool validate_header (ID3v2Header * header)
 {
     if (memcmp (header->magic, "ID3", 3))
         return false;
@@ -109,7 +105,7 @@ static bool validate_header (ID3v22Header * header)
 
     header->size = unsyncsafe32 (FROM_BE32 (header->size));
 
-    AUDDBG ("Found ID3v2.2 header:\n");
+    AUDDBG ("Found ID3v2 header:\n");
     AUDDBG (" magic = %.3s\n", header->magic);
     AUDDBG (" version = %d\n", (int) header->version);
     AUDDBG (" revision = %d\n", (int) header->revision);
@@ -121,20 +117,20 @@ static bool validate_header (ID3v22Header * header)
 static bool read_header (VFSFile & handle, int * version, bool *
  syncsafe, int64_t * offset, int * header_size, int * data_size)
 {
-    ID3v22Header header;
+    ID3v2Header header;
 
     if (handle.fseek (0, VFS_SEEK_SET))
         return false;
 
-    if (handle.fread (& header, 1, sizeof (ID3v22Header)) != sizeof
-     (ID3v22Header))
+    if (handle.fread (& header, 1, sizeof (ID3v2Header)) != sizeof
+     (ID3v2Header))
         return false;
 
     if (validate_header (& header))
     {
         * offset = 0;
         * version = header.version;
-        * header_size = sizeof (ID3v22Header);
+        * header_size = sizeof (ID3v2Header);
         * data_size = header.size;
     }
     else
@@ -151,14 +147,14 @@ static bool read_header (VFSFile & handle, int * version, bool *
 static bool read_frame (VFSFile & handle, int max_size, int version,
  bool syncsafe, int * frame_size, GenericFrame & frame)
 {
-    ID3v22FrameHeader header;
+    ID3v2FrameHeader header;
     uint32_t hdrsz = 0;
 
-    if ((max_size -= sizeof (ID3v22FrameHeader)) < 0)
+    if ((max_size -= sizeof (ID3v2FrameHeader)) < 0)
         return false;
 
-    if (handle.fread (& header, 1, sizeof (ID3v22FrameHeader)) != sizeof
-     (ID3v22FrameHeader))
+    if (handle.fread (& header, 1, sizeof (ID3v2FrameHeader)) != sizeof
+     (ID3v2FrameHeader))
         return false;
 
     if (! header.key[0]) /* padding */
@@ -177,7 +173,7 @@ static bool read_frame (VFSFile & handle, int max_size, int version,
     AUDDBG (" key = %.3s\n", header.key);
     AUDDBG (" size = %d\n", (int) hdrsz);
 
-    * frame_size = sizeof (ID3v22FrameHeader) + hdrsz;
+    * frame_size = sizeof (ID3v2FrameHeader) + hdrsz;
 
     frame.key = String (str_copy (header.key, 3));
     frame.clear ();
@@ -235,7 +231,7 @@ bool ID3v22TagModule::read_tag (VFSFile & handle, Tuple & tuple, Index<char> * i
 
         if (! read_frame (handle, data_size - pos, version, syncsafe, & frame_size, frame))
         {
-            AUDDBG ("read_frame failed at pos %i\n", pos);
+            AUDDBG("read_frame failed at pos %i\n", pos);
             break;
         }
 
@@ -274,21 +270,15 @@ bool ID3v22TagModule::read_tag (VFSFile & handle, Tuple & tuple, Index<char> * i
           case ID3_GENRE:
             id3_decode_genre (tuple, & frame[0], frame.len ());
             break;
-          case ID3_PUBLISHER:
-            id3_associate_string (tuple, Tuple::Publisher, & frame[0], frame.len ());
-            break;
           case ID3_COMMENT:
-            id3_associate_memo (tuple, Tuple::Comment, & frame[0], frame.len ());
+            id3_decode_comment (tuple, & frame[0], frame.len ());
             break;
           case ID3_RVA:
             id3_decode_rva (tuple, & frame[0], frame.len ());
             break;
           case ID3_PIC:
             if (image)
-                * image = id3_decode_pic (& frame[0], frame.len ());
-            break;
-          case ID3_LYRICS:
-            id3_associate_memo (tuple, Tuple::Lyrics, & frame[0], frame.len ());
+                * image = id3_decode_picture (& frame[0], frame.len ());
             break;
           default:
             AUDDBG ("Ignoring unsupported ID3 frame %s.\n", (const char *) frame.key);

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if ! test -e .git
+if ! test -d .git
 then
 	echo This script must be run in a Git repository
 	exit 1
@@ -20,7 +20,7 @@ git archive --format=tar --prefix=$RELEASENAME/ HEAD | tar x || exit 1
 echo "Running autoreconf ..."
 cd $RELEASENAME || exit 1
 autoreconf || exit 1
-rm -rf .gitignore aclocal.m4 autom4te.cache
+rm -rf .gitignore .hgignore aclocal.m4 autom4te.cache
 
 echo "Building $RELEASENAME.tar.bz2 ..."
 cd .. || exit 1

@@ -4,10 +4,10 @@ Source: https://audacious-media-player.org/
 
 Files: *
 Copyright:
- 2005-2020 Audacious Development Team:
+ 2005-2018 Audacious Development Team:
            John Lindgren <john@jlindgren.net>,
            Michał Lipski,
-           Ariadne Conill <ariadne@dereferenced.org>,
+           William Pitcock <nenolod@nenolod.net>,
            George Averill <nhjm449@gmail.com>,
            René Bertin,
            Christian Birchinger,
@@ -31,18 +31,13 @@ License: BSD-2-clause
 
 Files: buildsys.mk.in
 Copyright: 2007—2017 Jonathan Schleifer <js@heap.zone>
-License: ISC
-
-Files: contrib/audacious.appdata.xml
-Copyright: 2015-2020 Audacious Development Team
-License: CC0
 
 Files: src/libaudtag/*
 Copyright:
  2009-2010, Paula Stanciu,
             John Lindgren,
             Tony Vroon,
-            Ariadne Conill,
+            William Pitcock,
             Mikael Magnusson,
             Michał Lipski
 License: BSD-2-clause
@@ -91,23 +86,16 @@ License: BSD-2-clause
 Files: debian/*
 Copyright:
  2006—2010 Adam Cécile (Le_Vert) <gandalf@le-vert.net>
- 2008—2009 Ariadne Conill <ariadne@dereferenced.org>
+ 2008—2009 William Pitcock <nenolod@sacredspiral.co.uk>
  2010 Chris Taylor <ctaylor@debian.org>
  2010 Benjamin Drung <bdrung@ubuntu.com>
  2012—2014 Alessio Treglia <alessio@debian.org>
  2014, 2015 Sebastian Ramacher <sebastian@ramacher.at>
- 2014, 2016, 2018, 2020 Andrej Shadura <andrewsh@debian.org>
+ 2014, 2016 Andrej Shadura <andrewsh@debian.org>
  2015—2017 Mateusz Łukasik <mati75@linuxmint.pl>
  2016, 2017 Nicholas D Steeves <nsteeves@gmail.com>
  2017 Mattia Rizzolo <mattia@debian.org>
 License: BSD-2-clause
-
-Files:
- src/libguess/guess.scm
- src/libguess/guess_impl.c
- src/libguess/libguess.h
-Copyright: 2000-2003, Shiro Kawai
-License: BSD-3-clause
 
 License: BSD-2-clause
  Redistribution and use in source and binary forms, with or without
@@ -124,6 +112,10 @@ License: BSD-2-clause
  implied. In no event shall the authors be liable for any damages arising from
  the use of this software.
 
+Files: src/libguess/guess.scm
+ src/libguess/guess_impl.c
+ src/libguess/libguess.h
+Copyright: 2000-2003, Shiro Kawai
 License: BSD-3-clause
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions
@@ -152,23 +144,3 @@ License: BSD-3-clause
  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-License: CC0
- On Debian systems, the complete text of the CC0 1.0 Universal
- license can be found in ‘/usr/share/common-licenses/CC0-1.0’.
-
-License: ISC
- Permission to use, copy, modify, and/or distribute this software for any
- purpose with or without fee is hereby granted, provided that the above
- copyright notice and this permission notice is present in all copies.
- .
- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
- AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
- ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
- LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
- CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
- SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
- INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
- CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
- ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
- POSSIBILITY OF SUCH DAMAGE.

@@ -1,6 +1,6 @@
 /*
  * vfs_async.cc
- * Copyright 2010-2014 Ariadne Conill and John Lindgren
+ * Copyright 2010-2014 William Pitcock and John Lindgren
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -17,73 +17,75 @@
  * the use of this software.
  */
 
-#include "vfs_async.h"
+#include <pthread.h>
+
 #include "list.h"
 #include "mainloop.h"
-#include "threads.h"
 #include "vfs.h"
+#include "vfs_async.h"
 
 struct QueuedData : public ListNode
 {
     const String filename;
-    const VFSConsumer2 cons_f;
+    const VFSConsumer cons_f;
+    void * const user;
 
-    std::thread thread;
+    pthread_t thread;
+
     Index<char> buf;
 
-    QueuedData(const char * filename, VFSConsumer2 cons_f)
-        : filename(filename), cons_f(cons_f)
-    {
-    }
+    QueuedData (const char * filename, VFSConsumer cons_f, void * user) :
+        filename (filename),
+        cons_f (cons_f),
+        user (user) {}
 };
 
 static QueuedFunc queued_func;
 static List<QueuedData> queue;
-static aud::mutex mutex;
+static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
-static void send_data()
+static void send_data (void *)
 {
-    auto mh = mutex.take();
+    pthread_mutex_lock (& mutex);
 
     QueuedData * data;
-    while ((data = queue.head()))
+    while ((data = queue.head ()))
     {
-        queue.remove(data);
+        queue.remove (data);
 
-        mh.unlock();
+        pthread_mutex_unlock (& mutex);
 
-        data->thread.join();
-        data->cons_f(data->filename, data->buf);
+        pthread_join (data->thread, nullptr);
+        data->cons_f (data->filename, data->buf, data->user);
         delete data;
 
-        mh.lock();
+        pthread_mutex_lock (& mutex);
     }
+
+    pthread_mutex_unlock (& mutex);
 }
 
-static void read_worker(QueuedData * data)
+static void * read_worker (void * data0)
 {
-    VFSFile file(data->filename, "r");
+    auto data = (QueuedData *) data0;
+
+    VFSFile file (data->filename, "r");
     if (file)
-        data->buf = file.read_all();
+        data->buf = file.read_all ();
 
-    auto mh = mutex.take();
+    pthread_mutex_lock (& mutex);
 
-    if (!queue.head())
-        queued_func.queue(send_data);
+    if (! queue.head ())
+        queued_func.queue (send_data, nullptr);
 
-    queue.append(data);
+    queue.append (data);
+
+    pthread_mutex_unlock (& mutex);
+    return nullptr;
 }
 
-EXPORT void vfs_async_file_get_contents(const char * filename,
-                                        VFSConsumer2 cons_f)
+EXPORT void vfs_async_file_get_contents (const char * filename, VFSConsumer cons_f, void * user)
 {
-    auto data = new QueuedData(filename, cons_f);
-    data->thread = std::thread(read_worker, data);
-}
-
-EXPORT void vfs_async_file_get_contents(const char * filename,
-                                        VFSConsumer cons_f, void * user)
-{
-    using namespace std::placeholders;
-    vfs_async_file_get_contents(filename, std::bind(cons_f, _1, _2, user));
+    auto data = new QueuedData (filename, cons_f, user);
+    pthread_create (& data->thread, nullptr, read_worker, data);
 }

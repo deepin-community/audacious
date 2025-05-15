@@ -25,16 +25,22 @@
 /* dbus-server.c */
 #ifdef USE_DBUS
 
-StringBuf dbus_server_name();
-bool dbus_server_init();
-void dbus_server_cleanup();
+enum class StartupType {
+    Server,
+    Client,
+    Unknown
+};
+
+StringBuf dbus_server_name ();
+StartupType dbus_server_init ();
+void dbus_server_cleanup ();
 
 #endif
 
 /* signals.c */
 #ifdef HAVE_SIGWAIT
-void signals_init_one();
-void signals_init_two();
+void signals_init_one ();
+void signals_init_two ();
 #endif
 
 #endif

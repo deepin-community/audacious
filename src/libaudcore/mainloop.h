@@ -24,52 +24,46 @@
 #ifndef LIBAUDCORE_MAINLOOP_H
 #define LIBAUDCORE_MAINLOOP_H
 
-#include <functional>
-
 class QueuedFunc
 {
 public:
-    typedef std::function<void()> Func2;
-    typedef void (*Func)(void * data);
+    typedef void (* Func) (void * data);
 
     // one-time idle callback
-    void queue(Func2 func);
-    void queue(Func func, void * data) __attribute__((deprecated));
+    void queue (Func func, void * data);
 
     // one-time delayed callback
-    void queue(int delay_ms, Func2 func);
-    void queue(int delay_ms, Func func, void * data)
-        __attribute__((deprecated));
+    void queue (int delay_ms, Func func, void * data);
 
     // periodic timer callback
-    void start(int interval_ms, Func2 func);
-    void start(int interval_ms, Func func, void * data)
-        __attribute__((deprecated));
+    void start (int interval_ms, Func func, void * data);
 
     // stops any type of callback
     // note that queue() and start() also stop any previous callback
-    void stop();
+    void stop ();
 
     // true if a periodic timer is running
     // does not apply to one-time callbacks
-    bool running() const { return _running; }
+    bool running () const
+        { return _running; }
 
-    constexpr QueuedFunc() = default;
-    QueuedFunc(const QueuedFunc &) = delete;
-    void operator=(const QueuedFunc &) = delete;
+    constexpr QueuedFunc () = default;
+    QueuedFunc (const QueuedFunc &) = delete;
+    void operator= (const QueuedFunc &) = delete;
 
-    ~QueuedFunc() { stop(); }
+    ~QueuedFunc ()
+        { stop (); }
 
     // cancels any pending callbacks
     // inhibits all future callbacks
     // needed to allow safe shutdown of some (Qt!) main loops
-    static void inhibit_all();
+    static void inhibit_all ();
 
 private:
     bool _running = false;
 };
 
-void mainloop_run();
-void mainloop_quit();
+void mainloop_run ();
+void mainloop_quit ();
 
 #endif // LIBAUDCORE_MAINLOOP_H
