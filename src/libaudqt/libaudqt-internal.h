@@ -26,43 +26,28 @@ class QPoint;
 class QScreen;
 class QString;
 
-namespace audqt
-{
-
-/* audqt.cc */
-void set_icon_theme();
-
-/* dark-theme.cc */
-void enable_dark_theme();
-void disable_dark_theme();
-
-/* dock.cc */
-void dock_show_simple(const char * id, const char * name, QWidget * create());
-void dock_hide_simple(const char * id);
+namespace audqt {
 
 /* infopopup.cc */
-void infopopup_hide_now();
+void infopopup_hide_now ();
 
 /* log-inspector.cc */
-void log_init();
-void log_cleanup();
-
-/* prefs-plugin.cc */
-void plugin_prefs_hide();
+void log_init ();
+void log_cleanup ();
 
 /* util-qt.cc */
 class PopupWidget : public QWidget
 {
 public:
-    PopupWidget(QWidget * parent = nullptr);
+    PopupWidget (QWidget * parent = nullptr);
 
 protected:
-    bool eventFilter(QObject *, QEvent * e) override;
-    void showEvent(QShowEvent *) override;
+    bool eventFilter (QObject *, QEvent * e) override;
+    void showEvent (QShowEvent *) override;
 };
 
-void show_copy_context_menu(QWidget * parent, const QPoint & global_pos,
-                            const QString & text_to_copy);
+void show_copy_context_menu (QWidget * parent, const QPoint & global_pos,
+ const QString & text_to_copy);
 
 } // namespace audqt
 

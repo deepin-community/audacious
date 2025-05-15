@@ -24,7 +24,6 @@
 #include <libaudcore/preferences.h>
 #include <libaudcore/runtime.h>
 
-#include "gtk-compat.h"
 #include "internal.h"
 #include "libaudgui.h"
 #include "libaudgui-gtk.h"
@@ -39,7 +38,7 @@ static void open_cb (void * entry)
     else
         aud_drct_pl_add (text, -1);
 
-    if (aud_get_bool ("save_url_history"))
+    if (aud_get_bool (nullptr, "save_url_history"))
         aud_history_add (text);
 }
 
@@ -87,14 +86,14 @@ static GtkWidget * create_url_opener (bool open)
 
     g_object_set_data ((GObject *) entry, "open", GINT_TO_POINTER (open));
 
-    GtkWidget * hbox = audgui_hbox_new (6);
+    GtkWidget * hbox = gtk_hbox_new (false, 6);
     audgui_create_widgets (hbox, widgets);
 
     GtkWidget * clear_button = audgui_button_new (_("C_lear history"),
      "edit-clear", clear_cb, combo);
     gtk_box_pack_end ((GtkBox *) hbox, clear_button, false, false, 0);
 
-    GtkWidget * vbox = audgui_vbox_new (6);
+    GtkWidget * vbox = gtk_vbox_new (false, 6);
     gtk_box_pack_start ((GtkBox *) vbox, combo, false, false, 0);
     gtk_box_pack_start ((GtkBox *) vbox, hbox, false, false, 0);
 

@@ -1,87 +1,75 @@
 libaudgui.so.5 libaudgui5 #MINVER#
- (c++)"audgui_init()@Base" 4.3
- (c++)"audgui_box_new(GtkOrientation, int)@Base" 4.3
- (c++)"audgui_cleanup()@Base" 4.3
- (c++)"audgui_get_dpi()@Base" 4.3
- (c++)"audgui_grid_new()@Base" 4.3
- (c++)"audgui_paned_new(GtkOrientation)@Base" 4.3
- (c++)"audgui_scale_new(GtkOrientation, _GtkAdjustment*)@Base" 4.3
- (c++)"audgui_button_new(char const*, char const*, void (*)(void*), void*)@Base" 4.3
- (c++)"audgui_dialog_new(GtkMessageType, char const*, char const*, _GtkWidget*, _GtkWidget*)@Base" 4.3
- (c++)"audgui_infowin_hide()@Base" 4.3
- (c++)"audgui_infowin_show(Playlist, int)@Base" 4.3
- (c++)"audgui_jump_to_time()@Base" 4.3
- (c++)"audgui_urilist_open(char const*)@Base" 4.3
- (c++)"audgui_jump_to_track()@Base" 4.3
- (c++)"audgui_list_get_user(_GtkWidget*)@Base" 4.3
- (c++)"audgui_list_new_real(AudguiListCallbacks const*, int, void*, int)@Base" 4.3
- (c++)"audgui_separator_new(GtkOrientation)@Base" 4.3
- (c++)"audgui_to_native_dpi(int)@Base" 4.3
- (c++)"audgui_vis_bar_color(_GdkColor const&, int, int, float&, float&, float&)@Base" 4.3
- (c++)"audgui_button_box_new(GtkOrientation)@Base" 4.3
- (c++)"audgui_file_entry_new(GtkFileChooserAction, char const*)@Base" 4.3
- (c++)"audgui_infopopup_hide()@Base" 4.3
- (c++)"audgui_infopopup_show(Playlist, int)@Base" 4.3
- (c++)"audgui_list_get_focus(_GtkWidget*)@Base" 4.3
- (c++)"audgui_list_row_count(_GtkWidget*)@Base" 4.3
- (c++)"audgui_list_set_focus(_GtkWidget*, int)@Base" 4.3
- (c++)"audgui_pixbuf_request(char const*, bool*)@Base" 4.3
- (c++)"audgui_simple_message(_GtkWidget**, GtkMessageType, char const*, char const*)@Base" 4.3
- (c++)"audgui_urilist_insert(Playlist, int, char const*)@Base" 4.3
- (c++)"audgui_export_playlist()@Base" 4.3
- (c++)"audgui_get_digit_width(_GtkWidget*)@Base" 4.3
- (c++)"audgui_get_plugin_menu(AudMenuID)@Base" 4.3
- (c++)"audgui_import_playlist()@Base" 4.3
- (c++)"audgui_list_add_column(_GtkWidget*, char const*, int, unsigned long, int, bool)@Base" 4.3
- (c++)"audgui_pixbuf_fallback()@Base" 4.3
- (c++)"audgui_plugin_menu_add(AudMenuID, void (*)(), char const*, char const*)@Base" 4.3
- (c++)"audgui_run_filebrowser(bool)@Base" 4.3
- (c++)"audgui_to_portable_dpi(int)@Base" 4.3
- (c++)"audgui_dark_bg_gradient(_GdkColor const&, int)@Base" 4.3
- (c++)"audgui_get_mouse_coords(_GdkScreen*, int*, int*)@Base" 4.3
- (c++)"audgui_get_mouse_coords(_GtkWidget*, int*, int*)@Base" 4.3
- (c++)"audgui_hide_filebrowser()@Base" 4.3
- (c++)"audgui_list_delete_rows(_GtkWidget*, int, int)@Base" 4.3
- (c++)"audgui_list_insert_rows(_GtkWidget*, int, int)@Base" 4.3
- (c++)"audgui_list_update_rows(_GtkWidget*, int, int)@Base" 4.3
- (c++|regex)"^audgui_pixbuf_from_data\(void const\*, (long|long long)\)@Base" 4.3
- (c++)"audgui_scaled_image_new(_GdkPixbuf*)@Base" 4.3
- (c++)"audgui_scaled_image_set(_GtkWidget*, _GdkPixbuf*)@Base" 4.3
- (c++)"audgui_destroy_on_escape(_GtkWidget*)@Base" 4.3
- (c++)"audgui_dialog_add_widget(_GtkWidget*, _GtkWidget*)@Base" 4.3
- (c++)"audgui_hide_about_window()@Base" 4.3
- (c++)"audgui_hide_prefs_window()@Base" 4.3
- (c++)"audgui_import_eq_presets(Index<EqualizerPreset> const&)@Base" 4.3
- (c++)"audgui_list_row_at_point(_GtkWidget*, int, int)@Base" 4.3
- (c++)"audgui_show_about_window()@Base" 4.3
- (c++)"audgui_show_plugin_about(PluginHandle*)@Base" 4.3
- (c++)"audgui_show_plugin_prefs(PluginHandle*)@Base" 4.3
- (c++)"audgui_show_prefs_window()@Base" 4.3
- (c++)"audgui_file_entry_get_uri(_GtkWidget*)@Base" 4.3
- (c++)"audgui_file_entry_set_uri(_GtkWidget*, char const*)@Base" 4.3
- (c++)"audgui_jump_to_track_hide()@Base" 4.3
- (c++)"audgui_list_get_highlight(_GtkWidget*)@Base" 4.3
- (c++)"audgui_list_set_highlight(_GtkWidget*, int)@Base" 4.3
- (c++)"audgui_plugin_menu_remove(AudMenuID, void (*)())@Base" 4.3
- (c++)"audgui_queue_manager_show()@Base" 4.3
- (c++)"audgui_pixbuf_scale_within(AudguiPixbuf&, int)@Base" 4.3
- (c++)"audgui_show_add_url_window(bool)@Base" 4.3
- (c++)"audgui_get_monitor_geometry(_GdkScreen*, int, int, _cairo_rectangle_int*)@Base" 4.3
- (c++)"audgui_grid_set_row_spacing(_GtkWidget*, unsigned int)@Base" 4.3
- (c++)"audgui_infowin_show_current()@Base" 4.3
- (c++)"audgui_show_playlist_rename(Playlist)@Base" 4.3
- (c++)"audgui_hide_equalizer_window()@Base" 4.3
- (c++)"audgui_list_update_selection(_GtkWidget*, int, int)@Base" 4.3
- (c++)"audgui_menu_init_with_domain(_GtkWidget*, ArrayRef<AudguiMenuItem>, _GtkAccelGroup*, char const*)@Base" 4.3
- (c++)"audgui_show_eq_preset_window()@Base" 4.3
- (c++)"audgui_show_equalizer_window()@Base" 4.3
- (c++)"audgui_infopopup_show_current()@Base" 4.3
- (c++)"audgui_pixbuf_request_current(bool*)@Base" 4.3
- (c++)"audgui_confirm_playlist_delete(Playlist)@Base" 4.3
- (c++)"audgui_grid_set_column_spacing(_GtkWidget*, unsigned int)@Base" 4.3
- (c++)"audgui_list_row_at_point_rounded(_GtkWidget*, int, int)@Base" 4.3
- (c++)"audgui_menu_item_new_with_domain(AudguiMenuItem const*, _GtkAccelGroup*, char const*)@Base" 4.3
- (c++)"audgui_tree_view_get_hadjustment(_GtkWidget*)@Base" 4.3
- (c++)"audgui_tree_view_get_vadjustment(_GtkWidget*)@Base" 4.3
- (c++)"audgui_show_prefs_for_plugin_type(PluginType)@Base" 4.3
- (c++)"audgui_urilist_create_from_selected(Playlist)@Base" 4.3
+ _Z11audgui_initv@Base 3.8
+ _Z14audgui_cleanupv@Base 3.8
+ _Z14audgui_get_dpiv@Base 3.8
+ _Z17audgui_button_newPKcS0_PFvPvES1_@Base 3.8
+ _Z17audgui_dialog_new14GtkMessageTypePKcS1_P10_GtkWidgetS3_@Base 3.8
+ _Z19audgui_infowin_hidev@Base 3.8
+ _Z19audgui_infowin_show8Playlisti@Base 3.9
+ _Z19audgui_jump_to_timev@Base 3.8
+ _Z19audgui_urilist_openPKc@Base 3.8
+ _Z20audgui_jump_to_trackv@Base 3.8
+ _Z20audgui_list_get_userP10_GtkWidget@Base 3.8
+ _Z20audgui_list_new_realPK19AudguiListCallbacksiPvi@Base 3.8
+ _Z20audgui_to_native_dpii@Base 3.8
+ _Z21audgui_file_entry_new20GtkFileChooserActionPKc@Base 3.8
+ _Z21audgui_infopopup_hidev@Base 3.8
+ _Z21audgui_infopopup_show8Playlisti@Base 3.9
+ _Z21audgui_list_get_focusP10_GtkWidget@Base 3.8
+ _Z21audgui_list_row_countP10_GtkWidget@Base 3.8
+ _Z21audgui_list_set_focusP10_GtkWidgeti@Base 3.8
+ _Z21audgui_pixbuf_requestPKcPb@Base 3.8
+ _Z21audgui_simple_messagePP10_GtkWidget14GtkMessageTypePKcS4_@Base 3.8
+ _Z21audgui_urilist_insert8PlaylistiPKc@Base 3.9
+ _Z22audgui_export_playlistv@Base 3.8
+ _Z22audgui_get_digit_widthP10_GtkWidget@Base 3.8
+ _Z22audgui_get_plugin_menu9AudMenuID@Base 3.8
+ _Z22audgui_import_playlistv@Base 3.8
+ _Z22audgui_list_add_columnP10_GtkWidgetPKcimib@Base 3.9
+ _Z22audgui_pixbuf_fallbackv@Base 3.8
+ _Z22audgui_plugin_menu_add9AudMenuIDPFvvEPKcS3_@Base 3.8
+ _Z22audgui_run_filebrowserb@Base 3.8
+ _Z22audgui_to_portable_dpii@Base 3.8
+ _Z23audgui_get_mouse_coordsP10_GdkScreenPiS1_@Base 3.8
+ _Z23audgui_get_mouse_coordsP10_GtkWidgetPiS1_@Base 3.8
+ _Z23audgui_hide_filebrowserv@Base 3.8
+ _Z23audgui_list_delete_rowsP10_GtkWidgetii@Base 3.8
+ _Z23audgui_list_insert_rowsP10_GtkWidgetii@Base 3.8
+ _Z23audgui_list_update_rowsP10_GtkWidgetii@Base 3.8
+ (c++|regex)"^audgui_pixbuf_from_data\(void const\*, (long|long long)\)@Base$" 3.8
+ _Z23audgui_scaled_image_newP10_GdkPixbuf@Base 3.8
+ _Z23audgui_scaled_image_setP10_GtkWidgetP10_GdkPixbuf@Base 3.8
+ _Z24audgui_destroy_on_escapeP10_GtkWidget@Base 3.8
+ _Z24audgui_dialog_add_widgetP10_GtkWidgetS0_@Base 3.8
+ _Z24audgui_hide_about_windowv@Base 3.8
+ _Z24audgui_hide_prefs_windowv@Base 3.8
+ _Z24audgui_import_eq_presetsRK5IndexI15EqualizerPresetE@Base 3.8
+ _Z24audgui_list_row_at_pointP10_GtkWidgetii@Base 3.8
+ _Z24audgui_show_about_windowv@Base 3.8
+ _Z24audgui_show_plugin_aboutP12PluginHandle@Base 3.8
+ _Z24audgui_show_plugin_prefsP12PluginHandle@Base 3.8
+ _Z24audgui_show_prefs_windowv@Base 3.8
+ _Z25audgui_file_entry_get_uriP10_GtkWidget@Base 3.8
+ _Z25audgui_file_entry_set_uriP10_GtkWidgetPKc@Base 3.8
+ _Z25audgui_jump_to_track_hidev@Base 3.8
+ _Z25audgui_list_get_highlightP10_GtkWidget@Base 3.8
+ _Z25audgui_list_set_highlightP10_GtkWidgeti@Base 3.8
+ _Z25audgui_plugin_menu_remove9AudMenuIDPFvvE@Base 3.8
+ _Z25audgui_queue_manager_showv@Base 3.8
+ _Z26audgui_pixbuf_scale_withinR12AudguiPixbufi@Base 3.9
+ _Z26audgui_show_add_url_windowb@Base 3.8
+ _Z27audgui_get_monitor_geometryP10_GdkScreeniiP13_GdkRectangle@Base 3.8
+ _Z27audgui_infowin_show_currentv@Base 3.8
+ _Z27audgui_show_playlist_rename8Playlist@Base 3.9
+ _Z28audgui_hide_equalizer_windowv@Base 3.8
+ _Z28audgui_list_update_selectionP10_GtkWidgetii@Base 3.8
+ _Z28audgui_menu_init_with_domainP10_GtkWidget8ArrayRefI14AudguiMenuItemEP14_GtkAccelGroupPKc@Base 3.8
+ _Z28audgui_show_eq_preset_windowv@Base 3.8
+ _Z28audgui_show_equalizer_windowv@Base 3.8
+ _Z29audgui_infopopup_show_currentv@Base 3.8
+ _Z29audgui_pixbuf_request_currentPb@Base 3.8
+ _Z30audgui_confirm_playlist_delete8Playlist@Base 3.9
+ _Z32audgui_list_row_at_point_roundedP10_GtkWidgetii@Base 3.8
+ _Z32audgui_menu_item_new_with_domainPK14AudguiMenuItemP14_GtkAccelGroupPKc@Base 3.8
+ _Z33audgui_show_prefs_for_plugin_type10PluginType@Base 3.8
+ _Z35audgui_urilist_create_from_selected8Playlist@Base 3.9

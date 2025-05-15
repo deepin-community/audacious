@@ -18,16 +18,17 @@
  */
 
 #include "hook.h"
+
+#include <pthread.h>
+
 #include "index.h"
 #include "internal.h"
 #include "mainloop.h"
 #include "runtime.h"
-#include "threads.h"
 
 static const aud::array<TimerRate, int> rate_to_ms = {1000, 250, 100, 33};
 
-struct TimerItem
-{
+struct TimerItem {
     TimerFunc func;
     void * data;
 };
@@ -38,7 +39,7 @@ struct TimerList
     Index<TimerItem> items;
     int use_count = 0;
 
-    bool contains(TimerFunc func, void * data) const
+    bool contains (TimerFunc func, void * data) const
     {
         for (auto & item : items)
         {
@@ -49,85 +50,93 @@ struct TimerList
         return false;
     }
 
-    void check_stop()
+    void check_stop ()
     {
-        if (!use_count)
+        if (! use_count)
         {
-            auto is_empty = [](const TimerItem & item) { return !item.func; };
+            auto is_empty = [] (const TimerItem & item)
+                { return ! item.func; };
 
-            items.remove_if(is_empty, true);
+            items.remove_if (is_empty, true);
 
-            if (!items.len() && source.running())
-                source.stop();
+            if (! items.len () && source.running ())
+                source.stop ();
         }
     }
-
-    void run();
 };
 
-static aud::mutex mutex;
+static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 static aud::array<TimerRate, TimerList> lists;
 
-void TimerList::run()
+static void timer_run (void * list_)
 {
-    auto mh = mutex.take();
+    auto & list = * (TimerList *) list_;
+    pthread_mutex_lock (& mutex);
 
-    use_count++;
+    list.use_count ++;
 
     /* note: the list may grow (but not shrink) during the call */
-    for (int i = 0; i < items.len(); i++)
+    for (int i = 0; i < list.items.len (); i ++)
     {
         /* copy locally to prevent race condition */
-        TimerItem item = items[i];
+        TimerItem item = list.items[i];
 
         if (item.func)
         {
-            mh.unlock();
-            item.func(item.data);
-            mh.lock();
+            pthread_mutex_unlock (& mutex);
+            item.func (item.data);
+            pthread_mutex_lock (& mutex);
         }
     }
 
-    use_count--;
-    check_stop();
+    list.use_count --;
+    list.check_stop ();
+
+    pthread_mutex_unlock (& mutex);
 }
 
-EXPORT void timer_add(TimerRate rate, TimerFunc func, void * data)
+EXPORT void timer_add (TimerRate rate, TimerFunc func, void * data)
 {
     auto & list = lists[rate];
-    auto mh = mutex.take();
+    pthread_mutex_lock (& mutex);
 
-    if (!list.contains(func, data))
+    if (! list.contains (func, data))
     {
-        list.items.append(func, data);
+        list.items.append (func, data);
 
-        if (!list.source.running())
-            list.source.start(rate_to_ms[rate], [&list]() { list.run(); });
+        if (! list.source.running ())
+            list.source.start (rate_to_ms[rate], timer_run, & list);
     }
+
+    pthread_mutex_unlock (& mutex);
 }
 
-EXPORT void timer_remove(TimerRate rate, TimerFunc func, void * data)
+EXPORT void timer_remove (TimerRate rate, TimerFunc func, void * data)
 {
     auto & list = lists[rate];
-    auto mh = mutex.take();
+    pthread_mutex_lock (& mutex);
 
     for (TimerItem & item : list.items)
     {
-        if (item.func == func && (!data || item.data == data))
+        if (item.func == func && (! data || item.data == data))
             item.func = nullptr;
     }
 
-    list.check_stop();
+    list.check_stop ();
+
+    pthread_mutex_unlock (& mutex);
 }
 
-void timer_cleanup()
+void timer_cleanup ()
 {
-    auto mh = mutex.take();
+    pthread_mutex_lock (& mutex);
 
     int timers_running = 0;
     for (TimerList & list : lists)
-        timers_running += list.items.len();
+        timers_running += list.items.len ();
 
     if (timers_running)
-        AUDWARN("%d timers still registered at exit\n", timers_running);
+        AUDWARN ("%d timers still registered at exit\n", timers_running);
+
+    pthread_mutex_unlock (& mutex);
 }

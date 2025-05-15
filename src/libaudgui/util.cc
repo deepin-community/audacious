@@ -89,44 +89,16 @@ EXPORT int audgui_get_digit_width (GtkWidget * widget)
 
 EXPORT void audgui_get_mouse_coords (GtkWidget * widget, int * x, int * y)
 {
-#ifdef USE_GTK3
-    int xwin, ywin;
-    GdkRectangle alloc;
-
-    GdkWindow * window = gtk_widget_get_window (widget);
-    GdkDisplay * display = gdk_window_get_display (window);
-    GdkSeat * seat = gdk_display_get_default_seat (display);
-    GdkDevice * device = gdk_seat_get_pointer (seat);
-
-    gdk_window_get_device_position (window, device, & xwin, & ywin, nullptr);
-    gtk_widget_get_allocation (widget, & alloc);
-
-    * x = xwin - alloc.x;
-    * y = ywin - alloc.y;
-#else
     gtk_widget_get_pointer (widget, x, y);
-#endif
 }
 
 EXPORT void audgui_get_mouse_coords (GdkScreen * screen, int * x, int * y)
 {
-#ifdef USE_GTK3
-    GdkDisplay * display = gdk_screen_get_display (screen);
-    GdkSeat * seat = gdk_display_get_default_seat (display);
-    GdkDevice * device = gdk_seat_get_pointer (seat);
-    gdk_device_get_position (device, nullptr, x, y);
-#else
     gdk_display_get_pointer (gdk_screen_get_display (screen), nullptr, x, y, nullptr);
-#endif
 }
 
 EXPORT void audgui_get_monitor_geometry (GdkScreen * screen, int x, int y, GdkRectangle * geom)
 {
-#ifdef USE_GTK3
-    GdkDisplay * display = gdk_screen_get_display (screen);
-    GdkMonitor * monitor = gdk_display_get_monitor_at_point (display, x, y);
-    gdk_monitor_get_geometry (monitor, geom);
-#else
     int monitors = gdk_screen_get_n_monitors (screen);
 
     for (int i = 0; i < monitors; i ++)
@@ -141,7 +113,6 @@ EXPORT void audgui_get_monitor_geometry (GdkScreen * screen, int x, int y, GdkRe
     geom->y = 0;
     geom->width = gdk_screen_get_width (screen);
     geom->height = gdk_screen_get_height (screen);
-#endif
 }
 
 static gboolean escape_destroy_cb (GtkWidget * widget, GdkEventKey * event)
@@ -219,8 +190,8 @@ EXPORT GtkWidget * audgui_file_entry_new (GtkFileChooserAction action, const cha
     GtkWidget * entry = gtk_entry_new ();
 
     auto data = new FileEntryData {action, String (title)};
-    g_object_set_data_full ((GObject *) entry, "file-entry-data", data,
-     aud::delete_obj<FileEntryData>);
+    auto destroy_cb = [] (void * data) { delete (FileEntryData *) data; };
+    g_object_set_data_full ((GObject *) entry, "file-entry-data", data, destroy_cb);
 
     gtk_entry_set_icon_from_icon_name ((GtkEntry *) entry,
      GTK_ENTRY_ICON_SECONDARY, "document-open");
@@ -260,43 +231,15 @@ static void set_label_wrap (GtkWidget * label, void *)
         gtk_label_set_line_wrap_mode ((GtkLabel *) label, PANGO_WRAP_WORD_CHAR);
 }
 
-#ifdef USE_GTK3
-static const char * icon_for_message_type (GtkMessageType type)
-{
-    switch (type)
-    {
-        case GTK_MESSAGE_INFO: return "dialog-information";
-        case GTK_MESSAGE_WARNING: return "dialog-warning";
-        case GTK_MESSAGE_QUESTION: return "dialog-question";
-        case GTK_MESSAGE_ERROR: return "dialog-error";
-        default: return nullptr;
-    }
-}
-#endif
-
-/* style choices should not be enforced by deprecating API functions */
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-
 EXPORT GtkWidget * audgui_dialog_new (GtkMessageType type, const char * title,
  const char * text, GtkWidget * button1, GtkWidget * button2)
 {
     GtkWidget * dialog = gtk_message_dialog_new (nullptr, (GtkDialogFlags) 0, type,
      GTK_BUTTONS_NONE, "%s", text);
     gtk_window_set_title ((GtkWindow *) dialog, title);
-    gtk_window_set_role ((GtkWindow *) dialog, "message");
 
     GtkWidget * box = gtk_message_dialog_get_message_area ((GtkMessageDialog *) dialog);
     gtk_container_foreach ((GtkContainer *) box, set_label_wrap, nullptr);
-
-#ifdef USE_GTK3
-    const char * icon = icon_for_message_type (type);
-    if (icon)
-    {
-        GtkWidget * image = gtk_image_new_from_icon_name (icon, GTK_ICON_SIZE_DIALOG);
-        gtk_message_dialog_set_image ((GtkMessageDialog *) dialog, image);
-    }
-#endif
 
     if (button2)
     {
@@ -312,8 +255,6 @@ EXPORT GtkWidget * audgui_dialog_new (GtkMessageType type, const char * title,
 
     return dialog;
 }
-
-#pragma GCC diagnostic pop
 
 EXPORT void audgui_dialog_add_widget (GtkWidget * dialog, GtkWidget * widget)
 {
@@ -361,93 +302,4 @@ EXPORT void audgui_simple_message (GtkWidget * * widget, GtkMessageType type,
 
         gtk_widget_show_all (* widget);
     }
-}
-
-EXPORT cairo_pattern_t * audgui_dark_bg_gradient (const GdkColor & base, int height)
-{
-    float r = 1, g = 1, b = 1;
-
-    /* in a dark theme, try to match the tone of the base color */
-    int v = aud::max (aud::max (base.red, base.green), base.blue);
-
-    if (v >= 10*256 && v < 80*256)
-    {
-        r = (float) base.red / v;
-        g = (float) base.green / v;
-        b = (float) base.blue / v;
-    }
-
-    cairo_pattern_t * gradient = cairo_pattern_create_linear (0, 0, 0, height);
-    cairo_pattern_add_color_stop_rgb (gradient, 0, 0.16 * r, 0.16 * g, 0.16 * b);
-    cairo_pattern_add_color_stop_rgb (gradient, 0.45, 0.11 * r, 0.11 * g, 0.11 * b);
-    cairo_pattern_add_color_stop_rgb (gradient, 0.55, 0.06 * r, 0.06 * g, 0.06 * b);
-    cairo_pattern_add_color_stop_rgb (gradient, 1, 0.09 * r, 0.09 * g, 0.09 * b);
-    return gradient;
-}
-
-static void rgb_to_hsv (float r, float g, float b, float * h, float * s, float * v)
-{
-    float max = aud::max (aud::max (r, g), b);
-    float min = aud::min (aud::min (r, g), b);
-
-    * v = max;
-
-    if (max == min)
-    {
-        * h = 0;
-        * s = 0;
-        return;
-    }
-
-    if (r == max)
-        * h = 1 + (g - b) / (max - min);
-    else if (g == max)
-        * h = 3 + (b - r) / (max - min);
-    else
-        * h = 5 + (r - g) / (max - min);
-
-    * s = (max - min) / max;
-}
-
-static void hsv_to_rgb (float h, float s, float v, float * r, float * g, float * b)
-{
-    for (; h >= 2; h -= 2)
-    {
-        float * p = r;
-        r = g;
-        g = b;
-        b = p;
-    }
-
-    if (h < 1)
-    {
-        * r = 1;
-        * g = 0;
-        * b = 1 - h;
-    }
-    else
-    {
-        * r = 1;
-        * g = h - 1;
-        * b = 0;
-    }
-
-    * r = v * (1 - s * (1 - * r));
-    * g = v * (1 - s * (1 - * g));
-    * b = v * (1 - s * (1 - * b));
-}
-
-EXPORT void audgui_vis_bar_color (const GdkColor & hue, int bar, int n_bars,
-                                  float & r, float & g, float & b)
-{
-    float h, s, v;
-    rgb_to_hsv (hue.red / 65535.0, hue.green / 65535.0, hue.blue / 65535.0, & h, & s, & v);
-
-    if (s < 0.1) /* monochrome theme? use blue instead */
-        h = 4.6;
-
-    s = 1 - 0.9 * bar / (n_bars - 1);
-    v = 0.75 + 0.25 * bar / (n_bars - 1);
-
-    hsv_to_rgb (h, s, v, & r, & g, & b);
 }

@@ -1,4 +1,2 @@
 usr/bin
 usr/share
-contrib/*.appdata.xml usr/share/metainfo
-contrib/thunar-sendto-audacious-playlist.desktop usr/share/Thunar/sendto

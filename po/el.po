@@ -3,29 +3,26 @@
 # This file is distributed under the same license as the Audacious package.
 #
 # Translators:
-# 79353a696ad19dc202b261b3067b7640_bec941e, 2015
 # gis mapps <gismapps@gmail.com>, 2014
-# Ioannis LM, 2018,2020
-# Ioannis LM, 2018,2020-2023
+# Ioannis LM, 2018
 # Marinos Zak <marinoszak@gmail.com>, 2012
 # Marinos Zak <marinoszak@gmail.com>, 2012
 # Marinos Zak <marinoszak@gmail.com>, 2012
 # Michael Misirlis <mmisirlis@gmail.com>, 2015
 # Stathis Kamperis <ekamperi@auth.gr>, 2006
 # Wasilis Mandratzis-Walz, 2015
-# 79353a696ad19dc202b261b3067b7640_bec941e, 2015
-# Yannis Anthymidis, 2011
-# Yannis Anthymidis, 2011
+# Wasilis Mandratzis-Walz, 2015
 # Γιάννης Ανθυμίδης, 2011
-# Yannis Anthymidis, 2011-2014
+# Γιάννης Ανθυμίδης, 2011
+# Γιάννης Ανθυμίδης, 2011-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Audacious\n"
 "Report-Msgid-Bugs-To: https://redmine.audacious-media-player.org/\n"
-"POT-Creation-Date: 2023-04-29 21:56+0200\n"
-"PO-Revision-Date: 2011-10-10 15:11+0000\n"
-"Last-Translator: Ioannis LM, 2018,2020-2023\n"
-"Language-Team: Greek (http://app.transifex.com/audacious/audacious/language/"
+"POT-Creation-Date: 2018-08-04 20:34+0200\n"
+"PO-Revision-Date: 2018-12-26 05:38+0000\n"
+"Last-Translator: Ioannis LM\n"
+"Language-Team: Greek (http://www.transifex.com/audacious/audacious/language/"
 "el/)\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
@@ -33,86 +30,82 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/audacious/main.cc:72
+#: src/audacious/main.cc:65
 msgid "Show command-line help"
-msgstr "Προβολή βοήθειας για τη γραμμή εντολών"
+msgstr "Προβολή βοήθειας  για τη γραμμή εντολών"
 
-#: src/audacious/main.cc:73
+#: src/audacious/main.cc:66
 msgid "Show version"
 msgstr "Εμφάνιση έκδοσης"
 
-#: src/audacious/main.cc:74
+#: src/audacious/main.cc:67
 msgid "Start playback"
 msgstr "Έναρξη αναπαραγωγής"
 
-#: src/audacious/main.cc:75
+#: src/audacious/main.cc:68
 msgid "Pause playback"
 msgstr "Παύση αναπαραγωγής"
 
-#: src/audacious/main.cc:77
+#: src/audacious/main.cc:69
 msgid "Pause if playing, play otherwise"
 msgstr "Παύση αν παίζει, αλλιώς αναπαραγωγή"
 
-#: src/audacious/main.cc:78
+#: src/audacious/main.cc:70
 msgid "Stop playback"
 msgstr "Διακοπή αναπαραγωγής"
 
-#: src/audacious/main.cc:79
+#: src/audacious/main.cc:71
 msgid "Skip to previous song"
 msgstr "Μετάβαση στο προηγούμενο κομμάτι"
 
-#: src/audacious/main.cc:80
+#: src/audacious/main.cc:72
 msgid "Skip to next song"
 msgstr "Μετάβαση στο επόμενο κομμάτι"
 
-#: src/audacious/main.cc:81
+#: src/audacious/main.cc:73
 msgid "Add files to the playlist"
-msgstr "Προσθήκη αρχείων στη λίστα αναπαραγωγής"
+msgstr "Προσθήκη αρχείων στη λίστα τραγουδιών"
 
-#: src/audacious/main.cc:83
+#: src/audacious/main.cc:74
 msgid "Add files to a temporary playlist"
-msgstr "Προσθήκη αρχείων σε προσωρινή λίστα αναπαραγωγής"
+msgstr "Προσθήκη αρχείων σε μια προσωρινή λίστα αναπαραγωγής"
 
-#: src/audacious/main.cc:84
+#: src/audacious/main.cc:75
 msgid "Display the main window"
-msgstr "Εμφάνιση του κυρίως παραθύρου"
+msgstr "Εμφάνιση του κυρίους παραθύρου"
 
-#: src/audacious/main.cc:86
+#: src/audacious/main.cc:76
 msgid "Display the jump-to-song window"
 msgstr "Εμφάνιση του παραθύρου άλμα-σε-τραγούδι"
 
-#: src/audacious/main.cc:88
+#: src/audacious/main.cc:77
 msgid "Start without a graphical interface"
 msgstr "Έναρξη χωρίς γραφικό περιβάλλον"
 
-#: src/audacious/main.cc:90
+#: src/audacious/main.cc:78
 msgid "Quit on playback stop"
-msgstr "Έξοδος στη διακοπή της αναπαραγωγής"
+msgstr "Έξοδος στη διακοπή αναπαραγωγής"
 
-#: src/audacious/main.cc:92
+#: src/audacious/main.cc:79
 msgid "Print debugging messages (may be used twice)"
 msgstr ""
 "Προβολή μηνυμάτων εντοπισμού σφαλμάτων (μπορεί να χρησιμοποιηθεί δύο φορές)"
 
-#: src/audacious/main.cc:94
-msgid "Run in GTK mode"
-msgstr "Εκτέλεση σε διεπαφή GTK"
-
-#: src/audacious/main.cc:95
+#: src/audacious/main.cc:81
 msgid "Run in Qt mode"
-msgstr "Εκτέλεση σε διεπαφή Qt"
+msgstr "Εκτέλεση σε λειτουργία Qt"
 
-#: src/audacious/main.cc:152
+#: src/audacious/main.cc:138
 #, c-format
 msgid "Unknown option: %s\n"
 msgstr "Άγνωστη επιλογή: %s\n"
 
-#: src/audacious/main.cc:174
+#: src/audacious/main.cc:160
 #, c-format
 msgid "Unknown option: -%c\n"
 msgstr "Άγνωστη επιλογή: -%c\n"
 
-#: src/audacious/main.cc:204
+#: src/audacious/main.cc:184
 msgid ""
 "Usage: audacious [OPTION] ... [FILE] ...\n"
 "\n"
@@ -120,66 +113,67 @@ msgstr ""
 "Χρήση: audacious  [ΕΠΙΛΟΓΗ] ... [Αρχείο] ...\n"
 "\n"
 
-#: src/audacious/main.cc:206
+#: src/audacious/main.cc:185
 msgid "Select instance to run/control"
 msgstr "Επιλογή υπόδειξης για εκτέλεση/έλεγχο"
 
-#: src/audacious/main.cc:391 src/libaudqt/audqt.cc:134
+#: src/audacious/main.cc:367 src/libaudqt/audqt.cc:63
 msgid "Audacious"
 msgstr "Audacious"
 
-#: src/libaudcore/adder.cc:96
+#: src/libaudcore/adder.cc:91
 #, c-format
 msgid "%d file found"
 msgid_plural "%d files found"
 msgstr[0] "Βρέθηκε %d αρχείο"
 msgstr[1] "Βρέθηκαν %d αρχεία"
 
-#: src/libaudcore/adder.cc:320 src/libaudcore/adder.cc:404
+#: src/libaudcore/adder.cc:313 src/libaudcore/adder.cc:387
 #, c-format
 msgid ""
 "Error reading %s:\n"
 "%s"
 msgstr ""
-"Σφάλμα ανάγνωσης %s:\n"
+"Σφάλμα στην ανάγνωση%s:\n"
 "%s"
 
-#: src/libaudcore/adder.cc:456
+#: src/libaudcore/adder.cc:445
 msgid "No files found."
 msgstr "Δεν βρέθηκαν αρχεία."
 
-#: src/libaudcore/adder.cc:478 src/libaudcore/playlist.cc:81
+#: src/libaudcore/adder.cc:467 src/libaudcore/playlist.cc:88
 msgid "New Playlist"
 msgstr "Νέα λίστα αναπαραγωγής"
 
-#: src/libaudcore/audstrings.cc:664 src/libaudcore/tuple.cc:532
+#: src/libaudcore/audstrings.cc:659 src/libaudcore/tuple.cc:520
 msgid "Standard input"
 msgstr "Τυπική είσοδος"
 
-#: src/libaudcore/audstrings.cc:666
+#: src/libaudcore/audstrings.cc:661
 #, c-format
 msgid "Audio CD, track %s"
 msgstr "Μουσικό CD, κομμάτι %s"
 
-#: src/libaudcore/audstrings.cc:670 src/libaudcore/tuple.cc:508
+#: src/libaudcore/audstrings.cc:665 src/libaudcore/tuple.cc:496
 msgid "(character encoding error)"
-msgstr "(σφάλμα κωδικοποίησης χαρακτήρων)"
+msgstr "(χαρακτήρας σφάλμα κωδικοποίησης)"
 
 #: src/libaudcore/drct.cc:96
 msgid ""
 "Stream recording must be configured in Audio Settings before it can be used."
 msgstr ""
-"Πρέπει να ενεργοποιήσετε την εγγραφή ηχητικής ροής στις ρυθμίσεις του ήχου."
+"Η καταγραφή της ηχητικής ροής πρέπει να έχει ρυθμιστεί στις ρυθμίσεις ήχου "
+"πριν χρησιμοποιηθεί."
 
-#: src/libaudcore/output.cc:289
+#: src/libaudcore/output.cc:195
 msgid "Error opening output stream"
 msgstr "Σφάλμα στο άνοιγμα της ηχητικής ροής"
 
-#: src/libaudcore/output.cc:341
+#: src/libaudcore/output.cc:248
 msgid "Error recording output stream"
-msgstr "Σφάλμα στην εγγραφή της ηχητικής ροής"
+msgstr "Σφάλμα στην καταγραφή της ηχητικής ροής"
 
-#: src/libaudcore/playback.cc:379
+#: src/libaudcore/playback.cc:373
 #, c-format
 msgid ""
 "Error playing %s:\n"
@@ -188,16 +182,16 @@ msgstr ""
 "Σφάλμα κατά την αναπαραγωγή του %s:\n"
 "%s"
 
-#: src/libaudcore/playback.cc:510
+#: src/libaudcore/playback.cc:505
 msgid "Invalid audio format"
 msgstr "Μη έγκυρη μορφή ήχου"
 
-#: src/libaudcore/playlist.cc:82
+#: src/libaudcore/playlist.cc:89
 msgid "Now Playing"
 msgstr "Αναπαράγεται τώρα"
 
-#: src/libaudcore/playlist-files.cc:73 src/libaudcore/playlist-files.cc:153
-#: src/libaudgui/infowin.cc:538 src/libaudqt/infowin-qt.cc:183
+#: src/libaudcore/playlist-files.cc:69 src/libaudgui/infowin.cc:489
+#: src/libaudqt/infowin-qt.cc:218
 #, c-format
 msgid ""
 "Error opening %s:\n"
@@ -206,79 +200,66 @@ msgstr ""
 "Σφάλμα ανοίγματος του %s:\n"
 "%s"
 
-#: src/libaudcore/playlist-files.cc:87 src/libaudqt/eq-preset-qt.cc:283
+#: src/libaudcore/playlist-files.cc:83
 #, c-format
 msgid "Error loading %s."
 msgstr "Σφάλμα φόρτωσης %s."
 
-#: src/libaudcore/playlist-files.cc:89
+#: src/libaudcore/playlist-files.cc:85
 #, c-format
 msgid "Cannot load %s: unsupported file name extension."
 msgstr ""
-"Δεν είναι δυνατή η φόρτωση του %s: δεν υποστηρίζεται η επέκταση του ονόματος "
-"στο αρχείο."
+"Δεν είναι δυνατή η φόρτωση του %s: δεν υποστηρίζεται η επέκταση ονόματος "
+"αρχείου."
 
-#: src/libaudcore/playlist-files.cc:161 src/libaudqt/eq-preset-qt.cc:319
-#, c-format
-msgid "Error saving %s."
-msgstr "Αποθήκευση σφάλματος %s."
-
-#: src/libaudcore/playlist-files.cc:167
+#: src/libaudcore/playlist-files.cc:151
 #, c-format
 msgid "Cannot save %s: unsupported file name extension."
 msgstr ""
 "Δεν είναι δυνατή η αποθήκευση του αρχείου %s: δεν υποστηρίζεται η επέκταση "
-"του ονόματος στο αρχείο."
+"ονόματος αρχείου."
 
 #: src/libaudcore/probe.cc:54
 msgid "Error loading plugin"
 msgstr "Σφάλμα κατά τη φόρτωση του πρόσθετου"
 
-#: src/libaudcore/probe.cc:179
+#: src/libaudcore/probe.cc:171
 msgid "Seek error"
 msgstr "Αναζήτηση σφάλματος"
 
-#: src/libaudcore/probe.cc:187
-msgid ""
-"The file format could not be determined. The format may be unsupported, or a "
-"necessary plugin may not be installed/enabled."
-msgstr ""
-"Δεν μπορεί να καθοριστεί η μορφή του αρχείου. Μπορεί να μην υποστηρίζεται ή "
-"να μην έχει εγκατασταθεί/ενεργοποιηθεί το απαραίτητο πρόσθετο."
+#: src/libaudcore/probe.cc:179
+msgid "File format not recognized"
+msgstr "Η μορφή του αρχείου δεν αναγνωρίζεται"
 
-#: src/libaudcore/probe.cc:218
-msgid ""
-"The file could not be decoded. It may be invalid, corrupt, or in an "
-"unsupported format."
-msgstr ""
-"Το αρχείο δεν μπορεί να αποκωδικοποιηθεί. Μπορεί να είναι μη έγκυρο, "
-"κατεστραμμένο ή σε μη υποστηριζόμενη μορφή."
+#: src/libaudcore/probe.cc:207
+msgid "Error reading metadata"
+msgstr "Σφάλμα ανάγνωσης μεταδεδομένων"
 
-#: src/libaudcore/tuple.cc:566
+#: src/libaudcore/tuple.cc:550
 msgid "Mono"
 msgstr "Μονοφωνικό"
 
-#: src/libaudcore/tuple.cc:568
+#: src/libaudcore/tuple.cc:552
 msgid "Stereo"
 msgstr "Στερεοφωνικό"
 
-#: src/libaudcore/tuple.cc:571
+#: src/libaudcore/tuple.cc:554
 #, c-format
 msgid "%d channel"
 msgid_plural "%d channels"
 msgstr[0] "%d κανάλι"
 msgstr[1] "%d κανάλια"
 
-#: src/libaudcore/tuple.cc:789
+#: src/libaudcore/tuple.cc:768
 msgid "Audio CD"
 msgstr "Μουσικό CD"
 
-#: src/libaudcore/tuple.cc:873
+#: src/libaudcore/tuple.cc:850
 #, c-format
 msgid "Track %d"
 msgstr "Κομμάτι %d"
 
-#: src/libaudcore/tuple.cc:879
+#: src/libaudcore/tuple.cc:855
 msgid "(unknown title)"
 msgstr "(Άγνωστος τίτλος)"
 
@@ -286,464 +267,456 @@ msgstr "(Άγνωστος τίτλος)"
 msgid "Unknown URI scheme"
 msgstr "Άγνωστο σχήμα URI"
 
-#: src/libaudcore/vfs_local.cc:86 src/libaudcore/vfs_local.cc:330
-#: src/libaudcore/vfs_local.cc:386
+#: src/libaudcore/vfs_local.cc:85 src/libaudcore/vfs_local.cc:330
+#: src/libaudcore/vfs_local.cc:385
 msgid "Invalid file name"
 msgstr "Μη έγκυρο όνομα αρχείου"
 
-#: src/libaudcore/vfs_local.cc:134
+#: src/libaudcore/vfs_local.cc:132
 msgid "Invalid access mode"
-msgstr "Μη έγκυρη πρόσβαση σε διεπαφή"
+msgstr "Μη έγκυρη λειτουργία πρόσβασης"
 
-#: src/libaudgui/about.cc:37 src/libaudqt/about-qt.cc:37
+#: src/libaudgui/about.cc:36 src/libaudqt/about-qt.cc:36
 msgid "Credits"
 msgstr "Μνεία"
 
-#: src/libaudgui/about.cc:37 src/libaudqt/about-qt.cc:37
+#: src/libaudgui/about.cc:36 src/libaudqt/about-qt.cc:36
 msgid "License"
 msgstr "Άδεια"
 
-#: src/libaudgui/about.cc:73 src/libaudqt/about-qt.cc:64
+#: src/libaudgui/about.cc:72 src/libaudqt/about-qt.cc:61
 msgid "About Audacious"
 msgstr "Σχετικά με το Audacious"
 
 #: src/libaudgui/confirm.cc:36 src/libaudgui/jump-to-time.cc:48
 #: src/libaudgui/playlists.cc:92 src/libaudgui/playlists.cc:189
-#: src/libaudgui/plugin-prefs.cc:162 src/libaudgui/url-opener.cc:102
-#: src/libaudqt/playlist-management.cc:42
-#: src/libaudqt/playlist-management.cc:60 src/libaudqt/prefs-plugin.cc:141
-#: src/libaudqt/url-opener-qt.cc:81
+#: src/libaudgui/plugin-prefs.cc:160 src/libaudgui/url-opener.cc:101
+#: src/libaudqt/playlist-management.cc:43
+#: src/libaudqt/playlist-management.cc:75 src/libaudqt/prefs-plugin.cc:131
+#: src/libaudqt/url-opener-qt.cc:79
 msgid "_Cancel"
-msgstr "Άκ_υρο"
+msgstr "Ά_κυρο"
 
-#: src/libaudgui/confirm.cc:51 src/libaudqt/playlist-management.cc:58
+#: src/libaudgui/confirm.cc:51 src/libaudqt/playlist-management.cc:73
 msgid "_Don’t ask again"
-msgstr "Να _μην ξαναγίνει η ερώτηση"
+msgstr "_Να μην ερωτηθώ ξανά"
 
-#: src/libaudgui/confirm.cc:70 src/libaudqt/playlist-management.cc:66
+#: src/libaudgui/confirm.cc:70 src/libaudqt/playlist-management.cc:79
 #, c-format
 msgid "Do you want to permanently remove “%s”?"
-msgstr "Θέλετε να αφαιρέσετε οριστικά την “%s”;"
+msgstr "Θέλετε να αφαιρέσετε τη λίστα «%s» για πάντα;"
 
-#: src/libaudgui/confirm.cc:73 src/libaudqt/playlist-management.cc:59
+#: src/libaudgui/confirm.cc:73 src/libaudqt/playlist-management.cc:74
 msgid "_Remove"
 msgstr "Α_φαίρεση"
 
-#: src/libaudgui/confirm.cc:76 src/libaudqt/playlist-management.cc:63
+#: src/libaudgui/confirm.cc:76 src/libaudqt/playlist-management.cc:78
 msgid "Remove Playlist"
-msgstr "Αφαίρεση λίστας αναπαραγωγής"
+msgstr "Αφαίρεση λίστας"
 
 #: src/libaudgui/confirm.cc:95 src/libaudqt/playlist-management.cc:40
 msgid "What would you like to call this playlist?"
-msgstr "Πώς θέλετε να ονομάσετε τη λίστα αναπαραγωγής;"
+msgstr "Πώς θα θέλατε να ονομάσετε αυτή τη λίστα αναπαραγωγής;"
 
-#: src/libaudgui/confirm.cc:96 src/libaudqt/playlist-management.cc:41
+#: src/libaudgui/confirm.cc:96 src/libaudqt/playlist-management.cc:42
 msgid "_Rename"
 msgstr "_Μετονομασία"
 
-#: src/libaudgui/confirm.cc:97 src/libaudqt/playlist-management.cc:38
+#: src/libaudgui/confirm.cc:97 src/libaudqt/playlist-management.cc:62
 msgid "Rename Playlist"
 msgstr "Μετονομασία λίστας αναπαραγωγής"
 
-#: src/libaudgui/eq-preset.cc:154
-msgid "Please select one preset to export."
-msgstr "Παρακαλώ επιλέξτε προρύθμιση για εξαγωγή."
-
-#: src/libaudgui/eq-preset.cc:257 src/libaudgui/eq-preset.cc:262
+#: src/libaudgui/eq-preset.cc:208 src/libaudgui/eq-preset.cc:215
 msgid "Preset File ..."
-msgstr "Αρχείο προρυθμίσεων ..."
+msgstr "Αρχείο προκαθορισμένων τιμών ..."
 
-#: src/libaudgui/eq-preset.cc:258 src/libaudgui/eq-preset.cc:263
+#: src/libaudgui/eq-preset.cc:209 src/libaudgui/eq-preset.cc:216
 msgid "EQF File ..."
 msgstr "Αρχείο EQF ..."
 
-#: src/libaudgui/eq-preset.cc:267 src/libaudqt/eq-preset-qt.cc:339
-#: src/libaudqt/fileopener.cc:108
+#: src/libaudgui/eq-preset.cc:211
+msgid "Winamp Presets ..."
+msgstr "Προκαθορισμένες τιμές Winamp ..."
+
+#: src/libaudgui/eq-preset.cc:220 src/libaudqt/fileopener.cc:70
 msgid "Import"
 msgstr "Εισαγωγή"
 
-#: src/libaudgui/eq-preset.cc:268 src/libaudqt/eq-preset-qt.cc:342
-#: src/libaudqt/fileopener.cc:108
+#: src/libaudgui/eq-preset.cc:221 src/libaudqt/fileopener.cc:71
 msgid "Export"
 msgstr "Εξαγωγή"
 
-#: src/libaudgui/eq-preset.cc:283 src/libaudqt/eq-preset-qt.cc:405
+#: src/libaudgui/eq-preset.cc:236
 msgid "Equalizer Presets"
-msgstr "Προρυθμίσεις ισοσταθμιστή"
+msgstr "Προκαθορισμένες τιμές ισοσταθμιστή"
 
-#: src/libaudgui/eq-preset.cc:306 src/libaudqt/eq-preset-qt.cc:330
+#: src/libaudgui/eq-preset.cc:258
 msgid "Save Preset"
-msgstr "Αποθήκευση προρύθμισης"
+msgstr "Αποθήκευση προκαθορισμένων τιμών"
 
-#: src/libaudgui/eq-preset.cc:328
+#: src/libaudgui/eq-preset.cc:280
 msgid "Delete Selected"
 msgstr "Διαγραφή επιλεγμένων"
 
-#: src/libaudgui/eq-preset.cc:332
+#: src/libaudgui/eq-preset.cc:284
 msgid "Revert Changes"
 msgstr "Επαναφορά αλλαγών"
 
-#: src/libaudgui/equalizer.cc:46 src/libaudqt/equalizer-qt.cc:120
+#: src/libaudgui/equalizer.cc:45 src/libaudqt/equalizer-qt.cc:114
 msgid "_Enable"
 msgstr "_Ενεργοποίηση"
 
-#: src/libaudgui/equalizer.cc:128 src/libaudqt/equalizer-qt.cc:123
+#: src/libaudgui/equalizer.cc:124 src/libaudqt/equalizer-qt.cc:116
 msgid "31 Hz"
 msgstr "31 Hz"
 
-#: src/libaudgui/equalizer.cc:128 src/libaudqt/equalizer-qt.cc:123
+#: src/libaudgui/equalizer.cc:124 src/libaudqt/equalizer-qt.cc:116
 msgid "63 Hz"
 msgstr "63 Hz"
 
-#: src/libaudgui/equalizer.cc:129 src/libaudqt/equalizer-qt.cc:123
+#: src/libaudgui/equalizer.cc:125 src/libaudqt/equalizer-qt.cc:117
 msgid "125 Hz"
 msgstr "125 Hz"
 
-#: src/libaudgui/equalizer.cc:129 src/libaudqt/equalizer-qt.cc:123
+#: src/libaudgui/equalizer.cc:125 src/libaudqt/equalizer-qt.cc:117
 msgid "250 Hz"
 msgstr "250 Hz"
 
-#: src/libaudgui/equalizer.cc:129 src/libaudqt/equalizer-qt.cc:123
+#: src/libaudgui/equalizer.cc:125 src/libaudqt/equalizer-qt.cc:117
 msgid "500 Hz"
 msgstr "500 Hz"
 
-#: src/libaudgui/equalizer.cc:129 src/libaudqt/equalizer-qt.cc:124
+#: src/libaudgui/equalizer.cc:125 src/libaudqt/equalizer-qt.cc:117
 msgid "1 kHz"
 msgstr "1 kHz"
 
-#: src/libaudgui/equalizer.cc:129 src/libaudqt/equalizer-qt.cc:124
+#: src/libaudgui/equalizer.cc:125 src/libaudqt/equalizer-qt.cc:117
 msgid "2 kHz"
 msgstr "2 kHz"
 
-#: src/libaudgui/equalizer.cc:130 src/libaudqt/equalizer-qt.cc:124
+#: src/libaudgui/equalizer.cc:126 src/libaudqt/equalizer-qt.cc:118
 msgid "4 kHz"
 msgstr "4 kHz"
 
-#: src/libaudgui/equalizer.cc:130 src/libaudqt/equalizer-qt.cc:124
+#: src/libaudgui/equalizer.cc:126 src/libaudqt/equalizer-qt.cc:118
 msgid "8 kHz"
 msgstr "8 kHz"
 
-#: src/libaudgui/equalizer.cc:130 src/libaudqt/equalizer-qt.cc:124
+#: src/libaudgui/equalizer.cc:126 src/libaudqt/equalizer-qt.cc:118
 msgid "16 kHz"
 msgstr "16 kHz"
 
-#: src/libaudgui/equalizer.cc:133 src/libaudqt/equalizer-qt.cc:206
+#: src/libaudgui/equalizer.cc:129 src/libaudqt/equalizer-qt.cc:142
 msgid "Equalizer"
 msgstr "Ισοσταθμιστής"
 
-#: src/libaudgui/equalizer.cc:148 src/libaudqt/equalizer-qt.cc:144
+#: src/libaudgui/equalizer.cc:143
 msgid "Presets ..."
-msgstr "Προρυθμίσεις ..."
+msgstr "Προκαθορισμένες τιμές ..."
 
-#: src/libaudgui/equalizer.cc:152 src/libaudqt/equalizer-qt.cc:143
+#: src/libaudgui/equalizer.cc:147
 msgid "Reset to Zero"
 msgstr "Επαναφορά στο μηδέν"
 
-#: src/libaudgui/equalizer.cc:159 src/libaudqt/equalizer-qt.cc:129
+#: src/libaudgui/equalizer.cc:154 src/libaudqt/equalizer-qt.cc:123
 msgid "Preamp"
 msgstr "Προενίσχυση"
 
-#: src/libaudgui/file-opener.cc:79 src/libaudqt/fileopener.cc:103
+#: src/libaudgui/file-opener.cc:78 src/libaudqt/fileopener.cc:57
 msgid "Open Files"
 msgstr "Άνοιγμα αρχείων"
 
-#: src/libaudgui/file-opener.cc:80 src/libaudgui/url-opener.cc:65
+#: src/libaudgui/file-opener.cc:79 src/libaudgui/url-opener.cc:64
 #: src/libaudqt/url-opener-qt.cc:48
 msgid "_Open"
 msgstr "_Άνοιγμα"
 
-#: src/libaudgui/file-opener.cc:82
+#: src/libaudgui/file-opener.cc:81
 msgid "Close _dialog on open"
-msgstr "Κλείσιμο του παρα_θύρου στο άνοιγμα"
+msgstr "Κλείσιμο παραθύρου διαλόγου κατά το άνοιγμα"
 
-#: src/libaudgui/file-opener.cc:87 src/libaudqt/fileopener.cc:103
+#: src/libaudgui/file-opener.cc:86 src/libaudqt/fileopener.cc:59
 msgid "Add Files"
 msgstr "Προσθήκη αρχείων"
 
-#: src/libaudgui/file-opener.cc:88 src/libaudgui/url-opener.cc:71
+#: src/libaudgui/file-opener.cc:87 src/libaudgui/url-opener.cc:70
 #: src/libaudqt/url-opener-qt.cc:54
 msgid "_Add"
 msgstr "_Προσθήκη"
 
-#: src/libaudgui/file-opener.cc:90
+#: src/libaudgui/file-opener.cc:89
 msgid "Close _dialog on add"
-msgstr "Κλείσιμο του παραθύρου στη π_ροσθήκη"
+msgstr "Κλείσιμο του διαλόγου κατά την προσθήκη"
 
-#: src/libaudgui/file-opener.cc:139 src/libaudgui/infowin.cc:443
-#: src/libaudgui/jump-to-track.cc:316 src/libaudgui/plugin-prefs.cc:168
-#: src/libaudgui/prefs-window.cc:939 src/libaudgui/queue-manager.cc:195
-#: src/libaudgui/util.cc:356 src/libaudqt/audqt.cc:314
-#: src/libaudqt/infowin-qt.cc:93 src/libaudqt/log-inspector.cc:245
-#: src/libaudqt/prefs-plugin.cc:152 src/libaudqt/prefs-window-qt.cc:689
-#: src/libaudqt/song-window-qt.cc:361
+#: src/libaudgui/file-opener.cc:128 src/libaudgui/infowin.cc:397
+#: src/libaudgui/jump-to-track.cc:309 src/libaudgui/plugin-prefs.cc:166
+#: src/libaudgui/prefs-window.cc:876 src/libaudgui/queue-manager.cc:194
+#: src/libaudgui/util.cc:297 src/libaudqt/audqt.cc:191
+#: src/libaudqt/infowin-qt.cc:149 src/libaudqt/log-inspector.cc:227
+#: src/libaudqt/prefs-plugin.cc:141 src/libaudqt/prefs-window-qt.cc:634
+#: src/libaudqt/queue-manager-qt.cc:161
 msgid "_Close"
 msgstr "_Κλείσιμο"
 
-#: src/libaudgui/infopopup.cc:201 src/libaudgui/infowin.cc:402
-#: src/libaudgui/prefs-window.cc:105 src/libaudqt/infopopup-qt.cc:94
-#: src/libaudqt/info-widget.cc:48 src/libaudqt/prefs-window-qt.cc:172
-#: src/libaudqt/queue-manager-qt.cc:110
+#: src/libaudgui/infopopup.cc:205 src/libaudgui/infowin.cc:351
+#: src/libaudgui/prefs-window.cc:104 src/libaudqt/infopopup-qt.cc:116
+#: src/libaudqt/info-widget.cc:43 src/libaudqt/prefs-window-qt.cc:149
 msgid "Title"
 msgstr "Τίτλος"
 
-#: src/libaudgui/infopopup.cc:202 src/libaudgui/infowin.cc:405
-#: src/libaudgui/prefs-window.cc:102 src/libaudqt/infopopup-qt.cc:96
-#: src/libaudqt/info-widget.cc:49 src/libaudqt/prefs-window-qt.cc:169
+#: src/libaudgui/infopopup.cc:206 src/libaudgui/infowin.cc:354
+#: src/libaudgui/prefs-window.cc:101 src/libaudqt/infopopup-qt.cc:118
+#: src/libaudqt/info-widget.cc:41 src/libaudqt/prefs-window-qt.cc:146
 msgid "Artist"
 msgstr "Καλλιτέχνης"
 
-#: src/libaudgui/infopopup.cc:203 src/libaudgui/infowin.cc:408
-#: src/libaudgui/prefs-window.cc:103 src/libaudgui/prefs-window.cc:150
-#: src/libaudqt/infopopup-qt.cc:98 src/libaudqt/info-widget.cc:50
-#: src/libaudqt/prefs-window-qt.cc:170 src/libaudqt/prefs-window-qt.cc:212
+#: src/libaudgui/infopopup.cc:207 src/libaudgui/infowin.cc:357
+#: src/libaudgui/prefs-window.cc:102 src/libaudgui/prefs-window.cc:148
+#: src/libaudqt/infopopup-qt.cc:120 src/libaudqt/info-widget.cc:42
+#: src/libaudqt/prefs-window-qt.cc:147 src/libaudqt/prefs-window-qt.cc:193
 msgid "Album"
 msgstr "Άλμπουμ"
 
-#: src/libaudgui/infopopup.cc:204 src/libaudgui/infowin.cc:418
-#: src/libaudgui/prefs-window.cc:107 src/libaudqt/infopopup-qt.cc:100
-#: src/libaudqt/info-widget.cc:53 src/libaudqt/prefs-window-qt.cc:174
+#: src/libaudgui/infopopup.cc:208 src/libaudgui/infowin.cc:367
+#: src/libaudgui/prefs-window.cc:106 src/libaudqt/infopopup-qt.cc:122
+#: src/libaudqt/info-widget.cc:45 src/libaudqt/prefs-window-qt.cc:151
 msgid "Genre"
 msgstr "Είδος"
 
-#: src/libaudgui/infopopup.cc:205 src/libaudgui/infowin.cc:421
-#: src/libaudgui/prefs-window.cc:112 src/libaudqt/infopopup-qt.cc:102
-#: src/libaudqt/prefs-window-qt.cc:179
+#: src/libaudgui/infopopup.cc:209 src/libaudgui/infowin.cc:370
+#: src/libaudgui/prefs-window.cc:110 src/libaudqt/infopopup-qt.cc:124
+#: src/libaudqt/prefs-window-qt.cc:155
 msgid "Year"
 msgstr "Έτος"
 
-#: src/libaudgui/infopopup.cc:206 src/libaudgui/prefs-window.cc:149
-#: src/libaudqt/infopopup-qt.cc:104 src/libaudqt/prefs-window-qt.cc:211
+#: src/libaudgui/infopopup.cc:210 src/libaudgui/prefs-window.cc:147
+#: src/libaudqt/infopopup-qt.cc:126 src/libaudqt/prefs-window-qt.cc:192
 msgid "Track"
 msgstr "Κομμάτι"
 
-#: src/libaudgui/infopopup.cc:207 src/libaudqt/infopopup-qt.cc:106
-#: src/libaudqt/info-widget.cc:65
+#: src/libaudgui/infopopup.cc:211 src/libaudqt/infopopup-qt.cc:128
+#: src/libaudqt/info-widget.cc:55
 msgid "Length"
 msgstr "Διάρκεια"
 
-#: src/libaudgui/infowin.cc:51
+#: src/libaudgui/infowin.cc:50
 msgid "Format:"
 msgstr "Μορφή:"
 
-#: src/libaudgui/infowin.cc:52
+#: src/libaudgui/infowin.cc:51
 msgid "Quality:"
 msgstr "Ποιότητα:"
 
-#: src/libaudgui/infowin.cc:53
+#: src/libaudgui/infowin.cc:52
 msgid "Bitrate:"
-msgstr "Ρυθμός μετάδοσης (bitrate):"
+msgstr "Ρυθμός διαμεταγωγής (bitrate)"
 
-#: src/libaudgui/infowin.cc:87
+#: src/libaudgui/infowin.cc:86
 msgid "Acid Jazz"
 msgstr "Acid Jazz"
 
-#: src/libaudgui/infowin.cc:88
+#: src/libaudgui/infowin.cc:87
 msgid "Acid Rock"
 msgstr "Acid Rock"
 
-#: src/libaudgui/infowin.cc:89
+#: src/libaudgui/infowin.cc:88
 msgid "Ambient"
 msgstr "Ambient"
 
-#: src/libaudgui/infowin.cc:90
+#: src/libaudgui/infowin.cc:89
 msgid "Bebop"
 msgstr "Bebop"
 
-#: src/libaudgui/infowin.cc:91
+#: src/libaudgui/infowin.cc:90
 msgid "Bluegrass"
 msgstr "Bluegrass"
 
-#: src/libaudgui/infowin.cc:92
+#: src/libaudgui/infowin.cc:91
 msgid "Blues"
 msgstr "Blues"
 
-#: src/libaudgui/infowin.cc:93
+#: src/libaudgui/infowin.cc:92
 msgid "Chamber Music"
 msgstr "Chamber Music"
 
-#: src/libaudgui/infowin.cc:94
+#: src/libaudgui/infowin.cc:93
 msgid "Classical"
 msgstr "Κλασική Μουσική"
 
-#: src/libaudgui/infowin.cc:95
+#: src/libaudgui/infowin.cc:94
 msgid "Country"
 msgstr "Country"
 
-#: src/libaudgui/infowin.cc:96
+#: src/libaudgui/infowin.cc:95
 msgid "Death Metal"
 msgstr "Death Metal"
 
-#: src/libaudgui/infowin.cc:97
+#: src/libaudgui/infowin.cc:96
 msgid "Disco"
 msgstr "Disco"
 
-#: src/libaudgui/infowin.cc:98
+#: src/libaudgui/infowin.cc:97
 msgid "Easy Listening"
 msgstr "Easy Listening"
 
-#: src/libaudgui/infowin.cc:99
+#: src/libaudgui/infowin.cc:98
 msgid "Folk"
 msgstr "Folk"
 
-#: src/libaudgui/infowin.cc:100
+#: src/libaudgui/infowin.cc:99
 msgid "Funk"
 msgstr "Funk"
 
-#: src/libaudgui/infowin.cc:101
+#: src/libaudgui/infowin.cc:100
 msgid "Gangsta Rap"
 msgstr "Gangsta Rap"
 
-#: src/libaudgui/infowin.cc:102
+#: src/libaudgui/infowin.cc:101
 msgid "Gospel"
 msgstr "Gospel"
 
-#: src/libaudgui/infowin.cc:103
+#: src/libaudgui/infowin.cc:102
 msgid "Grunge"
 msgstr "Grunge"
 
-#: src/libaudgui/infowin.cc:104
+#: src/libaudgui/infowin.cc:103
 msgid "Hard Rock"
 msgstr "Hard Rock"
 
-#: src/libaudgui/infowin.cc:105
+#: src/libaudgui/infowin.cc:104
 msgid "Heavy Metal"
 msgstr "Heavy Metal"
 
-#: src/libaudgui/infowin.cc:106
+#: src/libaudgui/infowin.cc:105
 msgid "Hip-hop"
 msgstr "Hip-hop"
 
-#: src/libaudgui/infowin.cc:107
+#: src/libaudgui/infowin.cc:106
 msgid "House"
 msgstr "House"
 
-#: src/libaudgui/infowin.cc:108
+#: src/libaudgui/infowin.cc:107
 msgid "Jazz"
 msgstr "Jazz"
 
-#: src/libaudgui/infowin.cc:109
+#: src/libaudgui/infowin.cc:108
 msgid "Jungle"
 msgstr "Jungle"
 
-#: src/libaudgui/infowin.cc:110
+#: src/libaudgui/infowin.cc:109
 msgid "Metal"
 msgstr "Metal"
 
-#: src/libaudgui/infowin.cc:111
+#: src/libaudgui/infowin.cc:110
 msgid "New Age"
 msgstr "New Age"
 
-#: src/libaudgui/infowin.cc:112
+#: src/libaudgui/infowin.cc:111
 msgid "New Wave"
 msgstr "New Wave"
 
-#: src/libaudgui/infowin.cc:113
+#: src/libaudgui/infowin.cc:112
 msgid "Noise"
 msgstr "Noise"
 
-#: src/libaudgui/infowin.cc:114
+#: src/libaudgui/infowin.cc:113
 msgid "Pop"
 msgstr "Pop"
 
-#: src/libaudgui/infowin.cc:115
+#: src/libaudgui/infowin.cc:114
 msgid "Punk Rock"
 msgstr "Punk Rock"
 
-#: src/libaudgui/infowin.cc:116
+#: src/libaudgui/infowin.cc:115
 msgid "Rap"
 msgstr "Rap"
 
-#: src/libaudgui/infowin.cc:117
+#: src/libaudgui/infowin.cc:116
 msgid "Reggae"
 msgstr "Reggae"
 
-#: src/libaudgui/infowin.cc:118
+#: src/libaudgui/infowin.cc:117
 msgid "Rock"
 msgstr "Rock"
 
-#: src/libaudgui/infowin.cc:119
+#: src/libaudgui/infowin.cc:118
 msgid "Rock and Roll"
 msgstr "Rock and Roll"
 
-#: src/libaudgui/infowin.cc:120
+#: src/libaudgui/infowin.cc:119
 msgid "Rhythm and Blues"
 msgstr "Rhythm and Blues"
 
-#: src/libaudgui/infowin.cc:121
+#: src/libaudgui/infowin.cc:120
 msgid "Ska"
 msgstr "Ska"
 
-#: src/libaudgui/infowin.cc:122
+#: src/libaudgui/infowin.cc:121
 msgid "Soul"
 msgstr "Soul"
 
-#: src/libaudgui/infowin.cc:123
+#: src/libaudgui/infowin.cc:122
 msgid "Swing"
 msgstr "Swing"
 
-#: src/libaudgui/infowin.cc:124
+#: src/libaudgui/infowin.cc:123
 msgid "Techno"
 msgstr "Techno"
 
-#: src/libaudgui/infowin.cc:125
+#: src/libaudgui/infowin.cc:124
 msgid "Trip-hop"
 msgstr "Trip-hop"
 
-#: src/libaudgui/infowin.cc:232
+#: src/libaudgui/infowin.cc:217
 msgid "Save successful"
 msgstr "Επιτυχής αποθήκευση"
 
-#: src/libaudgui/infowin.cc:236
+#: src/libaudgui/infowin.cc:221
 msgid "Save error"
 msgstr "Σφάλμα κατά την αποθήκευση"
 
-#: src/libaudgui/infowin.cc:333 src/libaudgui/prefs-window.cc:87
-#: src/libaudqt/infowin-qt.cc:64 src/libaudqt/prefs-window-qt.cc:164
+#: src/libaudgui/infowin.cc:306 src/libaudgui/prefs-window.cc:86
+#: src/libaudqt/infowin-qt.cc:123 src/libaudqt/prefs-window-qt.cc:140
 msgid "Song Info"
 msgstr "Πληροφορίες κομματιού"
 
-#: src/libaudgui/infowin.cc:411 src/libaudqt/info-widget.cc:51
+#: src/libaudgui/infowin.cc:360 src/libaudqt/info-widget.cc:47
 msgid "Album Artist"
 msgstr "Καλλιτέχνης άλμπουμ"
 
-#: src/libaudgui/infowin.cc:414 src/libaudgui/prefs-window.cc:113
-#: src/libaudqt/info-widget.cc:54 src/libaudqt/prefs-window-qt.cc:180
+#: src/libaudgui/infowin.cc:363 src/libaudgui/prefs-window.cc:111
+#: src/libaudqt/info-widget.cc:46 src/libaudqt/prefs-window-qt.cc:156
 msgid "Comment"
 msgstr "Σχόλιο"
 
-#: src/libaudgui/infowin.cc:424 src/libaudqt/info-widget.cc:52
+#: src/libaudgui/infowin.cc:373 src/libaudqt/info-widget.cc:44
 msgid "Track Number"
 msgstr "Αριθμός κομματιού"
 
-#: src/libaudgui/infowin.cc:426
-msgid "_Auto-fill empty fields"
-msgstr "Αυτόματη _συμπλήρωση κενών πεδίων"
+#: src/libaudgui/infowin.cc:380
+msgid "Clea_r fields when moving to next song"
+msgstr "Καθαρισμός πεδίων κατά τη μετακίνηση στο επόμενο τραγούδι"
 
-#: src/libaudgui/infowin.cc:440 src/libaudqt/infowin-qt.cc:121
+#: src/libaudgui/infowin.cc:394 src/libaudqt/infowin-qt.cc:148
 msgid "_Save"
-msgstr "Απο_θήκευση"
+msgstr "_Αποθήκευση"
 
-#: src/libaudgui/infowin.cc:446
-msgid "_Previous"
-msgstr "Προη_γούμενο"
-
-#: src/libaudgui/infowin.cc:449
+#: src/libaudgui/infowin.cc:400
 msgid "_Next"
-msgstr "Ε_πόμενο"
+msgstr "_Επόμενο"
 
-#: src/libaudgui/infowin.cc:498
+#: src/libaudgui/infowin.cc:447
 #, c-format
-msgid "%d kbit/s"
-msgstr "%dkbit/s "
+msgid "%d kb/s"
+msgstr "%d kΒ/s"
 
-#: src/libaudgui/infowin.cc:503
+#: src/libaudgui/infowin.cc:452
 msgid "N/A"
 msgstr "N/A"
 
-#: src/libaudgui/jump-to-time.cc:47 src/libaudgui/jump-to-track.cc:321
-#: src/libaudqt/song-window-qt.cc:359
+#: src/libaudgui/jump-to-time.cc:47 src/libaudgui/jump-to-track.cc:314
 msgid "_Jump"
-msgstr "Μετά_βαση"
+msgstr "_Μετάβαση"
 
 #: src/libaudgui/jump-to-time.cc:51
 msgid "Jump to Time"
@@ -753,35 +726,34 @@ msgstr "Μετάβαση σε χρόνο"
 msgid "Enter time (minutes:seconds):"
 msgstr "Πληκτρολογήστε το χρόνο (λεπτά: δευτερόλεπτα):"
 
-#: src/libaudgui/jump-to-track.cc:96 src/libaudgui/jump-to-track.cc:104
-#: src/libaudgui/jump-to-track.cc:312 src/libaudqt/song-window-qt.cc:281
-#: src/libaudqt/song-window-qt.cc:358
+#: src/libaudgui/jump-to-track.cc:95 src/libaudgui/jump-to-track.cc:103
+#: src/libaudgui/jump-to-track.cc:305
 msgid "_Queue"
-msgstr "Στ_η σειρά"
+msgstr "_Στη σειρά"
 
-#: src/libaudgui/jump-to-track.cc:102 src/libaudqt/song-window-qt.cc:281
+#: src/libaudgui/jump-to-track.cc:101
 msgid "Un_queue"
-msgstr "Αφαίρεση από τη σε_ιρά"
+msgstr "Αφ_αίρεση από τη σειρά"
 
-#: src/libaudgui/jump-to-track.cc:241 src/libaudqt/song-window-qt.cc:294
+#: src/libaudgui/jump-to-track.cc:240
 msgid "Jump to Song"
 msgstr "Μετάβαση στο τραγούδι"
 
-#: src/libaudgui/jump-to-track.cc:267 src/libaudqt/song-window-qt.cc:312
+#: src/libaudgui/jump-to-track.cc:265
 msgid "Filter: "
 msgstr "Φίλτρο: "
 
-#: src/libaudgui/jump-to-track.cc:268
+#: src/libaudgui/jump-to-track.cc:266
 msgid "_Filter:"
-msgstr "_Φίλτρο:"
+msgstr "_Φιλτράρισμα:"
 
-#: src/libaudgui/jump-to-track.cc:305 src/libaudqt/song-window-qt.cc:353
+#: src/libaudgui/jump-to-track.cc:298
 msgid "C_lose on jump"
-msgstr "_Κλείσιμο στη μετάβαση"
+msgstr "Κλείσιμο στη Μετάβαση"
 
 #: src/libaudgui/playlists.cc:91
 msgid "_Overwrite"
-msgstr "Αν_τικατάσταση"
+msgstr "_Αντικατάσταση"
 
 #: src/libaudgui/playlists.cc:95
 msgid "Confirm Overwrite"
@@ -792,823 +764,700 @@ msgstr "Επιβεβαίωση αντικατάστασης"
 msgid "Overwrite %s?"
 msgstr "Να γίνει αντικατάσταση του %s;"
 
-#: src/libaudgui/playlists.cc:121 src/libaudqt/fileopener.cc:63
+#: src/libaudgui/playlists.cc:121
 msgid ""
 "Please type a filename extension or select a format from the drop-down list."
 msgstr ""
-"Παρακαλώ δώστε την επέκταση του αρχείου ή επιλέξτε από την αναπτυσσόμενη "
-"λίστα."
+"Παρακαλώ επιλέξτε μία επέκταση ονόματος αρχείου ή επιλέξτε μία μορφή από την "
+"αναπτυσσόμενη λίστα."
 
-#: src/libaudgui/playlists.cc:140 src/libaudqt/fileopener.cc:70
+#: src/libaudgui/playlists.cc:140
 msgid "Select Format by Extension"
-msgstr "Επιλογή μορφής από την επέκταση"
+msgstr "Επιλογή μορφής από επέκταση"
 
-#: src/libaudgui/playlists.cc:167 src/libaudqt/fileopener.cc:104
+#: src/libaudgui/playlists.cc:167 src/libaudqt/fileopener.cc:62
 msgid "Export Playlist"
-msgstr "Εξαγωγή λίστας αναπαραγωγής"
+msgstr "Εξαγωγή λίστας τραγουδιών"
 
 #: src/libaudgui/playlists.cc:168
 msgid "_Export"
 msgstr "Ε_ξαγωγή"
 
-#: src/libaudgui/playlists.cc:174 src/libaudqt/fileopener.cc:104
+#: src/libaudgui/playlists.cc:174 src/libaudqt/fileopener.cc:61
 msgid "Import Playlist"
-msgstr "Εισαγωγή λίστας αναπαραγωγής"
+msgstr "Εισαγωγή λίστας τραγουδιών"
 
 #: src/libaudgui/playlists.cc:175
 msgid "_Import"
 msgstr "_Εισαγωγή"
 
-#: src/libaudgui/plugin-menu.cc:40 src/libaudqt/plugin-menu-qt.cc:44
+#: src/libaudgui/plugin-menu.cc:40 src/libaudqt/plugin-menu-qt.cc:45
 msgid "_Plugins ..."
 msgstr "Π_ρόσθετα ..."
 
-#: src/libaudgui/plugin-prefs.cc:110 src/libaudqt/prefs-plugin.cc:61
+#: src/libaudgui/plugin-prefs.cc:109 src/libaudqt/prefs-plugin.cc:56
 #, c-format
 msgid "About %s"
 msgstr "Σχετικά με το %s"
 
-#: src/libaudgui/plugin-prefs.cc:156 src/libaudqt/prefs-plugin.cc:126
+#: src/libaudgui/plugin-prefs.cc:155 src/libaudqt/prefs-plugin.cc:119
 #, c-format
 msgid "%s Settings"
 msgstr "%s Ρυθμίσεις"
 
-#: src/libaudgui/plugin-prefs.cc:161 src/libaudqt/prefs-plugin.cc:139
+#: src/libaudgui/plugin-prefs.cc:159 src/libaudqt/prefs-plugin.cc:130
 msgid "_Set"
 msgstr "_Ορισμός"
 
-#: src/libaudgui/plugin-view.cc:236 src/libaudgui/prefs-window.cc:751
-#: src/libaudgui/prefs-window.cc:791 src/libaudqt/prefs-window-qt.cc:634
-#: src/libaudqt/prefs-window-qt.cc:637
+#: src/libaudgui/plugin-view.cc:235 src/libaudgui/prefs-window.cc:690
+#: src/libaudgui/prefs-window.cc:730 src/libaudqt/prefs-window-qt.cc:595
+#: src/libaudqt/prefs-window-qt.cc:598
 msgid "_Settings"
 msgstr "_Ρυθμίσεις"
 
-#: src/libaudgui/plugin-view.cc:243 src/libaudgui/prefs-window.cc:765
-#: src/libaudgui/prefs-window.cc:803 src/libaudqt/prefs-window-qt.cc:635
-#: src/libaudqt/prefs-window-qt.cc:638
+#: src/libaudgui/plugin-view.cc:242 src/libaudgui/prefs-window.cc:704
+#: src/libaudgui/prefs-window.cc:742 src/libaudqt/prefs-window-qt.cc:596
+#: src/libaudqt/prefs-window-qt.cc:599
 msgid "_About"
-msgstr "Π_ερί"
+msgstr "_Περί"
 
-#: src/libaudgui/prefs-widget.cc:323 src/libaudqt/prefs-widget-qt.cc:234
+#: src/libaudgui/prefs-widget.cc:277
 msgid "Choose File"
 msgstr "Επιλογή αρχείου"
 
-#: src/libaudgui/prefs-widget.cc:327 src/libaudqt/prefs-widget-qt.cc:238
+#: src/libaudgui/prefs-widget.cc:281
 msgid "Choose Folder"
 msgstr "Επιλογή φακέλου"
 
-#: src/libaudgui/prefs-window.cc:83 src/libaudqt/prefs-window-qt.cc:160
+#: src/libaudgui/prefs-window.cc:82 src/libaudqt/prefs-window-qt.cc:136
 msgid "Appearance"
 msgstr "Εμφάνιση"
 
-#: src/libaudgui/prefs-window.cc:84 src/libaudqt/prefs-window-qt.cc:161
+#: src/libaudgui/prefs-window.cc:83 src/libaudqt/prefs-window-qt.cc:137
 msgid "Audio"
 msgstr "Ήχος"
 
-#: src/libaudgui/prefs-window.cc:85 src/libaudqt/prefs-window-qt.cc:162
+#: src/libaudgui/prefs-window.cc:84 src/libaudqt/prefs-window-qt.cc:138
 msgid "Network"
 msgstr "Δίκτυο"
 
-#: src/libaudgui/prefs-window.cc:86 src/libaudgui/prefs-window.cc:97
-#: src/libaudqt/prefs-pluginlist-model.cc:43
-#: src/libaudqt/prefs-window-qt.cc:163
+#: src/libaudgui/prefs-window.cc:85 src/libaudgui/prefs-window.cc:96
+#: src/libaudqt/prefs-pluginlist-model.cc:41
+#: src/libaudqt/prefs-window-qt.cc:139
 msgid "Playlist"
-msgstr "Λίστες αναπαραγωγής"
+msgstr "Λίστα αναπαραγωγής"
 
-#: src/libaudgui/prefs-window.cc:88 src/libaudqt/prefs-window-qt.cc:165
+#: src/libaudgui/prefs-window.cc:87 src/libaudqt/prefs-window-qt.cc:141
 msgid "Plugins"
 msgstr "Πρόσθετα"
 
-#: src/libaudgui/prefs-window.cc:89 src/libaudqt/prefs-window-qt.cc:166
+#: src/libaudgui/prefs-window.cc:88 src/libaudqt/prefs-window-qt.cc:142
 msgid "Advanced"
 msgstr "Προχωρημένα"
 
-#: src/libaudgui/prefs-window.cc:93 src/libaudqt/prefs-pluginlist-model.cc:39
+#: src/libaudgui/prefs-window.cc:92 src/libaudqt/prefs-pluginlist-model.cc:37
 msgid "General"
 msgstr "Γενικά"
 
-#: src/libaudgui/prefs-window.cc:94 src/libaudqt/prefs-pluginlist-model.cc:40
+#: src/libaudgui/prefs-window.cc:93 src/libaudqt/prefs-pluginlist-model.cc:38
 msgid "Effect"
 msgstr "Εφέ"
 
-#: src/libaudgui/prefs-window.cc:95 src/libaudqt/prefs-pluginlist-model.cc:41
+#: src/libaudgui/prefs-window.cc:94 src/libaudqt/prefs-pluginlist-model.cc:39
 msgid "Visualization"
-msgstr "Οπτικά εφέ"
+msgstr "Απεικόνιση"
 
-#: src/libaudgui/prefs-window.cc:96 src/libaudqt/prefs-pluginlist-model.cc:42
+#: src/libaudgui/prefs-window.cc:95 src/libaudqt/prefs-pluginlist-model.cc:40
 msgid "Input"
-msgstr "Είσοδοι"
+msgstr "Γραμμή εισόδου"
 
-#: src/libaudgui/prefs-window.cc:98 src/libaudqt/prefs-pluginlist-model.cc:44
+#: src/libaudgui/prefs-window.cc:97 src/libaudqt/prefs-pluginlist-model.cc:42
 msgid "Transport"
-msgstr "Μεταφορές"
+msgstr "Μεταφορά"
 
-#: src/libaudgui/prefs-window.cc:104 src/libaudqt/prefs-window-qt.cc:171
+#: src/libaudgui/prefs-window.cc:103 src/libaudqt/prefs-window-qt.cc:148
 msgid "Album artist"
 msgstr "Καλλιτέχνης άλμπουμ"
 
-#: src/libaudgui/prefs-window.cc:106 src/libaudqt/prefs-window-qt.cc:173
+#: src/libaudgui/prefs-window.cc:105 src/libaudqt/prefs-window-qt.cc:150
 msgid "Track number"
 msgstr "Αριθμός κομματιού"
 
-#: src/libaudgui/prefs-window.cc:108 src/libaudqt/prefs-window-qt.cc:175
+#: src/libaudgui/prefs-window.cc:107 src/libaudqt/prefs-window-qt.cc:152
 msgid "File name"
 msgstr "Όνομα αρχείου"
 
-#: src/libaudgui/prefs-window.cc:109 src/libaudqt/prefs-window-qt.cc:176
+#: src/libaudgui/prefs-window.cc:108 src/libaudqt/prefs-window-qt.cc:153
 msgid "File path"
 msgstr "Διαδρομή αρχείου"
 
-#: src/libaudgui/prefs-window.cc:110 src/libaudqt/prefs-window-qt.cc:177
+#: src/libaudgui/prefs-window.cc:109 src/libaudqt/prefs-window-qt.cc:154
 msgid "Date"
 msgstr "Ημερομηνία"
 
-#: src/libaudgui/prefs-window.cc:111 src/libaudqt/info-widget.cc:55
-#: src/libaudqt/prefs-window-qt.cc:178
-msgid "Description"
-msgstr "Περιγραφή"
-
-#: src/libaudgui/prefs-window.cc:114 src/libaudqt/info-widget.cc:66
-#: src/libaudqt/prefs-window-qt.cc:181
+#: src/libaudgui/prefs-window.cc:112 src/libaudqt/info-widget.cc:56
+#: src/libaudqt/prefs-window-qt.cc:157
 msgid "Codec"
-msgstr "Κωδικοποιητής"
+msgstr "Πολυμέσο"
 
-#: src/libaudgui/prefs-window.cc:115 src/libaudqt/info-widget.cc:67
-#: src/libaudqt/prefs-window-qt.cc:182
+#: src/libaudgui/prefs-window.cc:113 src/libaudqt/info-widget.cc:57
+#: src/libaudqt/prefs-window-qt.cc:158
 msgid "Quality"
 msgstr "Ποιότητα"
 
-#: src/libaudgui/prefs-window.cc:119 src/libaudqt/prefs-window-qt.cc:185
+#: src/libaudgui/prefs-window.cc:117 src/libaudqt/prefs-window-qt.cc:162
 msgid "None"
 msgstr "Κανένα"
 
-#: src/libaudgui/prefs-window.cc:120 src/libaudqt/prefs-window-qt.cc:186
+#: src/libaudgui/prefs-window.cc:118 src/libaudqt/prefs-window-qt.cc:163
 msgid "Arabic"
 msgstr "Αραβικά"
 
-#: src/libaudgui/prefs-window.cc:121 src/libaudqt/prefs-window-qt.cc:187
+#: src/libaudgui/prefs-window.cc:119 src/libaudqt/prefs-window-qt.cc:164
 msgid "Baltic"
 msgstr "Βαλτικά"
 
-#: src/libaudgui/prefs-window.cc:122 src/libaudqt/prefs-window-qt.cc:188
+#: src/libaudgui/prefs-window.cc:120 src/libaudqt/prefs-window-qt.cc:165
 msgid "Chinese"
 msgstr "Κινέζικα"
 
-#: src/libaudgui/prefs-window.cc:123 src/libaudqt/prefs-window-qt.cc:189
+#: src/libaudgui/prefs-window.cc:121 src/libaudqt/prefs-window-qt.cc:166
 msgid "Greek"
 msgstr "Ελληνικά"
 
-#: src/libaudgui/prefs-window.cc:124 src/libaudqt/prefs-window-qt.cc:190
+#: src/libaudgui/prefs-window.cc:122 src/libaudqt/prefs-window-qt.cc:167
 msgid "Hebrew"
 msgstr "Εβραϊκά"
 
-#: src/libaudgui/prefs-window.cc:125 src/libaudqt/prefs-window-qt.cc:191
+#: src/libaudgui/prefs-window.cc:123 src/libaudqt/prefs-window-qt.cc:168
 msgid "Japanese"
 msgstr "Ιαπωνικά"
 
-#: src/libaudgui/prefs-window.cc:126 src/libaudqt/prefs-window-qt.cc:192
+#: src/libaudgui/prefs-window.cc:124 src/libaudqt/prefs-window-qt.cc:169
 msgid "Korean"
 msgstr "Κορεάτικα"
 
-#: src/libaudgui/prefs-window.cc:127 src/libaudqt/prefs-window-qt.cc:193
+#: src/libaudgui/prefs-window.cc:125 src/libaudqt/prefs-window-qt.cc:170
 msgid "Polish"
 msgstr "Πολωνικά"
 
-#: src/libaudgui/prefs-window.cc:128 src/libaudqt/prefs-window-qt.cc:194
+#: src/libaudgui/prefs-window.cc:126 src/libaudqt/prefs-window-qt.cc:171
 msgid "Russian"
 msgstr "Ρώσικα"
 
-#: src/libaudgui/prefs-window.cc:129 src/libaudqt/prefs-window-qt.cc:195
+#: src/libaudgui/prefs-window.cc:127 src/libaudqt/prefs-window-qt.cc:172
 msgid "Taiwanese"
 msgstr "Ταϊβανέζικα"
 
-#: src/libaudgui/prefs-window.cc:130 src/libaudqt/prefs-window-qt.cc:196
+#: src/libaudgui/prefs-window.cc:128 src/libaudqt/prefs-window-qt.cc:173
 msgid "Turkish"
 msgstr "Τούρκικα"
 
-#: src/libaudgui/prefs-window.cc:134 src/libaudqt/prefs-window-qt.cc:199
+#: src/libaudgui/prefs-window.cc:132 src/libaudqt/prefs-window-qt.cc:177
 msgid "Automatic"
 msgstr "Αυτόματα"
 
-#: src/libaudgui/prefs-window.cc:138 src/libaudqt/prefs-window-qt.cc:200
+#: src/libaudgui/prefs-window.cc:136 src/libaudqt/prefs-window-qt.cc:181
 msgid "Floating point"
 msgstr "Κινητή υποδιαστολή"
 
-#: src/libaudgui/prefs-window.cc:142 src/libaudqt/prefs-window-qt.cc:203
+#: src/libaudgui/prefs-window.cc:140 src/libaudqt/prefs-window-qt.cc:185
 msgid "As decoded"
 msgstr "Όπως αποκωδικοποιείται"
 
-#: src/libaudgui/prefs-window.cc:143 src/libaudqt/prefs-window-qt.cc:204
+#: src/libaudgui/prefs-window.cc:141 src/libaudqt/prefs-window-qt.cc:186
 msgid "After applying ReplayGain"
-msgstr "Μετά από την εφαρμογή ReplayGain"
+msgstr "Μετά την εφαρμογή ReplayGain"
 
-#: src/libaudgui/prefs-window.cc:144 src/libaudqt/prefs-window-qt.cc:206
+#: src/libaudgui/prefs-window.cc:142 src/libaudqt/prefs-window-qt.cc:187
 msgid "After applying effects"
-msgstr "Μετά από την εφαρμογή ενεργειών"
+msgstr "Μετά την εφαρμογή δράσεων"
 
-#: src/libaudgui/prefs-window.cc:145 src/libaudqt/prefs-window-qt.cc:207
+#: src/libaudgui/prefs-window.cc:143 src/libaudqt/prefs-window-qt.cc:188
 msgid "After applying equalization"
-msgstr "Μετά από την εφαρμογή εξισορρόπησης"
+msgstr "Μετά την εφαρμογή εξισορρόπησης"
 
-#: src/libaudgui/prefs-window.cc:151 src/libaudqt/prefs-window-qt.cc:213
+#: src/libaudgui/prefs-window.cc:149 src/libaudqt/prefs-window-qt.cc:194
 msgid "Based on shuffle"
-msgstr "Τυχαία επιλογή"
+msgstr "Με βάση τη τυχαία εναλλαγή"
 
-#: src/libaudgui/prefs-window.cc:166
-msgid "Restart in Qt mode"
-msgstr "Επανεκκίνηση σε διεπαφή Qt"
-
-#: src/libaudgui/prefs-window.cc:175
-msgid "Audacious is running in GTK (legacy) mode."
-msgstr "Το audacious εκτελείται σε διεπαφή GTK (legacy)."
-
-#: src/libaudgui/prefs-window.cc:179
-msgid "Qt mode is unavailable in this build."
-msgstr "Η διεπαφή Qt δεν είναι διαθέσιμη."
-
-#: src/libaudgui/prefs-window.cc:181 src/libaudqt/prefs-window-qt.cc:269
+#: src/libaudgui/prefs-window.cc:161 src/libaudqt/prefs-window-qt.cc:206
 msgid "Interface:"
 msgstr "Διεπαφή:"
 
-#: src/libaudgui/prefs-window.cc:200 src/libaudqt/prefs-window-qt.cc:283
+#: src/libaudgui/prefs-window.cc:180 src/libaudqt/prefs-window-qt.cc:216
 msgid "Output plugin:"
 msgstr "Πρόσθετο γραμμής εξόδου:"
 
-#: src/libaudgui/prefs-window.cc:221 src/libaudqt/prefs-window-qt.cc:296
+#: src/libaudgui/prefs-window.cc:201 src/libaudqt/prefs-window-qt.cc:231
 msgid "Amplify all files:"
 msgstr "Ενίσχυση όλων των αρχείων:"
 
-#: src/libaudgui/prefs-window.cc:223 src/libaudgui/prefs-window.cc:226
-#: src/libaudqt/prefs-window-qt.cc:297 src/libaudqt/prefs-window-qt.cc:299
+#: src/libaudgui/prefs-window.cc:203 src/libaudgui/prefs-window.cc:206
+#: src/libaudqt/prefs-window-qt.cc:233 src/libaudqt/prefs-window-qt.cc:236
 msgid "dB"
 msgstr "dB"
 
-#: src/libaudgui/prefs-window.cc:224 src/libaudqt/prefs-window-qt.cc:298
+#: src/libaudgui/prefs-window.cc:204 src/libaudqt/prefs-window-qt.cc:234
 msgid "Amplify untagged files:"
-msgstr "Ενίσχυση αρχείων χωρίς tags:"
+msgstr "Ενίσχυση αρχείων χωρίς ετικέτες:"
 
-#: src/libaudgui/prefs-window.cc:230 src/libaudqt/prefs-window-qt.cc:302
+#: src/libaudgui/prefs-window.cc:210 src/libaudqt/prefs-window-qt.cc:240
 msgid "<b>Output Settings</b>"
 msgstr "<b>Ρυθμίσεις εξόδου</b>"
 
-#: src/libaudgui/prefs-window.cc:232 src/libaudqt/prefs-window-qt.cc:304
+#: src/libaudgui/prefs-window.cc:212 src/libaudqt/prefs-window-qt.cc:242
 msgid "Bit depth:"
-msgstr "Βάθος bit:"
+msgstr "Βάθος μπιτ:"
 
-#: src/libaudgui/prefs-window.cc:235 src/libaudgui/prefs-window.cc:280
-#: src/libaudqt/prefs-window-qt.cc:307 src/libaudqt/prefs-window-qt.cc:335
+#: src/libaudgui/prefs-window.cc:215 src/libaudgui/prefs-window.cc:260
+#: src/libaudqt/prefs-window-qt.cc:245 src/libaudqt/prefs-window-qt.cc:290
 msgid "Buffer size:"
 msgstr "Μέγεθος προσωρινής μνήμης:"
 
-#: src/libaudgui/prefs-window.cc:237 src/libaudqt/prefs-window-qt.cc:308
+#: src/libaudgui/prefs-window.cc:217 src/libaudqt/prefs-window-qt.cc:247
 msgid "ms"
 msgstr "ms"
 
-#: src/libaudgui/prefs-window.cc:238 src/libaudqt/prefs-window-qt.cc:309
+#: src/libaudgui/prefs-window.cc:218 src/libaudqt/prefs-window-qt.cc:248
 msgid "Soft clipping"
-msgstr "Soft clipping"
+msgstr "Μαλακή αποκοπή"
 
-#: src/libaudgui/prefs-window.cc:240 src/libaudqt/prefs-window-qt.cc:310
+#: src/libaudgui/prefs-window.cc:220 src/libaudqt/prefs-window-qt.cc:250
 msgid "Use software volume control (not recommended)"
 msgstr "Χρήση λογισμικού ελέγχου έντασης (δεν συνιστάται)"
 
-#: src/libaudgui/prefs-window.cc:242 src/libaudqt/prefs-window-qt.cc:312
+#: src/libaudgui/prefs-window.cc:222 src/libaudqt/prefs-window-qt.cc:252
 msgid "<b>Recording Settings</b>"
-msgstr "<b>Ρυθμίσεις εγγραφής</b>"
+msgstr "<b>Ρυθμίσεις καταγραφής</b>"
 
-#: src/libaudgui/prefs-window.cc:246 src/libaudqt/prefs-window-qt.cc:315
+#: src/libaudgui/prefs-window.cc:226 src/libaudqt/prefs-window-qt.cc:256
 msgid "Record stream:"
-msgstr "Εγγραφή ροής:"
+msgstr "Καταγραφή ροής:"
 
-#: src/libaudgui/prefs-window.cc:249 src/libaudqt/prefs-window-qt.cc:317
+#: src/libaudgui/prefs-window.cc:229 src/libaudqt/prefs-window-qt.cc:259
 msgid "<b>ReplayGain</b>"
 msgstr "<b>ReplayGain (ομαλοποίηση έντασης)</b>"
 
-#: src/libaudgui/prefs-window.cc:250 src/libaudqt/prefs-window-qt.cc:318
+#: src/libaudgui/prefs-window.cc:230 src/libaudqt/prefs-window-qt.cc:260
 msgid "Enable ReplayGain"
 msgstr "Ενεργοποίηση ReplayGain"
 
-#: src/libaudgui/prefs-window.cc:252 src/libaudqt/prefs-window-qt.cc:319
+#: src/libaudgui/prefs-window.cc:232 src/libaudqt/prefs-window-qt.cc:262
 msgid "Mode:"
-msgstr "Μέθοδος:"
+msgstr "Λειτουργία:"
 
-#: src/libaudgui/prefs-window.cc:256 src/libaudqt/prefs-window-qt.cc:321
+#: src/libaudgui/prefs-window.cc:236 src/libaudqt/prefs-window-qt.cc:266
 msgid "Prevent clipping (recommended)"
 msgstr "Αποτροπή αποκοπής (συνιστάται)"
 
-#: src/libaudgui/prefs-window.cc:264 src/libaudqt/prefs-window-qt.cc:326
+#: src/libaudgui/prefs-window.cc:244 src/libaudqt/prefs-window-qt.cc:274
 msgid "Proxy hostname:"
-msgstr "Διεύθυνση:"
+msgstr "Διεύθυνση διαμεσολαβητή:"
 
-#: src/libaudgui/prefs-window.cc:266 src/libaudqt/prefs-window-qt.cc:327
+#: src/libaudgui/prefs-window.cc:246 src/libaudqt/prefs-window-qt.cc:276
 msgid "Proxy port:"
 msgstr "Θύρα διαμεσολαβητή:"
 
-#: src/libaudgui/prefs-window.cc:271 src/libaudqt/prefs-window-qt.cc:330
+#: src/libaudgui/prefs-window.cc:251 src/libaudqt/prefs-window-qt.cc:281
 msgid "Proxy username:"
-msgstr "Όνομα χρήστη:"
+msgstr "Όνομα χρήστη διαμεσολαβητή:"
 
-#: src/libaudgui/prefs-window.cc:273 src/libaudqt/prefs-window-qt.cc:331
+#: src/libaudgui/prefs-window.cc:253 src/libaudqt/prefs-window-qt.cc:283
 msgid "Proxy password:"
-msgstr "Κωδικός πρόσβασης:"
+msgstr "Κωδικός πρόσβασης διαμεσολαβητή:"
 
-#: src/libaudgui/prefs-window.cc:279 src/libaudqt/prefs-window-qt.cc:334
+#: src/libaudgui/prefs-window.cc:259 src/libaudqt/prefs-window-qt.cc:289
 msgid "<b>Network Settings</b>"
 msgstr "<b>Ρυθμίσεις δικτύου</b>"
 
-#: src/libaudgui/prefs-window.cc:282 src/libaudqt/prefs-window-qt.cc:336
+#: src/libaudgui/prefs-window.cc:262 src/libaudqt/prefs-window-qt.cc:292
 msgid "KiB"
 msgstr "KiB"
 
-#: src/libaudgui/prefs-window.cc:283 src/libaudqt/prefs-window-qt.cc:337
+#: src/libaudgui/prefs-window.cc:263 src/libaudqt/prefs-window-qt.cc:293
 msgid "<b>Proxy Configuration</b>"
-msgstr "<b>Ρυθμίσεις διαμεσολαβητή</b>"
+msgstr "<b>Ρύθμιση διαμεσολαβητή</b>"
 
-#: src/libaudgui/prefs-window.cc:284 src/libaudqt/prefs-window-qt.cc:338
+#: src/libaudgui/prefs-window.cc:264 src/libaudqt/prefs-window-qt.cc:294
 msgid "Enable proxy usage"
 msgstr "Χρήση διαμεσολαβητή"
 
-#: src/libaudgui/prefs-window.cc:288 src/libaudqt/prefs-window-qt.cc:340
+#: src/libaudgui/prefs-window.cc:268 src/libaudqt/prefs-window-qt.cc:298
 msgid "Use authentication with proxy"
 msgstr "Χρήση πιστοποίησης με το διαμεσολαβητή"
 
-#: src/libaudgui/prefs-window.cc:292 src/libaudqt/prefs-window-qt.cc:343
-msgid "Use SOCKS proxy"
-msgstr "Χρήση διαμεσολαβητή SOCKS"
-
-#: src/libaudgui/prefs-window.cc:294 src/libaudqt/prefs-window-qt.cc:344
-msgid "SOCKS v4a"
-msgstr "SOCKS v4a"
-
-#: src/libaudgui/prefs-window.cc:298 src/libaudqt/prefs-window-qt.cc:345
-msgid "SOCKS v5"
-msgstr "SOCKS v5"
-
-#: src/libaudgui/prefs-window.cc:305 src/libaudqt/prefs-window-qt.cc:348
+#: src/libaudgui/prefs-window.cc:275 src/libaudqt/prefs-window-qt.cc:305
 msgid "Auto character encoding detector for:"
 msgstr "Αυτόματη αναγνώριση κωδικοσελίδας για:"
 
-#: src/libaudgui/prefs-window.cc:308 src/libaudqt/prefs-window-qt.cc:351
+#: src/libaudgui/prefs-window.cc:278 src/libaudqt/prefs-window-qt.cc:308
 msgid "Fallback character encodings:"
 msgstr "Εναλλακτικές κωδικοποιήσεις χαρακτήρων:"
 
-#: src/libaudgui/prefs-window.cc:316 src/libaudqt/prefs-window-qt.cc:358
+#: src/libaudgui/prefs-window.cc:286 src/libaudqt/prefs-window-qt.cc:316
 msgid "<b>Behavior</b>"
 msgstr "<b>Συμπεριφορά</b>"
 
-#: src/libaudgui/prefs-window.cc:317 src/libaudqt/prefs-window-qt.cc:359
+#: src/libaudgui/prefs-window.cc:287 src/libaudqt/prefs-window-qt.cc:317
 msgid "Resume playback on startup"
-msgstr "Συνέχιση της αναπαραγωγής με την εκκίνηση"
+msgstr "Συνέχιση της αναπαραγωγής κατά την εκκίνηση"
 
-#: src/libaudgui/prefs-window.cc:319 src/libaudqt/prefs-window-qt.cc:361
+#: src/libaudgui/prefs-window.cc:289 src/libaudqt/prefs-window-qt.cc:319
 msgid "Pause instead of resuming immediately"
-msgstr "Παύση αντί για άμεση συνέχιση"
+msgstr "Παύση αντί για άμεση επανάληψη"
 
-#: src/libaudgui/prefs-window.cc:322 src/libaudqt/prefs-window-qt.cc:363
+#: src/libaudgui/prefs-window.cc:292 src/libaudqt/prefs-window-qt.cc:322
 msgid "Advance when the current song is deleted"
-msgstr "Όταν το τρέχων αρχείο διαγράφεται, συνέχεια με το επόμενο"
+msgstr "Όταν το τρέχων αρχείο διαγράφεται, συνεχίζεται το επόμενο"
 
-#: src/libaudgui/prefs-window.cc:324 src/libaudqt/prefs-window-qt.cc:365
+#: src/libaudgui/prefs-window.cc:294 src/libaudqt/prefs-window-qt.cc:324
 msgid "Clear the playlist when opening files"
 msgstr "Όταν ανοίγουν αρχεία, καθαρισμός της λίστας αναπαραγωγής"
 
-#: src/libaudgui/prefs-window.cc:326 src/libaudqt/prefs-window-qt.cc:367
+#: src/libaudgui/prefs-window.cc:296 src/libaudqt/prefs-window-qt.cc:326
 msgid "Open files in a temporary playlist"
 msgstr "Άνοιγμα αρχείων σε μια προσωρινή λίστα αναπαραγωγής"
 
-#: src/libaudgui/prefs-window.cc:328 src/libaudqt/prefs-window-qt.cc:369
+#: src/libaudgui/prefs-window.cc:298 src/libaudqt/prefs-window-qt.cc:328
 msgid "<b>Song Display</b>"
-msgstr "<b>Εμφάνιση</b>"
+msgstr "<b>Προβολή τραγουδιού</b>"
 
-#: src/libaudgui/prefs-window.cc:329 src/libaudqt/prefs-window-qt.cc:370
+#: src/libaudgui/prefs-window.cc:299 src/libaudqt/prefs-window-qt.cc:329
 msgid "Show song numbers"
 msgstr "Εμφάνιση αριθμών στα τραγούδια"
 
-#: src/libaudgui/prefs-window.cc:331 src/libaudqt/prefs-window-qt.cc:372
+#: src/libaudgui/prefs-window.cc:301 src/libaudqt/prefs-window-qt.cc:331
 msgid "Show leading zeroes (02:00 vs. 2:00)"
 msgstr "Εμφάνιση μηδενικών στην αρχή (02:00 αντί 2:00)"
 
-#: src/libaudgui/prefs-window.cc:333 src/libaudqt/prefs-window-qt.cc:374
+#: src/libaudgui/prefs-window.cc:303 src/libaudqt/prefs-window-qt.cc:333
 msgid "Show hours separately (1:30:00 vs. 90:00)"
-msgstr "Εμφάνιση της ώρας ξεχωριστά (1:30:00 αντί 90:00)"
+msgstr "Εμφάνιση της ώρας χωριστά (1:30:00 αντί 90:00)"
 
-#: src/libaudgui/prefs-window.cc:336 src/libaudqt/prefs-window-qt.cc:377
+#: src/libaudgui/prefs-window.cc:306 src/libaudqt/prefs-window-qt.cc:336
 msgid "<b>Export</b>"
 msgstr "<b>Εξαγωγή</b>"
 
-#: src/libaudgui/prefs-window.cc:337 src/libaudqt/prefs-window-qt.cc:378
+#: src/libaudgui/prefs-window.cc:307 src/libaudqt/prefs-window-qt.cc:337
 msgid "Use relative paths when possible"
-msgstr "Χρήση σχετικών διαδρομών, όταν είναι δυνατόν"
+msgstr "Χρήση των σχετικών διαδρομών, όταν είναι δυνατόν"
 
-#: src/libaudgui/prefs-window.cc:342 src/libaudqt/prefs-window-qt.cc:382
+#: src/libaudgui/prefs-window.cc:312 src/libaudqt/prefs-window-qt.cc:342
 msgid "<b>Album Art</b>"
 msgstr "<b>Άλμπουμ</b>"
 
-#: src/libaudgui/prefs-window.cc:343 src/libaudqt/prefs-window-qt.cc:384
+#: src/libaudgui/prefs-window.cc:313 src/libaudqt/prefs-window-qt.cc:343
 msgid "Search for images matching these words (comma-separated):"
 msgstr ""
 "Αναζήτηση εικόνων που ταιριάζουν με τις λέξεις (διαχωρισμένες με κόμμα):"
 
-#: src/libaudgui/prefs-window.cc:345 src/libaudqt/prefs-window-qt.cc:386
+#: src/libaudgui/prefs-window.cc:315 src/libaudqt/prefs-window-qt.cc:345
 msgid "Exclude images matching these words (comma-separated):"
 msgstr ""
 "Εξαίρεση εικόνων που ταιριάζουν με τις λέξεις (διαχωρισμένες με κόμμα):"
 
-#: src/libaudgui/prefs-window.cc:347 src/libaudqt/prefs-window-qt.cc:388
+#: src/libaudgui/prefs-window.cc:317 src/libaudqt/prefs-window-qt.cc:347
 msgid "Search for images matching song file name"
 msgstr "Αναζήτηση εικόνων που ταιριάζουν με το όνομα αρχείου του τραγουδιού"
 
-#: src/libaudgui/prefs-window.cc:349 src/libaudqt/prefs-window-qt.cc:390
+#: src/libaudgui/prefs-window.cc:319 src/libaudqt/prefs-window-qt.cc:349
 msgid "Search recursively"
-msgstr "Αναζήτηση εικόνων σε υποφακέλους"
+msgstr "Αναδρομική αναζήτηση"
 
-#: src/libaudgui/prefs-window.cc:351 src/libaudqt/prefs-window-qt.cc:391
+#: src/libaudgui/prefs-window.cc:321 src/libaudqt/prefs-window-qt.cc:351
 msgid "Search depth:"
 msgstr "Βάθος αναζήτησης:"
 
-#: src/libaudgui/prefs-window.cc:355 src/libaudqt/prefs-window-qt.cc:393
+#: src/libaudgui/prefs-window.cc:325 src/libaudqt/prefs-window-qt.cc:355
 msgid "<b>Popup Information</b>"
-msgstr "<b>Αναδυόμενη πληροφόρηση</b>"
+msgstr "<b>Αναδυόμενες πληροφορίες</b>"
 
-#: src/libaudgui/prefs-window.cc:356 src/libaudqt/prefs-window-qt.cc:394
+#: src/libaudgui/prefs-window.cc:326 src/libaudqt/prefs-window-qt.cc:356
 msgid "Show popup information"
-msgstr "Εμφάνιση αναδυόμενων πληροφοριών"
+msgstr "Εμφάνιση πληροφοριών σε αναδυόμενο παράθυρο"
 
-#: src/libaudgui/prefs-window.cc:358 src/libaudqt/prefs-window-qt.cc:396
+#: src/libaudgui/prefs-window.cc:328 src/libaudqt/prefs-window-qt.cc:358
 msgid "Popup delay (tenths of a second):"
-msgstr "Καθυστέρηση (σε δέκατα του δευτερολέπτου):"
+msgstr "Αναδυόμενη καθυστέρηση (σε δέκατα του δευτερολέπτου):"
 
-#: src/libaudgui/prefs-window.cc:362
+#: src/libaudgui/prefs-window.cc:332 src/libaudqt/prefs-window-qt.cc:362
 msgid "Show time scale for current song"
-msgstr "Εμφάνιση χρονικής κλίμακας για το τρέχον τραγούδι"
+msgstr "Εμφάνιση χρονοδιαγράμματος για το τρέχον τραγούδι"
 
-#: src/libaudgui/prefs-window.cc:368 src/libaudqt/prefs-window-qt.cc:400
+#: src/libaudgui/prefs-window.cc:338 src/libaudqt/prefs-window-qt.cc:368
 msgid "<b>Compatibility</b>"
 msgstr "<b>Συμβατότητα</b>"
 
-#: src/libaudgui/prefs-window.cc:369 src/libaudqt/prefs-window-qt.cc:401
+#: src/libaudgui/prefs-window.cc:339 src/libaudqt/prefs-window-qt.cc:369
 msgid "Interpret \\ (backward slash) as a folder delimiter"
-msgstr "Σήμανση με \\\\ (αντιπλάγια μπάρα) ως διαχωριστικό φακέλων"
+msgstr "Εξήγηση με \\\\ (αντιπλάγια μπάρα) ως διαχωριστικό φακέλων"
 
-#: src/libaudgui/prefs-window.cc:372 src/libaudqt/prefs-window-qt.cc:404
+#: src/libaudgui/prefs-window.cc:342 src/libaudqt/prefs-window-qt.cc:372
 msgid "<b>Playlist</b>"
 msgstr "<b>Λίστα αναπαραγωγής</b>"
 
-#: src/libaudgui/prefs-window.cc:373 src/libaudqt/prefs-window-qt.cc:405
+#: src/libaudgui/prefs-window.cc:343 src/libaudqt/prefs-window-qt.cc:373
 msgid "Add folders recursively"
-msgstr "Προσθήκη υποφακέλων"
+msgstr "Αναδρομική προσθήκη φακέλων"
 
-#: src/libaudgui/prefs-window.cc:375 src/libaudqt/prefs-window-qt.cc:407
+#: src/libaudgui/prefs-window.cc:345 src/libaudqt/prefs-window-qt.cc:375
 msgid "Add folders nested within playlist files"
-msgstr "Προσθήκη φακέλων που περιέχουν τα αρχεία της λίστας αναπαραγωγής"
+msgstr "Προσθήκη των ενσωματωμένων φακέλων στα αρχεία της λίστας αναπαραγωγής"
 
-#: src/libaudgui/prefs-window.cc:377 src/libaudqt/prefs-window-qt.cc:409
+#: src/libaudgui/prefs-window.cc:347 src/libaudqt/prefs-window-qt.cc:377
 msgid "<b>Metadata</b>"
 msgstr "<b>Μεταδεδομένα</b>"
 
-#: src/libaudgui/prefs-window.cc:378 src/libaudqt/prefs-window-qt.cc:410
+#: src/libaudgui/prefs-window.cc:348 src/libaudqt/prefs-window-qt.cc:378
 msgid "Guess missing metadata from file path"
-msgstr ""
-"Υποθετικός υπολογισμός μεταδεδομένων που λείπουν από τη διαδρομή του αρχείου"
+msgstr "Υπολογισμός των μεταδεδομένων που λείπουν με βάση τη διαδρομή αρχείου"
 
-#: src/libaudgui/prefs-window.cc:380 src/libaudqt/prefs-window-qt.cc:412
+#: src/libaudgui/prefs-window.cc:350 src/libaudqt/prefs-window-qt.cc:380
 msgid "Do not load metadata for songs until played"
 msgstr "Να μη φορτώνονται μεταδεδομένα για τα τραγούδια μέχρι να παίξουν"
 
-#: src/libaudgui/prefs-window.cc:382 src/libaudqt/prefs-window-qt.cc:415
+#: src/libaudgui/prefs-window.cc:352 src/libaudqt/prefs-window-qt.cc:382
 msgid "Probe content of files with no recognized file name extension"
-msgstr "Διερεύνηση περιεχομένου αρχείων χωρίς αναγνωρισμένη επέκταση ονόματος"
+msgstr "Ανίχνευση περιεχομένων σε αρχεία χωρίς αναγνωρισμένη επέκταση ονόματος"
 
-#: src/libaudgui/prefs-window.cc:384 src/libaudqt/prefs-window-qt.cc:417
-msgid "<b>Miscellaneous</b>"
-msgstr "<b>Διάφορα</b>"
-
-#: src/libaudgui/prefs-window.cc:385 src/libaudqt/prefs-window-qt.cc:418
-msgid "Step forward/backward by:"
-msgstr "Βήμα προς τα εμπρός/πίσω σε:"
-
-#: src/libaudgui/prefs-window.cc:387 src/libaudqt/prefs-window-qt.cc:419
-msgid "seconds"
-msgstr "δευτερόλεπτα"
-
-#: src/libaudgui/prefs-window.cc:388 src/libaudqt/prefs-window-qt.cc:420
-msgid "Adjust volume by:"
-msgstr "Ρύθμιση έντασης σε:"
-
-#: src/libaudgui/prefs-window.cc:390 src/libaudqt/prefs-window-qt.cc:421
-msgid "percent"
-msgstr "επί τοις εκατό"
-
-#: src/libaudgui/prefs-window.cc:407 src/libaudqt/prefs-window-qt.cc:438
+#: src/libaudgui/prefs-window.cc:370 src/libaudqt/prefs-window-qt.cc:400
 msgid "TITLE"
 msgstr "ΤΙΤΛΟΣ"
 
-#: src/libaudgui/prefs-window.cc:408 src/libaudqt/prefs-window-qt.cc:439
+#: src/libaudgui/prefs-window.cc:371 src/libaudqt/prefs-window-qt.cc:401
 msgid "TITLE - ARTIST"
 msgstr "ΤΙΤΛΟΣ - ΚΑΛΛΙΤΕΧΝΗΣ"
 
-#: src/libaudgui/prefs-window.cc:409 src/libaudqt/prefs-window-qt.cc:440
+#: src/libaudgui/prefs-window.cc:372 src/libaudqt/prefs-window-qt.cc:402
 msgid "TITLE - ARTIST - ALBUM"
 msgstr "ΤΙΤΛΟΣ - ΚΑΛΛΙΤΕΧΝΗΣ - ΑΛΜΠΟΥΜ"
 
-#: src/libaudgui/prefs-window.cc:410 src/libaudqt/prefs-window-qt.cc:441
+#: src/libaudgui/prefs-window.cc:373 src/libaudqt/prefs-window-qt.cc:403
 msgid "ARTIST - TITLE"
 msgstr "ΚΑΛΛΙΤΕΧΝΗΣ - ΤΙΤΛΟΣ"
 
-#: src/libaudgui/prefs-window.cc:411 src/libaudqt/prefs-window-qt.cc:442
+#: src/libaudgui/prefs-window.cc:374 src/libaudqt/prefs-window-qt.cc:404
 msgid "ARTIST - ALBUM - TITLE"
 msgstr "ΚΑΛΛΙΤΕΧΝΗΣ - ΑΛΜΠΟΥΜ - ΤΙΤΛΟΣ"
 
-#: src/libaudgui/prefs-window.cc:412 src/libaudqt/prefs-window-qt.cc:443
+#: src/libaudgui/prefs-window.cc:375 src/libaudqt/prefs-window-qt.cc:405
 msgid "ARTIST - ALBUM - TRACK. TITLE"
 msgstr "ΚΑΛΛΙΤΕΧΝΗΣ - ΑΛΜΠΟΥΜ - ΤΙΤΛΟΣ. ΤΡΑΓΟΥΔΙΟΥ"
 
-#: src/libaudgui/prefs-window.cc:413 src/libaudqt/prefs-window-qt.cc:444
+#: src/libaudgui/prefs-window.cc:376 src/libaudqt/prefs-window-qt.cc:406
 msgid "ARTIST [ ALBUM ] - TRACK. TITLE"
 msgstr "ΚΑΛΛΙΤΕΧΝΗΣ [ ΑΛΜΠΟΥΜ ] - ΤΙΤΛΟΣ. ΤΡΑΓΟΥΔΙΟΥ"
 
-#: src/libaudgui/prefs-window.cc:414 src/libaudqt/prefs-window-qt.cc:445
+#: src/libaudgui/prefs-window.cc:377 src/libaudqt/prefs-window-qt.cc:407
 msgid "ALBUM - TITLE"
 msgstr "ΑΛΜΠΟΥΜ - ΤΙΤΛΟΣ"
 
-#: src/libaudgui/prefs-window.cc:512
+#: src/libaudgui/prefs-window.cc:471
 msgid "Category"
 msgstr "Κατηγορία"
 
-#: src/libaudgui/prefs-window.cc:576 src/libaudqt/prefs-window-qt.cc:462
+#: src/libaudgui/prefs-window.cc:535 src/libaudqt/prefs-window-qt.cc:425
 msgid "Custom"
-msgstr "Προσαρμογή"
+msgstr "Προσαρμοσμένο"
 
-#: src/libaudgui/prefs-window.cc:594 src/libaudqt/prefs-window-qt.cc:454
+#: src/libaudgui/prefs-window.cc:553 src/libaudqt/prefs-window-qt.cc:417
 msgid "Title format:"
 msgstr "Μορφή τίτλου:"
 
-#: src/libaudgui/prefs-window.cc:595 src/libaudqt/prefs-window-qt.cc:465
+#: src/libaudgui/prefs-window.cc:557 src/libaudqt/prefs-window-qt.cc:428
 msgid "Custom string:"
-msgstr "Συμβολοσειρά:"
+msgstr "Προσαρμοσμένο αλφαριθμητικό:"
 
-#: src/libaudgui/prefs-window.cc:817 src/libaudqt/prefs-window-qt.cc:774
+#: src/libaudgui/prefs-window.cc:756 src/libaudqt/prefs-window-qt.cc:719
 #, c-format
 msgid "Enable audio stream recording with %s"
-msgstr "Ενεργοποίηση εγγραφής ηχητικής ροής με το %s"
+msgstr "Ενεργοποίηση ηχητικής ροής με το %s"
 
-#: src/libaudgui/prefs-window.cc:826 src/libaudqt/prefs-window-qt.cc:787
+#: src/libaudgui/prefs-window.cc:765 src/libaudqt/prefs-window-qt.cc:730
 msgid "No audio recording plugin available"
-msgstr "Δεν είναι διαθέσιμο κανένα πρόσθετο εγγραφής ήχου"
+msgstr "Δεν είναι διαθέσιμο κανένα πρόσθετο ηχητικής καταγραφής"
 
-#: src/libaudgui/prefs-window.cc:887 src/libaudqt/prefs-window-qt.cc:647
+#: src/libaudgui/prefs-window.cc:825 src/libaudqt/prefs-window-qt.cc:607
 msgid "Audacious Settings"
 msgstr "Ρυθμίσεις Audacious"
 
-#: src/libaudgui/preset-browser.cc:53 src/libaudgui/util.cc:201
-#: src/libaudqt/fileopener.cc:123
+#: src/libaudgui/preset-browser.cc:50 src/libaudgui/util.cc:172
 msgid "Cancel"
 msgstr "Άκυρο"
 
-#: src/libaudgui/preset-browser.cc:54 src/libaudqt/eq-preset-qt.cc:299
+#: src/libaudgui/preset-browser.cc:51
 msgid "Save"
 msgstr "Αποθήκευση"
 
-#: src/libaudgui/preset-browser.cc:54 src/libaudqt/eq-preset-qt.cc:261
+#: src/libaudgui/preset-browser.cc:51
 msgid "Load"
 msgstr "Φόρτωση"
 
-#: src/libaudgui/preset-browser.cc:85 src/libaudqt/eq-preset-qt.cc:257
+#: src/libaudgui/preset-browser.cc:77
 msgid "Load Preset File"
-msgstr "Φόρτωση αρχείου προρυθμίσεων"
+msgstr "Φόρτωση αρχείου προκαθορισμένων τιμών"
 
-#: src/libaudgui/preset-browser.cc:99
+#: src/libaudgui/preset-browser.cc:94
 msgid "Load EQF File"
 msgstr "Φόρτωση αρχείου EQF"
 
-#: src/libaudgui/preset-browser.cc:114 src/libaudqt/eq-preset-qt.cc:294
+#: src/libaudgui/preset-browser.cc:109
 msgid "Save Preset File"
-msgstr "Αποθήκευση αρχείου προρυθμίσεων"
+msgstr "Αποθήκευση αρχείου προκαθορισμένων τιμών"
 
-#: src/libaudgui/preset-browser.cc:131
+#: src/libaudgui/preset-browser.cc:109
+msgid "<name>.preset"
+msgstr "όνομα.preset"
+
+#: src/libaudgui/preset-browser.cc:127
 msgid "Save EQF File"
 msgstr "Αποθήκευση αρχείου EQF"
 
-#: src/libaudgui/queue-manager.cc:175 src/libaudqt/queue-manager-qt.cc:264
+#: src/libaudgui/preset-browser.cc:127
+msgid "<name>.eqf"
+msgstr "<name>.eqf"
+
+#: src/libaudgui/preset-browser.cc:141
+msgid "Import Winamp Presets"
+msgstr "Εισαγωγή προκαθορισμένων τιμών Winamp"
+
+#: src/libaudgui/queue-manager.cc:175 src/libaudqt/queue-manager-qt.cc:157
 msgid "Queue Manager"
 msgstr "Διαχειριστής σειράς αναμονής"
 
-#: src/libaudgui/queue-manager.cc:194 src/libaudqt/queue-manager-qt.cc:210
+#: src/libaudgui/queue-manager.cc:193 src/libaudqt/queue-manager-qt.cc:160
 msgid "_Unqueue"
 msgstr "Α_φαίρεση από την σειρά"
 
-#: src/libaudgui/status.cc:37
+#: src/libaudgui/status.cc:36
 msgid "Working ..."
 msgstr "Εργασία..."
 
-#: src/libaudgui/status.cc:87 src/libaudqt/log-inspector.cc:226
+#: src/libaudgui/status.cc:85 src/libaudqt/log-inspector.cc:209
 msgid "Error"
 msgstr "Σφάλμα"
 
-#: src/libaudgui/status.cc:92
+#: src/libaudgui/status.cc:90
 msgid "Information"
 msgstr "Πληροφόρηση"
 
-#: src/libaudgui/url-opener.cc:56 src/libaudqt/url-opener-qt.cc:41
+#: src/libaudgui/url-opener.cc:55 src/libaudqt/url-opener-qt.cc:39
 msgid "_Save to history"
-msgstr "Απο_θήκευση"
+msgstr "_Αποθήκευση"
 
-#: src/libaudgui/url-opener.cc:64 src/libaudqt/url-opener-qt.cc:47
+#: src/libaudgui/url-opener.cc:63 src/libaudqt/url-opener-qt.cc:47
 msgid "Open URL"
-msgstr "Άνοιγμα διεύθυνσης"
+msgstr "Άνοιγμα διεύθυνσης URL"
 
-#: src/libaudgui/url-opener.cc:70 src/libaudqt/url-opener-qt.cc:53
+#: src/libaudgui/url-opener.cc:69 src/libaudqt/url-opener-qt.cc:53
 msgid "Add URL"
-msgstr "Προσθήκη διεύθυνσης"
+msgstr "Προσθήκη διεύθυνσης URL"
 
-#: src/libaudgui/url-opener.cc:93 src/libaudqt/url-opener-qt.cc:70
+#: src/libaudgui/url-opener.cc:92 src/libaudqt/url-opener-qt.cc:68
 msgid "C_lear history"
-msgstr "Α_φαίρεση ιστορικού"
+msgstr "_Καθαρισμός ιστορικού"
 
-#: src/libaudgui/url-opener.cc:105 src/libaudqt/url-opener-qt.cc:63
+#: src/libaudgui/url-opener.cc:104 src/libaudqt/url-opener-qt.cc:62
 msgid "Enter URL:"
-msgstr "Εισαγωγή διεύθυνσης:"
+msgstr "Εισαγωγή URL:"
 
-#: src/libaudgui/util.cc:201 src/libaudqt/fileopener.cc:107
+#: src/libaudgui/util.cc:172 src/libaudqt/fileopener.cc:66
+#: src/libaudqt/fileopener.cc:67
 msgid "Open"
 msgstr "Άνοιγμα"
 
-#: src/libaudgui/util.cc:342
+#: src/libaudgui/util.cc:283
 msgid ""
 "\n"
 "(Further messages have been hidden.)"
 msgstr ""
 "\n"
-"(Έχουν απενεργοποιηθεί περισσότερα μηνύματα .)"
+"(Έχουν αποκρυφτεί περαιτέρω μηνύματα )"
 
-#: src/libaudqt/eq-preset-qt.cc:252
-msgid "Preset files (*.preset *.eqf *.q1)"
-msgstr "Αρχεία προρυθμίσεων (*.preset *.eqf *.q1)"
-
-#: src/libaudqt/eq-preset-qt.cc:347
-msgid "Revert"
-msgstr "Επαναφορά"
-
-#: src/libaudqt/file-entry.cc:40
-msgid "Browse"
-msgstr "Περιήγηση"
-
-#: src/libaudqt/fileopener.cc:103
+#: src/libaudqt/fileopener.cc:58
 msgid "Open Folder"
 msgstr "Άνοιγμα φακέλου"
 
-#: src/libaudqt/fileopener.cc:104
+#: src/libaudqt/fileopener.cc:60
 msgid "Add Folder"
 msgstr "Προσθήκη φακέλου"
 
-#: src/libaudqt/fileopener.cc:107 src/libaudqt/fileopener.cc:108
+#: src/libaudqt/fileopener.cc:68 src/libaudqt/fileopener.cc:69
 msgid "Add"
 msgstr "Προσθήκη"
 
-#: src/libaudqt/font-entry.cc:39
-msgid "Set Font"
-msgstr "Επιλογή γραμματοσειράς"
-
-#: src/libaudqt/info-widget.cc:44
-msgid "<various>"
-msgstr "<various>"
-
-#: src/libaudqt/info-widget.cc:47
+#: src/libaudqt/info-widget.cc:40
 msgid "Metadata"
-msgstr "Μεταδεδομένα"
+msgstr "Μετα-πληροφορίες"
 
-#: src/libaudqt/info-widget.cc:56
+#: src/libaudqt/info-widget.cc:48
 msgid "Composer"
 msgstr "Συνθέτης"
 
-#: src/libaudqt/info-widget.cc:57
+#: src/libaudqt/info-widget.cc:49
 msgid "Performer"
-msgstr "Καλλιτέχνης"
+msgstr "Ερμηνευτής"
 
-#: src/libaudqt/info-widget.cc:58
+#: src/libaudqt/info-widget.cc:50
 msgid "Recording Year"
-msgstr "Έτος εγγραφής"
+msgstr "Έτος καταγραφής "
 
-#: src/libaudqt/info-widget.cc:59
+#: src/libaudqt/info-widget.cc:51
 msgid "Recording Date"
-msgstr "Ημερομηνία εγγραφής"
+msgstr "Ημερομηνία καταγραφής "
 
-#: src/libaudqt/info-widget.cc:60
-msgid "Publisher"
-msgstr "Εκδότης"
-
-#: src/libaudqt/info-widget.cc:61
-msgid "Catalog Number"
-msgstr "Αριθμός καταλόγου"
-
-#: src/libaudqt/info-widget.cc:64
+#: src/libaudqt/info-widget.cc:54
 msgid "Technical"
 msgstr "Τεχνικά"
 
-#: src/libaudqt/info-widget.cc:68
+#: src/libaudqt/info-widget.cc:58
 msgid "Bitrate"
-msgstr "Ρυθμός μετάδοσης"
+msgstr "Ρυθμός διαμεταγωγής "
 
-#: src/libaudqt/info-widget.cc:69
-msgid "Channels"
-msgstr "Κανάλια"
-
-#: src/libaudqt/info-widget.cc:70
-msgid "MusicBrainz ID"
-msgstr "MusicBrainz ID"
-
-#: src/libaudqt/infowin-qt.cc:94
-msgid "_Revert"
-msgstr "_Επαναφορά"
-
-#: src/libaudqt/infowin-qt.cc:105
-msgid "Error writing tag(s)."
-msgstr "Σφάλμα εγγραφής tag(s)."
-
-#: src/libaudqt/infowin-qt.cc:127
-msgid "%1 files selected"
-msgstr "%1 επιλεγμένα αρχεία"
-
-#: src/libaudqt/infowin-qt.cc:131
-msgid "_Save %1 files"
-msgstr "Απο_θήκευση %1 αρχείων"
-
-#: src/libaudqt/log-inspector.cc:152
+#: src/libaudqt/log-inspector.cc:137
 msgid "Level"
 msgstr "Επίπεδο"
 
-#: src/libaudqt/log-inspector.cc:154
+#: src/libaudqt/log-inspector.cc:138
 msgid "Function"
 msgstr "Λειτουργία"
 
-#: src/libaudqt/log-inspector.cc:156
+#: src/libaudqt/log-inspector.cc:139
 msgid "Message"
 msgstr "Μήνυμα"
 
-#: src/libaudqt/log-inspector.cc:211
+#: src/libaudqt/log-inspector.cc:195
 msgid "Log Inspector"
-msgstr "Καταγραφές"
+msgstr "Επιθεωρητής σύνδεσης "
 
-#: src/libaudqt/log-inspector.cc:223
+#: src/libaudqt/log-inspector.cc:206
 msgid "Debug"
 msgstr "Εντοπισμός σφαλμάτων"
 
-#: src/libaudqt/log-inspector.cc:224
+#: src/libaudqt/log-inspector.cc:207
 msgid "Info"
 msgstr "Πληροφορίες"
 
-#: src/libaudqt/log-inspector.cc:225
+#: src/libaudqt/log-inspector.cc:208
 msgid "Warning"
 msgstr "Προειδοποίηση"
 
-#: src/libaudqt/log-inspector.cc:237
+#: src/libaudqt/log-inspector.cc:219
 msgid "Cl_ear"
 msgstr "Κα_θαρισμός"
 
-#: src/libaudqt/log-inspector.cc:250
+#: src/libaudqt/log-inspector.cc:232
 msgid "Log Level:"
 msgstr "Επίπεδο καταγραφής:"
 
-#: src/libaudqt/plugin-menu-qt.cc:52
+#: src/libaudqt/plugin-menu-qt.cc:53
 msgid "Services"
 msgstr "Υπηρεσίες"
 
-#: src/libaudqt/prefs-window-qt.cc:227
-msgid "Restart in GTK (legacy) mode"
-msgstr "Επανεκκίνηση σε διεπαφή GTK (legacy)"
-
-#: src/libaudqt/prefs-window-qt.cc:236 src/libaudqt/prefs-window-qt.cc:249
-msgid "Native"
-msgstr "Συστήματος"
-
-#: src/libaudqt/prefs-window-qt.cc:237
-msgid "Dark"
-msgstr "Σκοτεινό"
-
-#: src/libaudqt/prefs-window-qt.cc:251
-msgid "Flat"
-msgstr "Flat"
-
-#: src/libaudqt/prefs-window-qt.cc:252
-msgid "Flat (dark)"
-msgstr "Flat (σκοτεινό)"
-
-#: src/libaudqt/prefs-window-qt.cc:262
-msgid "Audacious is running in Qt mode."
-msgstr "Το audacious εκτελείται σε διεπαφή Qt."
-
-#: src/libaudqt/prefs-window-qt.cc:266
-msgid "GTK (legacy) mode is unavailable in this build."
-msgstr "Η διεπαφή GTK (legacy) δεν είναι διαθέσιμη."
-
-#: src/libaudqt/prefs-window-qt.cc:272
-msgid "Theme:"
-msgstr "Θέμα:"
-
-#: src/libaudqt/prefs-window-qt.cc:274
-msgid "Icon theme:"
-msgstr "Θέμα εικονιδίων:"
-
-#: src/libaudqt/util-qt.cc:112
+#: src/libaudqt/util-qt.cc:80
 msgid "Copy"
 msgstr "Αντιγραφή"
+
+#~ msgid "Plugins ..."
+#~ msgstr "Πρόσθετα ..."

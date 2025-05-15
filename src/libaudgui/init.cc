@@ -134,7 +134,7 @@ void audgui_hide_unique_window (int id)
 #ifdef _WIN32
 /* On Windows, the default icon sizes are fixed.
  * Adjust them for varying screen resolutions. */
-void adjust_icon_sizes ()
+void adjust_icon_sizes (void)
 {
     struct Mapping {
         GtkIconSize size;
@@ -186,10 +186,8 @@ static void load_fallback_icon (const char * icon, int size)
 
     if (pixbuf)
     {
-G_GNUC_BEGIN_IGNORE_DEPRECATIONS
         gtk_icon_theme_add_builtin_icon (icon, size, pixbuf);
         g_object_unref (pixbuf);
-G_GNUC_END_IGNORE_DEPRECATIONS
     }
 }
 
@@ -217,14 +215,12 @@ static void load_fallback_icons ()
         "document-open",
         "document-save",
         "edit-clear",
-        "edit-clear-all",
         "edit-copy",
         "edit-cut",
         "edit-delete",
         "edit-find",
         "edit-paste",
         "edit-select-all",
-        "edit-undo",
         "face-smile",
         "folder-remote",
         "folder",
@@ -310,7 +306,7 @@ static void load_fallback_icons ()
 
     GtkIconSize icon_size;
     GtkSettings * settings = gtk_settings_get_default ();
-    g_object_get (settings, "gtk-toolbar-icon-size", & icon_size, nullptr);
+    g_object_get (settings, "gtk-toolbar-icon-size", & icon_size, NULL);
 
     int toolbar_size = get_icon_size (icon_size);
     for (const char * icon : toolbar_icons)
@@ -365,9 +361,7 @@ EXPORT void audgui_init ()
     hook_associate ("playlist set playing", playlist_set_playing_cb, nullptr);
     hook_associate ("playlist position", playlist_position_cb, nullptr);
 
-#ifndef _WIN32
     gtk_window_set_default_icon_name ("audacious");
-#endif
 }
 
 EXPORT void audgui_cleanup ()

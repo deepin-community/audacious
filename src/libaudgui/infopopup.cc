@@ -1,6 +1,6 @@
 /*
  * infopopup.c
- * Copyright 2006-2012 Ariadne Conill, Giacomo Lozito, John Lindgren, and
+ * Copyright 2006-2012 William Pitcock, Giacomo Lozito, John Lindgren, and
  *                     Thomas Lange
  *
  * Redistribution and use in source and binary forms, with or without
@@ -30,12 +30,14 @@
 #include <libaudcore/runtime.h>
 #include <libaudcore/tuple.h>
 
-#include "gtk-compat.h"
 #include "internal.h"
 #include "libaudgui.h"
 #include "libaudgui-gtk.h"
 
 static void infopopup_move_to_mouse (GtkWidget * infopopup);
+
+static const GdkColor gray = {0, 40960, 40960, 40960};
+static const GdkColor white = {0, 65535, 65535, 65535};
 
 static struct {
     GtkWidget * title_header, * title_label;
@@ -89,7 +91,7 @@ static void infopopup_progress_cb (void *)
         time = aud_drct_get_time ();
     }
 
-    if (aud_get_bool ("filepopup_showprogressbar") && filename &&
+    if (aud_get_bool (nullptr, "filepopup_showprogressbar") && filename &&
      current_file && ! strcmp (filename, current_file) && length > 0)
     {
         gtk_progress_bar_set_fraction ((GtkProgressBar *) widgets.progress, time / (float) length);
@@ -102,25 +104,37 @@ static void infopopup_progress_cb (void *)
 
 static void infopopup_realized (GtkWidget * widget)
 {
-#ifndef USE_GTK3
     GdkWindow * window = gtk_widget_get_window (widget);
     gdk_window_set_back_pixmap (window, nullptr, false);
-#endif
     infopopup_move_to_mouse (widget);
 }
 
-#ifndef USE_GTK3
-static const GdkColor gray = {0, 40960, 40960, 40960};
-static const GdkColor white = {0, 65535, 65535, 65535};
-
+/* borrowed from the gtkui infoarea */
 static gboolean infopopup_draw_bg (GtkWidget * widget)
 {
+    double r = 1, g = 1, b = 1;
+
+    /* In a dark theme, try to match the tone of the base color */
+    auto & c = (gtk_widget_get_style (widget))->base[GTK_STATE_NORMAL];
+    int v = aud::max (aud::max (c.red, c.green), c.blue);
+
+    if (v >= 10*256 && v < 80*256)
+    {
+        r = (double)c.red / v;
+        g = (double)c.green / v;
+        b = (double)c.blue / v;
+    }
+
     GtkAllocation alloc;
     gtk_widget_get_allocation (widget, & alloc);
 
     cairo_t * cr = gdk_cairo_create (gtk_widget_get_window (widget));
-    auto & c = (gtk_widget_get_style (widget))->base[GTK_STATE_NORMAL];
-    cairo_pattern_t * gradient = audgui_dark_bg_gradient (c, alloc.height);
+
+    cairo_pattern_t * gradient = cairo_pattern_create_linear (0, 0, 0, alloc.height);
+    cairo_pattern_add_color_stop_rgb (gradient, 0, 0.25 * r, 0.25 * g, 0.25 * b);
+    cairo_pattern_add_color_stop_rgb (gradient, 0.5, 0.15 * r, 0.15 * g, 0.15 * b);
+    cairo_pattern_add_color_stop_rgb (gradient, 0.5, 0.1 * r, 0.1 * g, 0.1 * b);
+    cairo_pattern_add_color_stop_rgb (gradient, 1, 0, 0, 0);
 
     cairo_set_source (cr, gradient);
     cairo_rectangle (cr, 0, 0, alloc.width, alloc.height);
@@ -130,7 +144,6 @@ static gboolean infopopup_draw_bg (GtkWidget * widget)
     cairo_destroy (cr);
     return false;
 }
-#endif
 
 static void infopopup_add_category (GtkWidget * grid, int position,
  const char * text, GtkWidget * * header, GtkWidget * * label)
@@ -138,27 +151,19 @@ static void infopopup_add_category (GtkWidget * grid, int position,
     * header = gtk_label_new (nullptr);
     * label = gtk_label_new (nullptr);
 
-    CharPtr markup (g_markup_printf_escaped ("<span style=\"italic\">%s</span>", text));
-    gtk_label_set_markup ((GtkLabel *) * header, markup);
-
-#ifdef USE_GTK3
-    gtk_widget_set_halign (* header, GTK_ALIGN_END);
-    gtk_widget_set_halign (* label, GTK_ALIGN_START);
-
-    gtk_grid_attach ((GtkGrid *) grid, * header, 0, position, 1, 1);
-    gtk_grid_attach ((GtkGrid *) grid, * label, 1, position, 1, 1);
-#else
     gtk_misc_set_alignment ((GtkMisc *) * header, 1, 0.5);
     gtk_misc_set_alignment ((GtkMisc *) * label, 0, 0.5);
 
     gtk_widget_modify_fg (* header, GTK_STATE_NORMAL, & gray);
     gtk_widget_modify_fg (* label, GTK_STATE_NORMAL, & white);
 
+    CharPtr markup (g_markup_printf_escaped ("<span style=\"italic\">%s</span>", text));
+    gtk_label_set_markup ((GtkLabel *) * header, markup);
+
     gtk_table_attach ((GtkTable *) grid, * header, 0, 1, position, position + 1,
      GTK_FILL, GTK_FILL, 0, 0);
     gtk_table_attach ((GtkTable *) grid, * label, 1, 2, position, position + 1,
      GTK_FILL, GTK_FILL, 0, 0);
-#endif
 
     gtk_widget_set_no_show_all (* header, true);
     gtk_widget_set_no_show_all (* label, true);
@@ -183,10 +188,9 @@ static GtkWidget * infopopup_create ()
     GtkWidget * infopopup = gtk_window_new (GTK_WINDOW_POPUP);
     gtk_window_set_type_hint ((GtkWindow *) infopopup, GDK_WINDOW_TYPE_HINT_TOOLTIP);
     gtk_window_set_decorated ((GtkWindow *) infopopup, false);
-    gtk_window_set_role ((GtkWindow *) infopopup, "infopopup");
     gtk_container_set_border_width ((GtkContainer *) infopopup, 4);
 
-    GtkWidget * hbox = audgui_hbox_new (6);
+    GtkWidget * hbox = gtk_hbox_new (false, 6);
     gtk_container_add ((GtkContainer *) infopopup, hbox);
 
     widgets.image = gtk_image_new ();
@@ -194,8 +198,8 @@ static GtkWidget * infopopup_create ()
     gtk_box_pack_start ((GtkBox *) hbox, widgets.image, false, false, 0);
     gtk_widget_set_no_show_all (widgets.image, true);
 
-    GtkWidget * grid = audgui_grid_new ();
-    audgui_grid_set_column_spacing (grid, 6);
+    GtkWidget * grid = gtk_table_new (0, 0, false);
+    gtk_table_set_col_spacings ((GtkTable *) grid, 6);
     gtk_box_pack_start ((GtkBox *) hbox, grid, true, true, 0);
 
     infopopup_add_category (grid, 0, _("Title"), & widgets.title_header, & widgets.title_label);
@@ -209,24 +213,18 @@ static GtkWidget * infopopup_create ()
     /* track progress */
     widgets.progress = gtk_progress_bar_new ();
     gtk_progress_bar_set_text ((GtkProgressBar *) widgets.progress, "");
-
-#ifdef USE_GTK3
-    gtk_widget_set_margin_top (widgets.progress, 6);
-    gtk_progress_bar_set_show_text ((GtkProgressBar *) widgets.progress, true);
-    gtk_grid_attach ((GtkGrid *) grid, widgets.progress, 0, 7, 2, 1);
-#else
     gtk_table_set_row_spacing ((GtkTable *) grid, 6, 4);
     gtk_table_attach ((GtkTable *) grid, widgets.progress, 0, 2, 7, 8,
      GTK_FILL, GTK_FILL, 0, 0);
 
-    /* override background drawing */
-    gtk_widget_set_app_paintable (infopopup, true);
-    g_signal_connect (infopopup, AUDGUI_DRAW_SIGNAL, (GCallback) infopopup_draw_bg, nullptr);
-#endif
-    g_signal_connect (infopopup, "realize", (GCallback) infopopup_realized, nullptr);
-
     /* do not show the track progress */
     gtk_widget_set_no_show_all (widgets.progress, true);
+
+    /* override background drawing */
+    gtk_widget_set_app_paintable (infopopup, true);
+
+    g_signal_connect (infopopup, "realize", (GCallback) infopopup_realized, nullptr);
+    g_signal_connect (infopopup, "expose-event", (GCallback) infopopup_draw_bg, nullptr);
 
     return infopopup;
 }

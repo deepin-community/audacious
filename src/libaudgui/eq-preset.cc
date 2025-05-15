@@ -20,13 +20,10 @@
 #include <string.h>
 
 #include <libaudcore/equalizer.h>
-#include <libaudcore/hook.h>
 #include <libaudcore/i18n.h>
 #include <libaudcore/index.h>
-#include <libaudcore/interface.h>
 #include <libaudcore/runtime.h>
 
-#include "gtk-compat.h"
 #include "internal.h"
 #include "libaudgui.h"
 #include "libaudgui-gtk.h"
@@ -68,16 +65,11 @@ static void select_all (void *, bool selected)
         item.selected = selected;
 }
 
-static void activate_preset (const EqualizerPreset & preset)
-{
-    aud_eq_apply_preset (preset);
-    aud_set_bool ("equalizer_active", true);
-}
-
 static void activate_row (void *, int row)
 {
     g_return_if_fail (row >= 0 && row < preset_list.len ());
-    activate_preset (preset_list[row].preset);
+    aud_eq_apply_preset (preset_list[row].preset);
+    aud_set_bool (nullptr, "equalizer_active", true);
 }
 
 static void focus_change (void *, int row)
@@ -130,30 +122,6 @@ static int find_by_name (const char * name)
     }
 
     return -1;
-}
-
-static const EqualizerPreset * find_one_selected ()
-{
-    const EqualizerPreset * preset = nullptr;
-
-    for (PresetItem & item : preset_list)
-    {
-        if (item.selected)
-        {
-            if (preset)
-            {
-                preset = nullptr;
-                break;
-            }
-
-            preset = & item.preset;
-        }
-    }
-
-    if (! preset)
-        aud_ui_show_error (_("Please select one preset to export."));
-
-    return preset;
 }
 
 static void text_changed ()
@@ -218,20 +186,6 @@ static void revert_changes ()
     gtk_widget_set_sensitive (revert, false);
 }
 
-static void do_save_file ()
-{
-    auto preset = find_one_selected ();
-    if (preset)
-        eq_preset_save_file (* preset);
-}
-
-static void do_save_eqf ()
-{
-    auto preset = find_one_selected ();
-    if (preset)
-        eq_preset_save_eqf (* preset);
-}
-
 static void cleanup_eq_preset_window ()
 {
     // also hide the preset browser window
@@ -255,12 +209,14 @@ static GtkWidget * create_menu_bar ()
 {
     static const AudguiMenuItem import_items[] = {
         MenuCommand (N_("Preset File ..."), nullptr, 0, (GdkModifierType) 0, eq_preset_load_file),
-        MenuCommand (N_("EQF File ..."), nullptr, 0, (GdkModifierType) 0, eq_preset_load_eqf)
+        MenuCommand (N_("EQF File ..."), nullptr, 0, (GdkModifierType) 0, eq_preset_load_eqf),
+        MenuSep (),
+        MenuCommand (N_("Winamp Presets ..."), nullptr, 0, (GdkModifierType) 0, eq_preset_import_winamp)
     };
 
     static const AudguiMenuItem export_items[] = {
-        MenuCommand (N_("Preset File ..."), nullptr, 0, (GdkModifierType) 0, do_save_file),
-        MenuCommand (N_("EQF File ..."), nullptr, 0, (GdkModifierType) 0, do_save_eqf)
+        MenuCommand (N_("Preset File ..."), nullptr, 0, (GdkModifierType) 0, eq_preset_save_file),
+        MenuCommand (N_("EQF File ..."), nullptr, 0, (GdkModifierType) 0, eq_preset_save_eqf)
     };
 
     static const AudguiMenuItem menus[] = {
@@ -281,23 +237,22 @@ static GtkWidget * create_eq_preset_window ()
 
     GtkWidget * window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
     gtk_window_set_title ((GtkWindow *) window, _("Equalizer Presets"));
-    gtk_window_set_role ((GtkWindow *) window, "equalizer-presets");
     gtk_window_set_type_hint ((GtkWindow *) window, GDK_WINDOW_TYPE_HINT_DIALOG);
     gtk_window_set_default_size ((GtkWindow *) window, 3 * dpi, 3 * dpi);
     audgui_destroy_on_escape (window);
 
     g_signal_connect (window, "destroy", (GCallback) cleanup_eq_preset_window, nullptr);
 
-    GtkWidget * outer = audgui_vbox_new (0);
+    GtkWidget * outer = gtk_vbox_new (false, 0);
     gtk_container_add ((GtkContainer *) window, outer);
 
     gtk_box_pack_start ((GtkBox *) outer, create_menu_bar (), false, false, 0);
 
-    GtkWidget * vbox = audgui_vbox_new (6);
+    GtkWidget * vbox = gtk_vbox_new (false, 6);
     gtk_container_set_border_width ((GtkContainer *) vbox, 6);
     gtk_box_pack_start ((GtkBox *) outer, vbox, true, true, 0);
 
-    GtkWidget * hbox = audgui_hbox_new (6);
+    GtkWidget * hbox = gtk_hbox_new (false, 6);
     gtk_box_pack_start ((GtkBox *) vbox, hbox, false, false, 0);
 
     entry = gtk_entry_new ();
@@ -322,7 +277,7 @@ static GtkWidget * create_eq_preset_window ()
     audgui_list_add_column (list, nullptr, 0, G_TYPE_STRING, -1);
     gtk_container_add ((GtkContainer *) scrolled, list);
 
-    GtkWidget * hbox2 = audgui_hbox_new (6);
+    GtkWidget * hbox2 = gtk_hbox_new (false, 6);
     gtk_box_pack_start ((GtkBox *) vbox, hbox2, false, false, 0);
 
     GtkWidget * remove = audgui_button_new (_("Delete Selected"), "edit-delete",
@@ -354,17 +309,8 @@ static void merge_presets (const Index<EqualizerPreset> & presets)
         preset_list.remove_if (is_duplicate);
     }
 
-    /* deselect existing presets */
-    for (auto & item : preset_list)
-        item.selected = false;
-
-    /* append and select new presets */
     for (const EqualizerPreset & preset : presets)
-        preset_list.append (preset, true);
-
-    /* if a single preset was imported, activate it */
-    if (presets.len () == 1)
-        activate_preset (presets[0]);
+        preset_list.append (preset, false);
 }
 
 EXPORT void audgui_import_eq_presets (const Index<EqualizerPreset> & presets)
@@ -376,7 +322,6 @@ EXPORT void audgui_import_eq_presets (const Index<EqualizerPreset> & presets)
     audgui_list_delete_rows (list, 0, preset_list.len ());
     merge_presets (presets);
     audgui_list_insert_rows (list, 0, preset_list.len ());
-    audgui_list_set_focus (list, preset_list.len () - 1);
 
     changes_made = true;
     gtk_widget_set_sensitive (revert, true);

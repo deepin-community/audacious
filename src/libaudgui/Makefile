@@ -1,13 +1,12 @@
 SHARED_LIB = ${LIB_PREFIX}audgui${LIB_SUFFIX}
 LIB_MAJOR = 5
-LIB_MINOR = 2
+LIB_MINOR = 0
 
 SRCS = about.cc \
        confirm.cc \
        eq-preset.cc \
        equalizer.cc \
        file-opener.cc \
-       gtk-compat.cc \
        images.c \
        infopopup.cc \
        infowin.cc \
@@ -32,8 +31,7 @@ SRCS = about.cc \
        url-opener.cc \
        util.cc
 
-INCLUDES = gtk-compat.h \
-           libaudgui.h \
+INCLUDES = libaudgui.h \
            libaudgui-gtk.h \
            list.h \
            menu.h
@@ -54,9 +52,7 @@ CPPFLAGS := -I.. -I../.. \
 
 CFLAGS += ${LIB_CFLAGS}
 
-LIB_LDFLAGS := -L../libaudcore $(LIB_LDFLAGS)
-
-LIBS := -laudcore \
+LIBS := -L../libaudcore -laudcore \
         ${LIBS} -lm \
         ${GLIB_LIBS} \
         ${GTK_LIBS}

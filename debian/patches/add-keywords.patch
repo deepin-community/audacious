@@ -1,22 +1,13 @@
-From: Mateusz Łukasik <mati75@linuxmint.pl>
-Date: Sat Feb 6 14:29:14 2016 +0100
-Subject: Add keywords to desktop file
+Description: Add keywords to desktop file
+Author: Mateusz Łukasik <mati75@linuxmint.pl>
 
----
- audacious.desktop | 3 ++-
- 1 file changed, 2 insertions(+), 1 deletion(-)
-
-diff --git a/audacious.desktop b/audacious.desktop
-index efdba75..4e50f03 100644
 --- a/audacious.desktop
 +++ b/audacious.desktop
-@@ -5,7 +5,8 @@ Name=Audacious
+@@ -5,6 +5,7 @@
  GenericName=Music Player
  Comment=Listen to music
  Icon=audacious
--Categories=AudioVideo;Audio;Player;
 +Keywords=audio;player;audacious;music;gtk;
-+Categories=AudioVideo;Audio;Player;GTK;
+ Categories=AudioVideo;Audio;Player;GTK;
  Exec=audacious %U
  TryExec=audacious
- StartupNotify=false

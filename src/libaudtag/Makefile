@@ -24,8 +24,6 @@ CPPFLAGS := -I.. -I../.. \
 
 CFLAGS += ${LIB_CFLAGS}
 
-LIB_LDFLAGS := -L../libaudcore $(LIB_LDFLAGS)
-
-LIBS := -laudcore \
+LIBS := -L../libaudcore -laudcore \
         ${LIBS} \
         ${GLIB_LIBS}
